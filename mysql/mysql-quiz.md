@@ -975,15 +975,15 @@ Table name: superheroes
 
 - [ ] 1 CREATE VIEW v1 2 SELECT \* FROM t1 3 WHERE col1 &gt; 10;
 - [ ] 1 CREATE VIEW v1 2 BEGIN 3 SELECT \* FROM t1 4 END
-- [ ] 1 CREATE VIEW v1 AS 2 SELECT \* FROM t1;
+- [x] 1 CREATE VIEW v1 AS 2 SELECT \* FROM t1;
 - [ ] 1 CREATE VIEW v1 AS 2 BEGIN 3 SELECT \* FROM t1 4 END;
 
-#### Q101. A table Item has a Boolean field endOfLife and a field makeYear of type YEAR(4). How can you set the Boolean to true for all Items that have been made before 2019?A table Item has a Boolean field endOfLife and a field makeYear of type YEAR(4). How can you set the Boolean to true for all Items that have been made before 2019?
+#### Q101. A table Item has a Boolean field endOfLife and a field makeYear of type YEAR(4). How can you set the Boolean to true for all Items that have been made before 2019?
 
-- [ ] UPSERT Item SET endOfLife = true WHERE makeYear < 2019UPSERT Item SET endOfLife = true WHERE makeYear < 2019
-- [ ] CHANGE Item SET endOfLife = true WHERE makeYear < 2019CHANGE Item SET endOfLife = true WHERE makeYear < 2019
-- [ ] ALTER Item SET endOfLife = true WHERE makeYear < 2019ALTER Item SET endOfLife = true WHERE makeYear < 2019
-- [ ] UPDATE Item SET endOfLife = true WHERE makeYear < 2019
+- [ ] UPSERT Item SET endOfLife = true WHERE makeYear < 2019
+- [ ] CHANGE Item SET endOfLife = true WHERE makeYear < 2019
+- [ ] ALTER Item SET endOfLife = true WHERE makeYear < 2019
+- [x] UPDATE Item SET endOfLife = true WHERE makeYear < 2019
 
 #### Q102. Which choice is an example of an aggregate function?Which choice is an example of an aggregate function?
 
