@@ -428,7 +428,7 @@ StDf[, -1]
 MyMat = matrix(c(7, 9, 8, 6, 10, 12),nrow=2,ncol=3, byrow = TRUE)
 ```
 
-- [ ]
+- [ ] :
 
 ```
 [ ,3]
@@ -436,19 +436,19 @@ MyMat = matrix(c(7, 9, 8, 6, 10, 12),nrow=2,ncol=3, byrow = TRUE)
 [2, ] 12
 ```
 
-- [x]
+- [x] :
 
 ```
 [1] 8 12
 ```
 
-- [ ]
+- [ ] :
 
 ```
 [1] 10 12
 ```
 
-- [ ]
+- [ ] :
 
 ```
 [ ,3]
@@ -526,7 +526,7 @@ Petal.Width:Speciesvirginica    0.1008     0.5248   0.192   0.8480
 
 #### Q51. How do you obtain the row numbers in a data frame named `pizza` for which the value of `pizza$delivery_min` is greater than or equal to 30?
 
-- [ ]
+- [ ] :
 
 ```
 late_delivery <- pizza$delivery_min >= 30
@@ -534,7 +534,7 @@ index_late <- index(late_delivery)
 index_late
 ```
 
-- [ ]
+- [ ] :
 
 ```
 late_delivery <- pizza$delivery_min >= 30
@@ -542,7 +542,7 @@ rownum_late <- rownum(late_delivery)
 rownum_late
 ```
 
-- [x]
+- [x] :
 
 ```
 late_delivery <- pizza$delivery_min >= 30
@@ -550,11 +550,11 @@ which_late <- which(late_delivery)
 which_late
 ```
 
-- [x]
+- [ ] :
 
 ```
 late_delivery <- pizza$delivery_min >= 30
-late <- pizaa$late_delivery
+late <- piza$late_delivery
 pizza$late
 ```
 
@@ -566,3 +566,34 @@ pizza$late
 - [x] grepl("Rd|Ave|Dr|St", indat)
 - [ ] grepl("Rd,Ave,Dr,St", indat)
 - [ ] grepl("[Rd],[Ave],[Dr],[St]", indat)
+
+#### Q53. Which statement returns the fourth row of a data frame named _fish_?
+
+- [x] fish[4, ]
+- [ ] fish( ,4)
+- [ ] fish(4, )
+- [ ] fish{4, }
+
+#### Q54. What is the value of _csum_?
+
+```
+a <- c(1.2, 2, 3.5, 4)
+b <- c(1.2, 2.2, 3.5, 4)
+csum <-sum(a == b)
+```
+
+- [ ] 8
+- [x] 3
+- [ ] 0.2
+- [ ] 21.6
+
+#### Q54. A list named _a_ is created using the statement below. Which choice returns TRUE?
+
+```
+a <- list("10", TRUE, 5.6)
+```
+
+- [x] is.list(a[1])
+- [ ] is.numeric(a[1])
+- [ ] is.logical(a[1])
+- [ ] is.character(a[1])

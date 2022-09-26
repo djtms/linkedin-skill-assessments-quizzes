@@ -23,7 +23,7 @@
 - [x] task-based
 - [ ] callback-based
 
-[Official documentation: Task asynchronous programming model](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model)
+[Official documentation: Task asynchronous programming model](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model) resposta correta --> var contacts = new List<string>();
 
 #### Q4. How would you determine if a class has a particular attribute?
 
@@ -52,9 +52,8 @@ Attribute.GetCustomAttribute, typeof(SubControllerActionToViewDataAttribute)
 Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActionToViewDataAttribute))
 ```
 
-[Official documentation: Attribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=net-5.0)
-
-[Official documentation: Attribute.GetCustomAttribute Method](https://docs.microsoft.com/en-us/dotnet/api/system.attribute.getcustomattribute?view=net-5.0)
+1. [Official documentation: Attribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=net-5.0)
+2. [Official documentation: Attribute.GetCustomAttribute Method](https://docs.microsoft.com/en-us/dotnet/api/system.attribute.getcustomattribute?view=net-5.0)
 
 #### Q5. What is the difference between the ref and out keywords?
 
@@ -63,9 +62,8 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 - [x] Variables passed to out can be passed to a function without being initialized, while ref specifies that the value is a reference value that can be changed inside the calling method.
 - [ ] Variables passed to ref specify that the parameter is an output parameter, while out specifies that a variable may be passed to a function without being initialized.
 
-[Official documentation: ref](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref)
-
-[Official documentation: out parameter modifier](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)
+1. [Official documentation: ref](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref)
+2. [Official documentation: out parameter modifier](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)
 
 #### Q6. How could you retrieve information about a class, as well as create an instance at runtime?
 
@@ -127,10 +125,13 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 #### Q10. What is the difference between a.Equals(b) and a == b?
 
-- [ ] The .Equals method compares reference identities while the == compares contents.
-- [ ] The .Equals method compares primitive values while == compares all values.
-- [x] The .Equals method compares contents while == compares references reference identity.
-- [ ] The .Equals method compares reference type while == compares primitive value types.
+- [ ] The .Equals method compares reference identities while the `==` compares contents.
+- [ ] The .Equals method compares primitive values while `==` compares all values.
+- [x] The .Equals method compares contents while `==` compares reference identity.
+- [ ] The .Equals method compares reference type while `==` compares primitive value types
+
+1. [Official documentation: Object.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals)
+2. [c-sharpcorner: Equality Operator(==) vs .Equals()](https://www.c-sharpcorner.com/UploadFile/3d39b4/difference-between-operator-and-equals-method-in-C-Sharp)
 
 #### Q11. Which choice best describes a deadlock situation?
 
@@ -170,7 +171,7 @@ Attribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActi
 
 #### Q15. What will be returned when this method is executed?
 
-`public void userInput(string charParamters) { }`
+`public void userInput(string charParameters) { }`
 
 - [x] nothing
 - [ ] a Boolean
@@ -230,9 +231,8 @@ foreach(string employee in employeeQuery)
 - [ ] Make it private
 - [x] Make it virtual
 
-[Official documentation: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)
-
-[Official documentation: abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)
+1. [Official documentation: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)
+2. [Official documentation: abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)
 
 #### Q20. How would you write code for an integer property called Age with a getter and setter?
 
@@ -272,14 +272,14 @@ foreach(string employee in employeeQuery)
 
 #### Q24. What does operator overloading allow you to do?
 
-- [ ] hide built-in operatores when necessary
+- [ ] hide built-in operators when necessary
 - [ ] add methods to be interpreted by the compiler at runtime
 - [ ] define how enums and other primitive value types work within the rest of the application
 - [x] define custom functionality for common operators like addition and equality
 
 [Official documentation: Operator overloading](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)
 
-#### Q25. What it the main purpose of LINQ?
+#### Q25. What is the main purpose of LINQ?
 
 - [ ] to delete duplicate data
 - [ ] to bind namespaces and assemblies
@@ -304,9 +304,8 @@ foreach(string employee in employeeQuery)
 - [ ] Throw clauses overwrite the stack trace, while throw exceptions retain the stack information.
 - [ ] Throw exceptions fire only at runtime, while throw clauses can fire during compile time.
 
-[Official documentation: throw](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)
-
-[c-sharpcorner: Difference Between Throw Exception and Throw Clause](https://www.c-sharpcorner.com/UploadFile/akkiraju/difference-between-throw-exception-and-throw-clause/)
+1. [Official documentation: throw](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)
+2. [c-sharpcorner: Difference Between Throw Exception and Throw Clause](https://www.c-sharpcorner.com/UploadFile/akkiraju/difference-between-throw-exception-and-throw-clause/)
 
 #### Q28. When an asynchronous method is executed, the code runs but nothing happens other than a compiler warning. What is most likely causing the method to not return anything?
 
@@ -314,6 +313,8 @@ foreach(string employee in employeeQuery)
 - [x] The method is missing an await keyword in its body.
 - [ ] The wait keyword is missing from the end of the method.
 - [ ] The yield keyword is missing from the method.
+
+[Official documentation: Starting tasks concurrently](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/#start-tasks-concurrently)
 
 #### Q29. What are C# events?
 
@@ -326,7 +327,7 @@ foreach(string employee in employeeQuery)
 
 #### Q30. What kind of values can arrays store?
 
-- [ ] unordered collections of numerc values
+- [ ] unordered collections of numeric values
 - [ ] key-value pairs of any C# supported type
 - [ ] class and struct instances
 - [x] multiple variables, or collections, of the same type
@@ -351,14 +352,13 @@ foreach(string employee in employeeQuery)
 - [x] \b
 - [ ] \w
 
-[regular-expressions: Word Boundaries](https://www.regular-expressions.info/wordboundaries.html)
-
-[Official documentation: Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
+1. [regular-expressions: Word Boundaries](https://www.regular-expressions.info/wordboundaries.html)
+2. [Official documentation: Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
 
 #### Q33. To conform to the following interface, which of its members need to be implemented?
 
 ```cs
-public interface INameble
+public interface INameable
 {
     string FirstName { get; set; }
     string LastName { get; }
@@ -379,6 +379,9 @@ public interface INameble
 - [x] only when required
 - [ ] only when programmatically loaded
 
+1. [Official documentation: Assembly Loading](https://docs.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading)
+2. [Stackoverflow : When exactly are assemblies loaded?](https://stackoverflow.com/questions/21914692/when-exactly-are-assemblies-loaded)
+
 #### Q35. What is most accurate description of a regular expression?
 
 - [ ] A regular expression is a C# tool used to parse HTML
@@ -386,9 +389,8 @@ public interface INameble
 - [ ] A regular expression allows a variable to be passed by reference.
 - [ ] A regular expression allows a class to conform to the Equatable protocol.
 
-[Official documentation: Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
-
-[Official documentation: .NET regular expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)
+1. [Official documentation: Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
+2. [Official documentation: .NET regular expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)
 
 #### Q36. Why would you use a class field in C#
 
@@ -429,9 +431,8 @@ public static void Main(string[] args)
 - [x] an error, because the method signature of Login doesn't match the delegate
 - [ ] Login successful... Valid user!
 
-[Official documentation: Introduction to Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/delegates-overview)
-
-[Official documentation: Introduction to Events](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)
+1. [Official documentation: Introduction to Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/delegates-overview)
+2. [Official documentation: Introduction to Events](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)
 
 #### Q39. How would you declare a sealed class named User?
 
@@ -449,9 +450,8 @@ public static void Main(string[] args)
 - [ ] non-static classes need to initialize all class members at runtime, while static classes do not
 - [ ] non-static classes do not need to be initialized while static classes do
 
-[stackoverflow](https://stackoverflow.com/questions/20451554/whats-the-function-of-a-static-constructor-in-a-non-static-class)
-
-[Official documentation: Static Constructors](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors)
+1. [stackoverflow](https://stackoverflow.com/questions/20451554/whats-the-function-of-a-static-constructor-in-a-non-static-class)
+2. [Official documentation: Static Constructors](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors)
 
 #### Q41. Which characteristic prevents this code from compiling?
 
@@ -518,7 +518,7 @@ public static void Main(string[] args)
 - [ ] public string IsvalidName(this string i, string value) {}
 - [ ] public void IsvalidName(this string i, string value) {}
 
-#### Q48. How are C# classses limited?
+#### Q48. How are C# classes limited?
 
 - [x] They do not support multiple inheritance.
 - [ ] They support multiple inheritance.
@@ -538,21 +538,21 @@ public static void Main(string[] args)
 
 #### Q50. What is the correct way to write a public property with a private backing field?
 
-- [ ]
+- [ ] A
 
 ```cs
 private int _password;
 pubic int Password = { get; set; }
 ```
 
-- [ ]
+- [ ] B
 
 ```cs
 private int _password;
 public int Password = _password;
 ```
 
-- [ ]
+- [ ] C
 
 ```cs
 private int _password;
@@ -563,7 +563,7 @@ public int Password
 }
 ```
 
-- [x]
+- [x] D
 
 ```cs
 private int _password;
@@ -662,9 +662,8 @@ public int Password
 - [x] A value type stores an actual value, while a reference type is a pointer to a value.
 - [ ] A value type is available only at runtime, while a reference type is available only at compile time.
 
-[Official documentation: Value types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types)
-
-[Official documentation: Reference types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)
+1. [Official documentation: Value types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types)
+2. [Official documentation: Reference types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)
 
 #### Q61. What is the difference between the `break` and `continue` keywords?
 
@@ -691,16 +690,17 @@ public int Password
 - [x] `Virtual methods always need a default implementation.`
 - [ ] `Virtual methods cannot have default implementation.`
 
-[Official documentation: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)
-
-[c-sharpcorner: Virtual Method in C#](https://www.c-sharpcorner.com/UploadFile/3d39b4/virtual-method-in-C-Sharp/)
+1. [Official documentation: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)
+2. [c-sharpcorner: Virtual Method in C#](https://www.c-sharpcorner.com/UploadFile/3d39b4/virtual-method-in-C-Sharp/)
 
 #### Q64. What is likely to happen if you have multiple threads accessing the same resource in your program?
 
 - [ ] `resource overload`
 - [ ] `thread jumping`
-- [ ] `deadlock and race conditions`
+- [x] `deadlock and race conditions`
 - [ ] `nothing, since this is what threading is for`
+
+[Official documentation: race conditions](https://docs.microsoft.com/en-us/archive/msdn-magazine/2008/october/concurrency-hazards-solving-problems-in-your-multithreaded-code)
 
 #### Q65. How do you indicate that a string might be null?
 
@@ -711,7 +711,7 @@ public int Password
 
 #### Q66. Do you need to declare an out variable before you use it?
 
-- [x] `No, you can declare it in the parameter list.`
+- [x] `No, you can declare an out in the parameter list.`
 - [ ] `Out variables are no longer part of C#.`
 - [ ] `You must declare it if it is a primitive type.`
 - [ ] `Yes.`
@@ -742,3 +742,32 @@ public int Password
 - [ ] `Thread multitasking adds single-threaded code blocks together.`
 
 [Official Documentation: Threads](https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading)
+
+#### Q70. What accessibility level does this class field have ?
+
+`private string LastName;`
+
+- [x] It can be used by other code only in the same class or struct.
+- [ ] It can be used by other code in a referenced assembly.
+- [ ] It can be used only by code contained in a derived class.
+- [ ] It can be used by other code in the same assembly.
+
+[Official Documentation: Accessibility Levels](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-levels)
+
+#### Q71. How would you correctly declare a jagged array called 'partyInvites' with 10 empty elements?
+
+- [ ] `string[] partyInvites = new string[10];`
+- [x] `string[][] partyInvites = new string[10][];`
+- [ ] `string[][] partyInvites = new string[10]();`
+- [ ] `string <[]> partyInvites = new string <[10]>;`
+
+[Official Documentation: Jagged Arrays](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/jagged-arrays)
+
+#### Q72. How could you pause a thread for three seconds?
+
+- [ ] Thread.Pause(3000);
+- [ ] Thread.Resume(-3000);
+- [ ] Thread.Suspend(3000);
+- [x] Thread.Sleep(3000);
+
+[Reference](https://docs.microsoft.com/en-us/dotnet/api/system.threading.thread.sleep?view=net-6.0)

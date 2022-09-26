@@ -437,8 +437,8 @@ echo "No, mail is not set";
 
 #### Q43. Assuming that `$first_name` and `$family_name` are valid strings, which statement is invalid?
 
-- [x] `echo $first_name. ' '. $family_name;`
-- [ ] `print $first_name, ' ', $family_name;`
+- [ ] `echo $first_name. ' '. $family_name;`
+- [x] `print $first_name, ' ', $family_name;`
 - [ ] `print $first_name. ' '. $family_name;`
 - [ ] `echo $first_name, ' ', $family_name;`
 
@@ -674,7 +674,7 @@ Dog
 Dog
 ```
 
-- [ ]
+- [ ] :
 
 ```php
       $name = "Cat";
@@ -684,7 +684,7 @@ Dog
       echo $Dog;
 ```
 
-- [ ]
+- [ ] :
 
 ```php
       $name = "Cat";
@@ -694,7 +694,7 @@ Dog
       echo $Dog;
 ```
 
-- [x]
+- [x] :
 
 ```php
       $name = "Cat";
@@ -704,7 +704,7 @@ Dog
       echo $Cat;
 ```
 
-- [ ]
+- [ ] :
 
 ```php
       $name = "Cat";
@@ -723,7 +723,7 @@ Dog
 
 #### Q61. Which script might be used to continue a user's search for music, across different webpages?
 
-- [ ]
+- [ ] :
 
 ```php
         <?php
@@ -732,7 +732,7 @@ Dog
         ?>
 ```
 
-- [ ]
+- [ ] :
 
 ```php
         <?php
@@ -741,7 +741,7 @@ Dog
         ?>
 ```
 
-- [ ]
+- [ ] :
 
 ```php
         <?php
@@ -750,7 +750,7 @@ Dog
         ?>
 ```
 
-- [x]
+- [x] :
 
 ```php
         <?php
@@ -761,7 +761,7 @@ Dog
 
 #### Q62. Which PHP script finds the earliest and latest dates from an array?
 
-- [x]
+- [x] :
 
 ```php
         <?php
@@ -771,7 +771,7 @@ Dog
         ?>
 ```
 
-- [ ]
+- [ ] :
 
 ```php
         <?php
@@ -781,7 +781,7 @@ Dog
         ?>
 ```
 
-- [ ]
+- [ ] :
 
 ```php
         <?php
@@ -791,7 +791,7 @@ Dog
         ?>
 ```
 
-- [ ]
+- [ ] :
 
 ```php
         <?php
@@ -812,7 +812,7 @@ for (;;) {
 }
 ```
 
-- [x]
+- [x] :
 
 ```
         kilometers = 0.6214 miles.
@@ -822,7 +822,7 @@ for (;;) {
         kilometers = 3.107 miles.
 ```
 
-- [ ]
+- [ ] :
 
 ```
         kilometers = 0.6214 miles.
@@ -833,7 +833,7 @@ for (;;) {
         kilometers = 3.7284 miles.
 ```
 
-- [ ]
+- [ ] :
 
 ```
         kilometers = 1.2428 miles.
@@ -1088,7 +1088,7 @@ if( isset($user_info['url']) ) {
 ```
 
 - [ ] It directs all users to the same page when they log in.
-- [ ] It is a login script for a user portal on a website.
+- [x] It is a login script for a user portal on a website.
 - [ ] It keeps the user logged in across different browsers.
 - [ ] It sends the user to an error page if they enter the wrong URL
 
@@ -1107,3 +1107,155 @@ if( isset($user_info['url']) ) {
 - [ ] Specialized versions of built-in classes can be extended by calling the parent's constructor.
 - [ ] Yes, if a final class is defined as private in parent class.
 - [ ] Yes, a final defined class can be used to declare constants.
+
+#### Q91. How can you test if a checkbox is set?
+
+- [x] Use `!empty($_GET['test'])`
+- [x] Use `isset($_GET['test'])`
+- [ ] Use `$_GET['test'] == ''`
+- [ ] all other answers
+
+`Actually both are correct, option 3 is actually testing if a checkbox is not set`
+
+#### Q92. A form to subscrive to a newsletter is submitted using the POST method. The form has only one field: an input text field named "email". How would you check if the field is empty and, if it is, print "The email cannot be empty"?
+
+- [x] :
+
+```php
+if(empty($_POST['email'])) {
+    echo "The email cannot be empty";
+}
+```
+
+- [ ] :
+
+```php
+if(empty($_GET['email'])) {
+    echo "The email cannot be empty";
+}
+```
+
+- [ ] :
+
+```php
+if(empty($_POST('email'))) {
+    echo "The email cannot be empty";
+}
+```
+
+- [ ] :
+
+```php
+if(isset($email)) {
+    echo "The email cannot be empty";
+}
+```
+
+#### Q93. What is the PHP fatal error type?
+
+- [ ] This type of error causes a termination of the script execution when it occurs.
+- [ ] This type of error's causes are not detected by compiler and causes incorrect results.
+- [ ] This type of error causes erroneous results or may cause termination of program.
+- [x] This type of error causes termination after showing the list of errors and the line number where the errors have occured.
+
+1. [reference1](https://www.geeksforgeeks.org/php-types-of-errors/#:~:text=an%20error%20message.-,Fatal%20Error,-%3A%20It%20is)
+2. [reference2](https://www.c-sharpcorner.com/UploadFile/051e29/types-of-error-in-php/#:~:text=2.-,Fatal%20Errors,-Fatal%20errors%20are)
+
+#### Q94. Which script properly validates the IP address given?
+
+- [ ] $valid = ip2long($ip) !== false;
+- [x] $ip_address = "164.12.2540.1";
+      if(filter_var($ip_address, FILTER_VALIDATE_IP)){
+      echo "$ip_address is a valid IP address";
+        } else {
+           echo "$ip_address is not a valid IP address";
+      }
+- [ ] $ip_address = "164.12.2540.1";
+      if(validate_ip($ip_address)){
+      echo "$ip_address is a valid IP address";
+        } else {
+            echo "$ip_address is not a valid IP address";
+      }
+- [ ] $ip_address = "164.12.2540.1"
+      echo is_valid($ip_address, VALIDATE_IP);
+
+#### Q95. What is the output of this code?
+
+    $i = 0;
+    while($i < 6) {
+    if($i++ == 3) break;
+    }
+    echo "loop stopped at $i by break statement";
+
+- [ ] loop stopped at 3 by break statement
+- [ ] loop stopped at 4 by break statement
+- [ ] loop stopped at 6 by break statement
+- [x] loop stopped at 2 by break statement
+
+#### Q96. After creating your objects, you can call member functions related to that object, such as setting the names and prices for three "Pet" objects. What is the likely output of this code snippet?
+
+    $dof->setTitle("Spot");
+    $cat->setTitle("Mimi");
+    $horse-?setTitle("Trigger");
+    $dog->setPrice(10);
+    $cat->setPrice(15);
+    $horse->setPrice(7);
+    print_r($cat);
+
+- [ ] Pet Object ( [title]=> Spot[price]=>10)
+- [x] Pet Object ( [title]=> Mimi [price]=>15 )
+- [ ] Pet Object ( [title]=> Mimi[price]=>10 )
+- [ ] Pet Object ( [title]=> Trigger [price]=> 7)
+
+#### Q97. Given the associative array below, wich PHP code determines wich element(s) of the array is/are apple?
+
+```php
+$array = array(
+'fruit1' => 'apple',
+'fruit2' => 'orange',
+'fruit3' => 'grape',
+'fruit4' => 'apple',
+'fruit5' => 'apple');
+```
+
+- [x] :
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruit_name == 'apple') {
+        echo key($array).'<br />';
+    }
+    next($array);
+}
+```
+
+- [ ] :
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruitname == 'apple') {
+        echo key($array).'<br />';
+    }
+    next($array);
+}
+```
+
+- [ ] :
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruit_name == 'apple')
+        echo key($array).'<br />';
+    }
+    next($array);
+}
+```
+
+- [ ] :
+
+```php
+while ($fruit_name = current($array)) {
+    if ($fruit_name == 'apple') {
+        echo key($array).'<br />';
+    }
+```

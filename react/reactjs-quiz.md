@@ -78,6 +78,8 @@ const topics = ['cooking', 'art', 'history'];
 - [ ] React Router
 - [x] React Context
 
+[Reference](https://reactjs.org/docs/context.html)
+
 #### Q9. What should the console read when the following code is run?
 
 ```javascript
@@ -233,6 +235,8 @@ function Dish(props) {
 - [x] when you want a default implementation of `shouldComponentUpdate()`
 - [ ] when you do not want your component to have state
 
+[Reference](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+
 #### Q23. Why is it important to avoid copying the values of props into a component's state where possible?
 
 - [ ] because you should never mutate state
@@ -243,9 +247,11 @@ function Dish(props) {
 #### Q24. What is the children prop?
 
 - [ ] a property that adds child components to state
-- [x] a property that lets you pass components as data to other components
+- [x] a special property that JSX creates on components that contain both an opening tag and a closing tag, referencing it's contents.
 - [ ] a property that lets you set an array as a property
 - [ ] a property that lets you pass data to child elements
+
+[Explanation](https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx)
 
 #### Q25. Which attribute do you use to replace innerHTML in the browser DOM?
 
@@ -253,6 +259,8 @@ function Dish(props) {
 - [x] dangerouslySetInnerHTML
 - [ ] weirdSetInnerHTML
 - [ ] strangeHTML
+
+[Reference](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml)
 
 #### Q26. Which of these terms commonly describe React applications?
 
@@ -308,6 +316,8 @@ const Heading = () => {
 - [x] componentDidMount
 - [ ] componentWillReceiveProps
 - [ ] componentWillMount
+
+[Reference](https://reactjs.org/docs/react-component.html#componentdidmount)
 
 #### Q33. React components are composed to create a user interface. How are components composed?
 
@@ -365,8 +375,7 @@ class Clock extends React.Component {
 - [ ] It automatically updates a component.
 - [x] `setState` is asynchronous and might result in out of sync values.
 
-**Explanation:** Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
-Read [this article](https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)
+Read [this article](https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)**Explanation:** Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
 
 #### Q39. What package contains the render() function that renders a React element tree to the DOM?
 
@@ -397,8 +406,7 @@ class clock extends React.Component {
 - [ ] Remove the render method
 - [x] Capitalize `clock`
 
-**Explanation:** In JSX, lower-case tag names are considered to be HTML tags.
-Read [this article](https://reactjs.org/docs/jsx-in-depth.html#html-tags-vs.-react-components)
+Read [this article](https://reactjs.org/docs/jsx-in-depth.html#html-tags-vs.-react-components)**Explanation:** In JSX, lower-case tag names are considered to be HTML tags.
 
 #### Q42. Which Hook could be used to update the document's title?
 
@@ -557,7 +565,7 @@ class Ticker extends React.component {
 - [ ] state
 - [ ] state.count
 
-#### Q53. Per the following code, when is the Hello component displayed?
+#### Q53. Per the following code, when is the Hello component assigned to greeting?
 
 ```javascript
 const greeting = isLoggedIn ? <Hello /> : null;
@@ -608,7 +616,7 @@ const Star = ({ selected = false }) => <Icon color={selected ? 'red' : 'grey'} /
 - [x] grey
 - [ ] white
 
-#### Q58. What is the difference between the click behaviors of these two buttons(assuming that this.handleClick is bound correctly)
+#### Q58. What is the difference between the click behaviors of these two buttons(assuming that this.handleClick is not bound correctly)
 
 ```javascript
   A. <button onClick=this.handleClick>Click Me</button>
@@ -654,6 +662,8 @@ const Star = ({ selected = false }) => <Icon color={selected ? 'red' : 'grey'} /
   <About path="/:id" />
 </Route>
 ```
+
+[Reference](https://reactrouter.com/en/main/components/route)
 
 #### Q60. Which class-based component is equivalent to this function component?
 
@@ -744,7 +754,9 @@ useEffect(() => {
 - [ ] render
 - [ ] componentDidUpdate
 
-#### Q65. What is the name of this component?
+[Reference](https://reactjs.org/docs/react-component.html#componentdidmount)
+
+#### Q65. What is the name of the base component of this component?
 
 ```javascript
 class Comp extends React.Component {
@@ -754,12 +766,10 @@ class Comp extends React.Component {
 }
 ```
 
-- [x] Comp
+- [ ] Comp
 - [ ] h1
 - [ ] React.Component
-- [ ] Component
-
-This question might be an updated version of Q37.
+- [x] Component
 
 #### Q66. When using a portal, what is the first argument?
 
@@ -792,8 +802,8 @@ From official docs: [Hooks-State](https://reactjs.org/docs/hooks-state.html#:~:t
 #### Q68. What is the use of map function below?
 
 ```javascript
-const database = [user1:{},user2:{},user3:{}];
-database.map((user)=><h1>user.data</h1>);
+const database = [{ data: 1 }, { data: 2 }, { data: 3 }];
+database.map((user) => <h1>{user.data}</h1>);
 ```
 
 - [ ] gives a map of all the entries in database
@@ -855,7 +865,7 @@ const MyComponent = ({ children }) => (
 - [ ] undefined
 - [x] 2
 
-#### Q73. What is this pattern called?
+#### Q73. What is this assignment pattern called?
 
 ```javascript
 const [count, setCount] = useState(0);
@@ -964,6 +974,8 @@ class StarTrekkin extends React.Component {
 - [ ] react-gen
 - [ ] react-start
 
+[hint](https://create-react-app.dev/)
+
 #### Q83. What is the browser extension called that React developers use to debug applications?
 
 - [x] React Developer Tools
@@ -994,7 +1006,9 @@ class StarTrekkin extends React.Component {
 
 #### Q87. How do you add an id of heading to the following h1 element?
 
-`let dish = <h1>Mac and Cheese</h1>; `
+```javascript
+let dish = <h1>Mac and Cheese</h1>;
+```
 
 - [ ] `let dish = <h1 id={heading}>Mac and Cheese</h1>;`
 - [x] `let dish = <h1 id="heading">Mac and Cheese</h1>;`
@@ -1003,7 +1017,7 @@ class StarTrekkin extends React.Component {
 
 #### Q88. What value of button will allow you to pass the name of the person to be hugged?
 
-```
+```javascript
 class Huggable extends React.Component {
   hug(id) {
     console.log("hugging " + id);
@@ -1042,7 +1056,7 @@ This question test knowledge of react class components. You need to use `this` i
 
 #### Q91. In this function, which is the best way to describe the Dish component?
 
-```
+```javascript
 function Dish() {
   return (
     <>
@@ -1065,6 +1079,8 @@ function Dish() {
 - [ ] right after the component is updated
 - [ ] right after an API call
 
+[Reference](https://reactjs.org/docs/react-component.html#componentdidmount)
+
 #### Q93. What might you use webpack for?
 
 - [ ] to fetch remote dependencies used by your app
@@ -1083,7 +1099,7 @@ function Dish() {
 
 #### Q95. How would you modify the constructor to fix this error: "ReferenceError: Must call super constructor in derived class before accessing 'this'..."?
 
-```
+```javascript
 class TransIsBeautiful extends React.Component {
   constructor(props){
   // Missing line
@@ -1149,7 +1165,7 @@ add();
 
 [Reference](https://reactjs.org/docs/refs-and-the-dom.html)
 
-#### Q100. What pattern is being used in this code?
+#### Q100. What pattern is being used in this code block?
 
 ```javascript
 const { tree, lake } = nature;
@@ -1161,3 +1177,36 @@ const { tree, lake } = nature;
 - [x] destructuring assignment
 
 [Reference](https://javascript.info/destructuring-assignment)
+
+#### Q101. How would you correct this code block to make sure that the sent property is set to the Boolean value false?
+
+```javascript
+ReactDom.render(
+  <Message sent=false />,
+  document.getElementById("root")
+);
+```
+
+- [x] A
+
+```javascript
+<Message sent={false} />,
+```
+
+- [ ] B
+
+```javascript
+ReactDom.render(<Message sent="false" />, document.getElementById('root'));
+```
+
+- [ ] C
+
+```javascript
+<Message sent="false" />,
+```
+
+- [ ] D
+
+```javascript
+ReactDom.render(<Message sent="false" />, document.getElementById('root'));
+```

@@ -3,8 +3,8 @@
 #### Q1. According to the shared responsibility model, which cloud computing model places the most responsibility on the cloud service provider (CSP)?
 
 - [ ] Hybrid Cloud
-- [ ] Software as a Service (SaaS)
-- [x] Platform as a Service (PaaS)
+- [x] Software as a Service (SaaS)
+- [ ] Platform as a Service (PaaS)
 - [ ] Infrastructure as a Service (IaaS)
 
 #### Q2. Which option removes the risk of multitenancy in cloud computing?
@@ -83,7 +83,7 @@ An intrusion detection system (`IDS`) is a device or software application that m
 - [ ] password spray attack
 - [ ] brute force attack
 
-A rainbow table attack is a more efficient and effective way of cracking many hashed passwords, whereas brute-forcing would take much longer and may not complete in a reasonable amount of time.
+`A rainbow table attack is a more efficient and effective way of cracking many hashed passwords, whereas brute-forcing would take much longer and may not complete in a reasonable amount of time.`
 
 [Professor Messer](https://www.professormesser.com/free-a-plus-training/220-1002/brute-force-attacks-3).
 
@@ -124,7 +124,7 @@ A rainbow table attack is a more efficient and effective way of cracking many ha
 - [ ] Cloud Workload Protection Platforms (CWPP)
 - [ ] Cloud Access Security Brokers (CASBs)
 
-#### Q17. **\_\_\_\_\_** validates the integrity of data files.
+#### Q17. **\_** validates the integrity of data files.
 
 - [ ] Compression
 - [x] Hashing
@@ -187,7 +187,7 @@ A rainbow table attack is a more efficient and effective way of cracking many ha
 - [x] Mobile Device Management (MDM)
 - [ ] Data Loss Prevention (DLP)
 - [ ] Intrusion Detection and Prevention System (IDPS)
-- [ ] cloud access security broker (CASB)
+- [ ] Cloud Access Security Broker (CASB)
 
 #### Q26. How many keys would be necessary to accomodate 100 users in an asymmetric cryptography system?
 
@@ -203,7 +203,7 @@ A rainbow table attack is a more efficient and effective way of cracking many ha
 - [ ] Federal Information Security Managment Act (FISMA)
 - [x] Payment Card Industry Data Security Standard (PCI-DSS)
 - [ ] General Data Protection Regulation (GDPR)
-- [ ] International Organization for Standardization and Internation Electronical Commission (ISO/IEC 27018)
+- [ ] International Organization for Standardization and International Electrotechnical Commission (ISO/IEC 27018)
 
 **Explanation**: The Payment Card Industry Data Security Standard (`PCI DSS`) is the global card industry security standard that is **required of all entities** that store, process, or transmit cardholder data, including financial institutions, online retailers and service providers.
 
@@ -216,7 +216,7 @@ A rainbow table attack is a more efficient and effective way of cracking many ha
 - [x] common vulnerabilties and exposures
 - [ ] common vulnerability scoring system
 
-**Explaination**: The Common Vulnerabilities and Exposures (`CVE`) system provides a reference-method for publicly known information-security vulnerabilities and exposures.
+**Explanation**: The Common Vulnerabilities and Exposures (`CVE`) system provides a reference-method for publicly known information-security vulnerabilities and exposures.
 
 #### Q29. Which type of application can intercept sensative information such as passwoprds on a network segment?
 
@@ -395,10 +395,10 @@ autopsy is for forensic analysis
 
 #### Q51. You have recovered a server that was compromised in a malware attack to its previous state. What is the final step in the incident response process?
 
-- [x] Eradication / Remediation
+- [ ] Eradication / Remediation
 - [ ] Certification
 - [ ] Reporting
-- [ ] Lessons Learned
+- [x] Lessons Learned
 
 #### Q52. Which encryption type uses a public and private key pair for encrypting and decrypting data?
 
@@ -598,10 +598,10 @@ autopsy is for forensic analysis
 
 #### Q79. You are implementing a cybersecurity program in your organization and want to use the "de facto standard" cybersecurity framework. Which option would you choose?
 
-- [ ] the ISACA Cypersecurity Framework
-- [ ] the COBIT Cypersecurity Framework
-- [ ] the ISC2 Cypersecurity Framework
-- [x] the NIST Cypersecurity Framework
+- [ ] the ISACA Cybersecurity Framework
+- [ ] the COBIT Cybersecurity Framework
+- [ ] the ISC2 Cybersecurity Framework
+- [x] the NIST Cybersecurity Framework
 
 #### Q80. In 2014, 4,278 IP addresses of zombie computers were used to flood a business with over one million packets per minute for about one hour. What is this type of attack called?
 
@@ -698,7 +698,7 @@ What are the primary goals of the digital signature in this scenario? (Choose th
 - [x] defense-in-depth
 - [ ] least privilege
 
-[Explanation:](https://en.wikipedia.org/wiki/Defense_in_depth_(computing))
+[Explanation:](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)
 
 #### Q91. Which option describes a core principle of DevSecOps?
 
@@ -724,28 +724,28 @@ What are the primary goals of the digital signature in this scenario? (Choose th
 #### Q94. How can a data retention policy reduce your organization's legal liability?
 
 - [ ] by reducing DLP licensing costs
-- [ ] by ensuring that data is not retained beyond its necessary retention date
+- [x] by ensuring that data is not retained beyond its necessary retention date
 - [ ] by destroying data that may implicate company executives in dishonest behavior
 - [ ] by reducing cost associated with data storage and protection
 
 #### Q95. You believe a recent service outage due to a denial-of-service attack from a disgruntled inside source. What is the name for the malicious act this employee has committed?
 
 - [ ] espionage
-- [x] sabotage (not too much sure)
+- [x] sabotage
 - [ ] fraud
 - [ ] confidentiality breach
 
 #### Q96. Which option is a framework widely utilized by organizations in the development of security governance standards?
 
 - [ ] Software Capability Maturity Model (SW-CMM)
-- [x] Control Objectives for Information and Related Technologies (COBIT) (not too much sure)
+- [x] Control Objectives for Information and Related Technologies (COBIT)
 - [ ] The Open Group Architecture Framework (TOGAF)
 - [ ] Software Development Life Cycle (SDLC)
 
 #### Q97. There are connection-oriented and connectionless protocols in networking. What do web browsers use to ensure the integrity of the data it sends and receives?
 
 - [ ] UDP that is connection-oriented
-- [x] TCP that is connection-oriented (not too much sure)
+- [x] TCP that is connection-oriented
 - [ ] UDP that is connectionless
 - [ ] TCP that is connectionless
 
@@ -782,8 +782,8 @@ What is the next step you should take to best fulfill your responsibilities and 
 #### Q102. You are researching probable threats to your company’s internet-facing web applications. Which organization should you reference as an authoritative source for information on web-based attack vectors?
 
 - [ ] EC-Council
-- [ ] ISACAISACA
-- [ ] NISTNIST
+- [ ] ISACA
+- [ ] NIST
 - [x] OWASP
 
 [Explanation:](https://www.imperva.com/learn/application-security/application-security/)
@@ -797,7 +797,7 @@ What is the next step you should take to best fulfill your responsibilities and 
 
 [Explanation:](https://www.law.com/njlawjournal/2021/12/03/zero-trust-security-moving-from-trust-but-verify-to-never-trust-always-verify/?slreturn=20220417191235)
 
-#### Q104. **\_\_\_\_\_** attacks can execute the code injected by attackers as part of user inputs.
+#### Q104. **\_** attacks can execute the code injected by attackers as part of user inputs.
 
 - [ ] Ping of death
 - [x] Buffer overflow
@@ -808,7 +808,7 @@ What is the next step you should take to best fulfill your responsibilities and 
 
 - [ ] identifying and valuing assets
 - [ ] analyzing risks by criticality and cost
-- [x] discontiniuing activities that introduce risk
+- [x] discontinuing activities that introduce risk
 - [ ] identifying threats and analyzing vulnerabilities
 
 #### Q106. In response to an alert regarding a possible security incident, you are analyzing the logs for a web application. In the process, you see the following string: `./../../../var/secrets` What type of attack was most likely attempted against the application?
@@ -820,9 +820,32 @@ What is the next step you should take to best fulfill your responsibilities and 
 
 #### Q107. Which quadrant should be the focus of risk management?
 
-![Which quadrant should be the focus of risk management?](Q107-risk-quadrant.jpg)
+- ![Which quadrant should be the focus of risk management?](Q107-risk-quadrant.jpg)
 
 - [x] 2
 - [ ] 1
 - [ ] 3
 - [ ] 4
+
+#### Q108. Which option will not actively identify a secuirty incident?
+
+- [ ] Extended Detection and Response (XDR)
+- [x] Cloud Security Posture Management (CSPM)
+- [ ] Security Information Event Management (SEIM)
+- [ ] Endpoint Detection and Response (EDR)
+
+#### Q109. A website is asking for a password and also sending an authentication code to your phone. What factors are used in this multi-factor authentication scenario?
+
+- [x] what you have and what you do
+- [ ] what you know and what you are
+- [ ] what you have and what you know
+- [x] what you do and what you know
+
+[Explanation:](https://www.investopedia.com/terms/t/twofactor-authentication-2fa.asp)
+
+#### Q110. Which option is a list of publicly dsclosed information security defects?
+
+- [ ] DBIR
+- [ ] CVE
+- [ ] CWE
+- [ ] CERT

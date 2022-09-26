@@ -42,7 +42,7 @@
 
 #### Q3. You are converting your HTML file into XHTML Strict. Which code snippet will validate without errors?
 
-- [ ]
+- [ ] :
   ```xml
   <html xmlns="http://www.w3.org/1999/xhtml">
       <head><title>XHTML Example</title></head>
@@ -51,7 +51,7 @@
       </body>
   </html>
   ```
-- [ ]
+- [ ] :
   ```xml
   <html xmlns="http://www.w3.org/1999/xhtml">
       <head><title>XHTML Example</title></head>
@@ -60,7 +60,7 @@
       </body>
   </html>
   ```
-- [ ]
+- [ ] :
   ```xml
   <html xmlns="http://www.w3.org/1999/xhtml">
       <head><title>XHTML Example</title></head>
@@ -69,7 +69,7 @@
       </body>
   </html>
   ```
-- [x]
+- [x] :
   ```xml
   <html xmlns="http://www.w3.org/1999/xhtml">
       <head><title>XHTML Example</title></head>
@@ -297,7 +297,7 @@
 </cars>
 ```
 
-- [ ] A
+- [ ] :
 
 ```xquery
 <ul>
@@ -310,7 +310,7 @@
 </ul>
 ```
 
-- [ ] B
+- [ ] :
 
 ```xquery
 <ol>
@@ -323,7 +323,7 @@
 </ol>
 ```
 
-- [ ] C
+- [ ] :
 
 ```xquery
 <ul>
@@ -336,7 +336,7 @@
 </ul>
 ```
 
-- [x] D
+- [x] :
 
 ```xquery
 <ol>
@@ -489,7 +489,7 @@ NOTE: [XPather](http://xpather.com/) shows that all answers are incorrect. Repor
 </cars>
 ```
 
-- [ ]
+- [ ] :
 
 ```css
 cars {
@@ -503,7 +503,7 @@ car(year) {
 }
 ```
 
-- [x]
+- [x] :
 
 ```css
 car,
@@ -518,7 +518,7 @@ year {
 }
 ```
 
-- [ ]
+- [ ] :
 
 ```css
 cars {
@@ -532,7 +532,7 @@ car.year {
 }
 ```
 
-- [ ]
+- [ ] :
 
 ```css
 cars {
@@ -579,3 +579,32 @@ car#year {
 - [ ] entities
 - [x] elements
 - [ ] attributes
+
+#### Q44. In the XML DOM,what is the `setAttribute()` an example of?
+
+- [ ] node
+- [ ] function
+- [x] method
+- [ ] property
+
+#### Q45. What is not one of the advantages of the XML DOM?
+
+- [ ] The XML DOM is language and platform independent.
+- [ ] The XML DOM is modifiable and dynamic.
+- [ ] The XML DOM is easy to navigate around to find specific information.
+- [x] The XML DOM is efficient with memory and operation speed.
+
+#### Q46. In the XML DOM, which property is best to use to loop through each of the <car> nodes i nthe code snippet below?
+
+```xml
+<cars>
+    <car><make>Cadillac</make><model>Escalade</model><year>2007</year></car>
+    <car><make>Ford</make><model>Mustang</model><year>1968</year></car>
+    <car><make>Mercedes</make><model>C-Class</model><year>2006</year></car>
+</cars>
+```
+
+- [ ] `nextChild`
+- [ ] `nextSibling`
+- [x] `nodeValue`
+- [ ] `nodename`

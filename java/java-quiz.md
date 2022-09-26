@@ -975,7 +975,7 @@ try {
 
 [Reference](http://erpbasic.blogspot.com/2012/01/inheritance-advantages-and.html#:~:text=Main%20disadvantage%20of%20using%20inheritance,used%20independent%20of%20each%20other.&text=4.,case%20of%20using%20that%20method.)
 
-#### Q64. Declare and initialize an array of 10 ints.
+#### Q64. How would you declare and initialize an array of 10 ints?
 
 - [ ] `Array<Integer> numbers = new Array<Integer>(10);`
 - [ ] `Array[int] numbers = new Array[int](10);`
@@ -1254,9 +1254,8 @@ class TaxCalculator {
 
 **Note:** This code won't compile, broken code sample
 
-[Reference](https://www.geeksforgeeks.org/static-methods-vs-instance-methods-java/)
-
-[Code sample](https://replit.com/@mattheweller/EverlastingShadyBraces#TaxCalculator.java)
+1. [Reference](https://www.geeksforgeeks.org/static-methods-vs-instance-methods-java/)
+2. [Code sample](https://replit.com/@mattheweller/EverlastingShadyBraces#TaxCalculator.java)
 
 #### Q89. Which characteristic does not apply to instances of java.util.HashSet=
 
@@ -1406,6 +1405,8 @@ class Lambo extends Car {
 - [ ] String
 - [ ] double
 - [x] BigDecimal
+
+[Reference](https://www.scaler.com/topics/java/primitive-data-types/#types-of-primitive-data-types-in-java)
 
 #### Q101. Which statement about constructors is not ture?
 
@@ -1905,7 +1906,7 @@ for(int i=0; i<30; i+=x) {}
 - [ ] 1
 - [ ] 0
 
-#### Q129. The **\_** runs copmpiled Java code, while the **\_** compiles Java files.
+#### Q129. The **\_** runs compiled Java code, while the **\_** compiles Java files.
 
 - [ ] IDE; JRE
 - [ ] JDK; IDE
@@ -1922,3 +1923,101 @@ for(int i=0; i<30; i+=x) {}
 - [x] All above
 
 [Reference](https://docs.oracle.com/en/java/javase/11/docs/api/allpackages-index.html)
+
+#### Q131. What values for x and y will cause this code to print "btc"?
+
+```java
+String buy = "bitcoin";
+System.out.println(buy.substring(x, x+1) + buy.substring(y, y+2))
+```
+
+- [x] int x = 0; int y = 2;
+- [ ] int x = 1; int y = 3;
+- [ ] int x = 0; int y = 3;
+- [ ] int x = 1; int y = 3;
+
+#### Q132. Which keyword would you add to make this method the entry point of the program?
+
+- [ ] exception
+- [ ] args
+- [x] static
+- [ ] String
+
+[Reference](https://www.geeksforgeeks.org/java-main-method-public-static-void-main-string-args/)
+
+#### Q133. You have a list of Bunny objects that you want to sort by weight using Collections.sort. What modification would you make to the Bunny class?
+
+- [x] Implement the comparable interface by overriding the compareTo method.
+- [ ] Add the keyword default to the weight variable.
+- [ ] Override the equals method inside the Bunny class.
+- [ ] Implement Sortable and override the sortBy method.
+
+[Reference](https://www.geeksforgeeks.org/how-to-override-compareto-method-in-java/)
+
+#### Q134. Identify the incorrect Java feature.
+
+- [ ] Object oriented
+- [x] Use of pointers
+- [ ] Dynamic
+- [ ] Architectural neural
+
+[Reference](https://www.interviewbit.com/blog/features-of-java/)
+
+#### Q135. What is the output of this code?
+
+```java
+int yearsMarried = 2;
+switch (yearsMarried) {
+   case 1:
+      System.out.println("paper");
+   case 2:
+      System.out.println("cotton");
+   case 3:
+      System.out.println("leather");
+   default:
+      System.out.println("I don't gotta buy gifts for nobody!");
+}
+```
+
+- [ ] cotton
+- [ ] cotton <br> leather
+- [x] cotton <br> leather <br> I don't gotta buy gifts for nobody!
+- [ ] cotton <br> I don't gotta buy gifts for nobody!
+
+#### Q136. What language feature do these expressions demonstrate?
+
+```System.out::println
+Doggie::fetch
+```
+
+- [ ] condensed invocation
+- [ ] static references
+- [x] method references
+- [ ] bad code
+
+#### Q137. What is the difference between the wait() and sleep methods?
+
+- [ ] Only Threads can wait, but any Object can be put to sleep.
+- [ ] A wait can be woken up by another Thread calling notify whereas a sleep cannot.
+- [x] When things go wrong, sleep throws an IllegalMonitorStateException whereas wait throws an InterruptedException.
+- [ ] Sleep allows for multi-threading whereas wait does not.
+
+#### Q138. Which is the right way to declare an enumeration of cats?
+
+- [ ] enum Cats (SPHYNX, SIAMESE, BENGAL);
+- [ ] enum Cats ("sphynx", "siamese", "bengal");
+- [x] enum Cats {SPHYNX, SIAMESE, BENGAL}
+- [ ] enum Cats {"sphynx","siamese","bengal}
+
+#### Q139. What happens when this code is run?
+
+```java
+List<String> horses = new ArrayList<String>();
+horses.add (" Sea Biscuit ");
+System.out.println(horses.get(1).trim());
+```
+
+- [ ] "Sea Biscuit" will be printed.
+- [ ] " Sea Biscuit " will be printed.
+- [x] An IndexOutOfBoundsException will be thrown.
+- [ ] A NullPointerException will be thrown.

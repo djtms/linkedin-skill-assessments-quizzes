@@ -299,6 +299,8 @@
 - [ ] help files
 - [ ] default settings
 
+[Reference](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)
+
 #### Q32. After installing MySQL, it may be necessary to initialize the \_ which may be done automatically with some MySQL installation methods.
 
 - [ ] storage engine
@@ -343,12 +345,12 @@
 - [ ] show access
 - [ ] show user permissions
 
-#### Q38. What table cannot have a trigger associated with it?
+#### Q38. What cannot have a trigger associated with it?
 
-- [ ] temporary
-- [x] system
-- [ ] large
-- [ ] new
+- [ ] temporary table
+- [x] system table
+- [ ] large table
+- [ ] new table
 
 #### Q39. later versions of mysql support the native json data type for storing json documents. What is a drawback of json columns?
 
@@ -368,10 +370,10 @@
 
 #### Q41. Which statement can you use to load data from a file into the table?
 
-- [ ] cat file|mysql
-- [x] load data infile (correct if the file is already on the server)
-- [ ] load data local infile (also correct but only if the file is from the client)
-- [ ] extended insert statement
+- [ ] `cat file | mysql`
+- [x] `LOAD DATA INFILE`
+- [ ] `LOAD DATA LOCAL INFILE`
+- [ ] `extended INSERT statement`
 
 #### Q42. You are working with the tables as shown in this diagram. You need to make sure that any record added to the purchases table consists of a customerID, which already exists in the customers table, and a carID, which already exists in the cars table. You decide to use a trigger to do the validation. Which one do you use?
 
@@ -416,10 +418,13 @@ Note that the question is about _getting_ the data and not about the _duplicatin
 
 #### Q46. You manage a database with a table "customers". You created a temporary table also called "customers" with which you are working for the duration of your session. You need to recreate the temporary table with different specs. Which command do you need to run first?
 
-- [ ] `create temporary table customers;`
-- [ ] `drop temp table customers;`
-- [ ] `drop table customers;`
-- [x] `drop temporary table customers;`
+- [ ] `CREATE TEMPORARY TABLE customers;`
+- [ ] `DROP TEMP TABLE customers;`
+- [ ] `DROP TABLE customers;`
+- [x] `DROP TEMPORARY TABLE customers;`
+
+1. [reference](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)
+2. [reference](https://www.mysqltutorial.org/mysql-temporary-table)
 
 #### Q47. You need to run a complex query with recursive subqueries, but without creating a stored procedure or a function. Which command or clause do you use?
 
@@ -615,14 +620,15 @@ Note: the last option is valid too but the results will be enclosed with quotati
 
 #### Q67. You are working with the table in this diagram. You want to use full-text search to find the customers who live on a street or a drive. What is the command to do that?
 
-Table name: customers
-| ID | lastname | firstname | phone | address | city | state | zip |
+Table name: **customers**
+
+| ID   | lastname | firstname | phone        | address             | city        | state | zip   |
 | ---- | -------- | --------- | ------------ | ------------------- | ----------- | ----- | ----- |
-| A001 | Smith | Bob | 212-555-1212 | 1001 1st Street | New York | NY | 10001 |
-| A002 | Chang | John | 213-555-5678 | 888 Rodeo Drive | Los Angeles | CA | 90210 |
-| A003 | Smith | Mary | 999-999-9999 | 123 Main Street | Anytown | VA | 12345 |
-| A004 | Johnson | Jack | 312-312-3120 | 1111 Chicago Avenue | Chicago | IL | 60606 |
-| A005 | Lopez | Linda | 737-777-3333 | 123 Main Street | Austin | TX | 73344 |
+| A001 | Smith    | Bob       | 212-555-1212 | 1001 1st Street     | New York    | NY    | 10001 |
+| A002 | Chang    | John      | 213-555-5678 | 888 Rodeo Drive     | Los Angeles | CA    | 90210 |
+| A003 | Smith    | Mary      | 999-999-9999 | 123 Main Street     | Anytown     | VA    | 12345 |
+| A004 | Johnson  | Jack      | 312-312-3120 | 1111 Chicago Avenue | Chicago     | IL    | 60606 |
+| A005 | Lopez    | Linda     | 737-777-3333 | 123 Main Street     | Austin      | TX    | 73344 |
 
 - [ ] A
 
@@ -987,9 +993,9 @@ Table name: superheroes
 
 #### Q102. Which choice is an example of an aggregate function?Which choice is an example of an aggregate function?
 
-- [ ] NOW()NOW()
-- [ ] MID()MID()
-- [ ] FORMAT()FORMAT()
+- [ ] NOW()
+- [ ] MID()
+- [ ] FORMAT()
 - [x] COUNT()
 
 [Reference](https://www.sqltutorial.org/sql-aggregate-functions/)
@@ -1004,3 +1010,24 @@ Table name: superheroes
 - [ ] USE OLD.address
 
 [Reference](https://dev.mysql.com/doc/refman/8.0/en/trigger-syntax.html)
+
+#### Q104. You are working with the tables as shown in this diagram. You need to generate the list of customers who purchased certain car models. Which SQL clause do you use?
+
+- [ ] UNION ALL
+- [x] UNION
+- [ ] SHOW TOTALS
+- [ ] WITH ROLLUP
+
+#### Q105. You are managing a database with a table called "customers". You created a temporary table also called "customers" with which you are working for the duration of your session. You need to re-create the temporary table with different specifications. Which command do you need to run first?
+
+- [ ] `CREATE TEMPORARY TABLE customers;`
+- [ ] `DROP TEMP TABLE customers;`
+- [ ] `DROP TEMPORARY TABLE customers;`
+- [x] `DROP TABLE customers;`
+
+#### Q106. How would you make a case-insensitive query in MySQL?
+
+- [ ] `SELECT * FROM customers WHERE UPPEERCASE(LastName) = 'POTTER';`
+- [ ] `SELECT * FROM customers WHERE LOWERCASE(LastName) = 'potter';`
+- [x] `SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`
+- [ ] `SELECT * FROM customers WHERE UPPER(LastName) = 'Potter';`

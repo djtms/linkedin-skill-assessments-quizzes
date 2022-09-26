@@ -591,6 +591,10 @@ fun main() {
 - [ ] The reference to name needs to be scoped to the class, so it should be `this.name`
 - [x] Classes cannot be immutable. You need to change `var` to `val`
 
+Note: By default, constructor parameters can only be used in the initializer blocks or property initializers declared in the class body. Therefore, to let the `greet` function have access to the `name` parameter, it should be declared as a property: `class Cat (val name: String) { ... }`
+
+[reference](https://kotlinlang.org/docs/classes.html#constructors)
+
 #### Q46. The code below shows a typical way to show both index and value in many languages, including Kotlin. Which line of code shows a way to get both index and value more idiomatically?
 
 ```kotlin
@@ -1057,7 +1061,8 @@ names[3]= "Delta"
 - [ ] It can be omitted if secondary constructors are defined.
 - [x] It can be omitted when the primary constructor does not have any modifiers or annotations.
 
-[article](https://www.baeldung.com/kotlin/constructors#:~:text=In%20some%20cases%2C%20we%20can,default%20parameters%20in%20the%20constructors.) - [reference](https://kotlinlang.org/docs/classes.html#constructors)
+1. [article](https://www.baeldung.com/kotlin/constructors#:~:text=In%20some%20cases%2C%20we%20can,default%20parameters%20in%20the%20constructors.)
+2. [reference](https://kotlinlang.org/docs/classes.html#constructors)
 
 #### Q81. How many different kinds of constructors are available for kotlin classes?
 
@@ -1129,3 +1134,12 @@ fun main() {
 - [ ] val lessThan99 = listOf{1..99}.asSequence().toList()
 
 [reference](https://kotlinlang.org/docs/sequences.html#from-a-function)
+
+#### Q88. What is wrong with this class definition?
+
+- [x] The class is properly defined, so nothing is wrong with it.
+- [ ] The parentheses are missing-it should be declared as class Empty().
+- [ ] Empty is a Kotlin keyword, so the code will generate an error when compiled.
+- [ ] The curely braces are missing from the declaration of Empty.
+
+[reference](https://kotlinlang.org/docs/classes.html)

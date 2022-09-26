@@ -594,7 +594,7 @@ End Sub
 - [ ] Declare SubB as Sub SubB(ByRef MyVar).
 - [ ] Declare SubB as Sub SubB(MyVar).
 - [ ] Declare SubB as Sub SubB(Static MyVar).
-- [ ] Declare SubB as Sub SubB(ByVal MyVar).
+- [x] Declare SubB as Sub SubB(ByVal MyVar).
 
 #### Q42. Which procedure declaration is syntactically correct?
 
@@ -628,9 +628,9 @@ As Variant, Optional VarC as Long)
 
 #### Q43. What are the two principal kinds of procedure in VBA?
 
-- [ ] Function and EventFunction and Event
-- [ ] Function and ScopeFunction and Scope
-- [ ] Subroutine and EventSubroutine and Event
+- [x] Function and Event
+- [ ] Function and Scope
+- [ ] Subroutine and Event
 - [ ] Subroutine and Function
 
 #### Q44. Which code block compiles without error?
@@ -645,7 +645,7 @@ As Variant, Optional VarC as Long)
 - [ ] `= CountValues= CountValues`
 - [ ] `| CountValues| CountValues`
 - [ ] `: CountValues: CountValues`
-- [ ] `? CountValues? CountValues`
+- [x] `? CountValues? CountValues`
 
 #### Q46. At which level can you declare a variable in this way: Private TopSecret As String?
 
@@ -659,7 +659,7 @@ As Variant, Optional VarC as Long)
 - [ ] Show the form with this statement: UserForm1.Show vbModal.
 - [ ] Set the user form's SpecialEffect property to frmShowModal.
 - [ ] Include this statement in the code: `UserForm1.Hwnd = False.`
-- [ ] Set the user form's ShowModal property to False.
+- [x] Set the user form's ShowModal property to False.
 
 #### Q48. SubA passes MyVar to SubB. How can you ensure that MyVar has its original value when control returns to SubA?
 
@@ -682,7 +682,7 @@ End Sub Sub Example() Dim MyArr() As Variant ReDim MyArr(3, 4) 'some code ReDim 
 
 #### Q50. Which block of code ends with the variable i equal to 5 and the variable X equal to 10?
 
-- [ ]
+- [ ] :
 
 ```
 Do
@@ -692,7 +692,7 @@ Loop Until i < 5
 End Sub
 ```
 
-- [ ]
+- [ ] :
 
 ```
 Sub Loopi()
@@ -703,7 +703,7 @@ Next I
 End Sub
 ```
 
-- [ ]
+- [ ] :
 
 ```
 Sub Loopi()
@@ -715,7 +715,7 @@ Loop
 End Sub
 ```
 
-- [ ]
+- [ ] :
 
 ```
 Sub Loopi()
@@ -726,3 +726,55 @@ i = i + 1
 Loop While i < 5
 End Sub
 ```
+
+#### Q51. How does a class module indicate that it uses a particular interface?
+
+- [x] by means of the _Implemets_ keyword and the name of interface.
+- [ ] bymeans of the _Interface_ keyword and the name of the interface.
+- [ ] The name of the interface is passed as a parameter.
+- [ ] The interface itself is part of the class module.
+
+#### Q52. Which part of the VBE can help you explore VBA syntax?
+
+- [ ] Locals windows
+- [ ] object browser
+- [x] project explorer
+- [ ] optional dialog
+
+#### Q53. This code is trying to establish a new collection consisting of employee names and numbers. Assoc is a class. What statement is missing from the code?
+
+```
+Dim Associates As Collection, Assoc As CAssoc, i As Byte
+For i = 1 To 200
+    Set Assoc = New CAssoc
+    Assoc.Name = Cells(i,1)
+    Assoc.Number = Cells(i,2)
+    Associates.Add Assoc
+Next i
+```
+
+- [x] `Set Associates = New Collection`
+- [ ] `Set Associates = Collection`
+- [ ] `Redim(Associates(Associates.Count+1))`
+- [ ] `Redim(Associates _ (Unbound(Associates)+1))`
+
+#### Q54. What is the standard term for a variable or value that is passed from one subroutine or function to another?
+
+- [ ] reference
+- [ ] element
+- [x] argument
+- [ ] attribute
+
+#### Q55. What is the standard term for a variable or value that is passed from one subroutine or function to another?
+
+- [ ] reference
+- [ ] element
+- [x] argument
+- [ ] attribute
+
+#### Q56. Where is the event procedure named Worksheet_Change found?
+
+- [ ] in any standard code module
+- [ ] in the worksheet's object module
+- [ ] in the Worksheet_Change class module
+- [x] in the workbook's code module
