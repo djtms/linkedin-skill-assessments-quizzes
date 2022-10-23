@@ -740,3 +740,116 @@ Note: there are centres of clusters (C0, C1, C2).
 - [x] it might be unethical for the business to identify people without their consent
 - [ ] it will be difficult to decide between supervised and unsupervised learning
 - [ ] the image in the video would not be high quality enough to identify individuals
+
+#### Q97. Which of the following machine learning algorithms is unsupervised?
+
+- [ ] Random forest
+- [ ] k-nearest neighbors
+- [ ] Support-vector machines
+- [x] K- means
+
+Explanation:
+During training, k-means partitions observations into k clusters. During inference, it assigns a given data point to the nearest cluster by distance. k-means is unsupervised, because it doesn't require labeled data to be trained.
+
+#### Q98. Averaging the output of multiple decision trees helps to::
+
+- [ ] Increase variance
+- [ ] Increase bias
+- [x] Decrease variance
+- [ ] Decrease bias
+
+`//Averaging models leads to higher stability and a lower variance than individual models. Mathematically, remember that $Var(\bar{X})=\frac{Var(X)}{N}`
+
+#### Q99. To optimize your objective function, you are performing full batch gradient descent using the entire training set (not stochastic gradient descent). Is it required to shuffle your training set?
+
+- [ ] Yes. If you don't, the optimization will oscillate around the minimum at the end of training.
+- [ ] Yes, in order to help the model generalize to the test dataset.
+- [ ] No, it is not necessary because the dataset can already be considered shuffled from the data collection process.
+- [x] No, because each update passes through the entire dataset anyway and the order doesn't matter.
+
+`//At every iteration, full batch gradient descent uses the entire training set to compute a gradient. The order in which data is processed doesn't impact the gradient value.`
+
+At every iteration, full batch gradient descent uses the entire training set to compute a gradient. The order in which data is processed doesn't impact the gradient value.
+
+#### Q100. You've received 1,000,000 images and have split it in 96%/2%/2% between train, dev and test sets. You've trained your model, and analyzed the results. After working further on the problem, you’ve decided to correct the incorrectly labeled data on the dev set.
+
+Which of these statements do you agree with?
+
+- [x] You should also correct the incorrectly labeled data in the test set, so that the dev and test sets still come from the same distribution.
+- [ ] You should correct incorrectly labeled data in the training set as well so as to avoid your training set now being even more different from your dev set.
+- [ ] You should not correct the incorrectly labeled data in the test set, because the test set should reflect the data distribution of the real world.
+- [ ] If you want to correct incorrectly labeled data, you should do it on all three sets (train/dev/test) in order to maintain similar distributions.
+
+`//It is important that your dev and test set have the closest possible distribution to "real" data.`
+
+#### Q101. You're working on a binary classification task, to classify if an image contains a cat ("1") or doesn't contain a cat ("0"). What loss would you choose to minimize in order to train a model?
+
+- [ ] L = y log y^ + (1−y) log (1− y^)
+- [x] L = - y log y^ - (1−y) log (1− y^)
+- [ ] L = || y - y^ ||22
+- [ ] L = || y - y^ ||22 + constant
+
+`//You are trying to minimize the binary cross entropy loss over the training set..`
+
+### Q102. You want to create a machine learning algorithm that finds the top 100 people who have shared photographs of themselves on social media. What is the best machine learning method to use?
+
+- [ ] reinforcement learning
+- [x] binary classification
+- [ ] K-nearest neighbor
+- [ ] unsupervised learning
+
+### Q103. The famous data scientist Andrew Ng has been quoted as saying, "Applied machine learning is basically feature engineering." What is feature engineering?
+
+- [ ] scraping new features from web data
+- [x] creating new variables by combining and modifying the original variables
+- [ ] designing innovative new user features to add to software
+- [ ] using deep learning to find features in the data
+
+### Q104. In the context of calculus, what is df/dx?
+
+- [ ] the prediction function
+- [x] the derivative of f of x
+- [ ] the derivative of x
+- [ ] equivalent to f divided by x
+
+### Q105. What is a well-designed/well-fitted model?
+
+- [ ] one that has been trained and tested with the same data
+- [x] one that has a high degree of accuracy and is able to accurately predict results
+- [ ] one that has been trained with labeled training data
+- [ ] one that has been trained with an exhaustive set of all conditions and permutations in the training data
+
+### Q106. **\_**-based collaborative filtering occurs when a person is recommended an item similar to an item they have purchased.
+
+- [ ] History
+- [x] Item
+- [ ] Similarity
+- [ ] Purchase
+
+### Q107. Fill in the blanks: Two multivariate imputer techniques are the **\_** imputer and the **\_** imputer.
+
+- [ ] supervised, unsupervised
+- [x] iterative, KNN
+- [ ] similarity, regressive
+- [ ] normalized, scaled
+
+### Q108. You are working on a regression model using the Keras library. What method on the Model class do you use to train the model?
+
+- [ ] predict
+- [ ] compile
+- [x] fit
+- [ ] get_weights
+
+### Q109. What is the goal of regularization in the K nearest neighbors algorithm?
+
+- [ ] normalizing the data points so they can be compared with each other
+- [ ] using a straight line model to make predictions based on training data
+- [ ] finding the slope of the line that represents the model
+- [x] making the decision boundaries more regular
+
+### Q110. If there is no trend between two variables x and y, we say that there is a **\_** connection between x and y.
+
+- [ ] linear
+- [ ] exponential
+- [ ] non-random
+- [x] random

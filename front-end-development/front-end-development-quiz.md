@@ -210,8 +210,6 @@ h1 {
 
 #### Q24. Which style will change the color of the text?
 
-![A](images/Q24.png)
-
 ```html
 <cite>Noam Chomsky</cite>
 ```
@@ -539,7 +537,7 @@ console.log(currencies);
 
 [Source: MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
 
-#### Q56. What is the definition of the phrase “Time to Interactive”?
+#### Q56. What is the definition of the phrase "Time to Interactive"?
 
 - [ ] when the browser displays the first bit of content from the DOM
 - [x] when the user can consistently interact with all of the page elements
@@ -816,3 +814,19 @@ box {
 - [ ] data
 - [ ] src
 - [x] alt
+
+#### Q83.Which pseudo-class allows you to selectively show a focus ring on elements only if keyboard navigation is detected?
+
+- [ ] focus-show
+- [x] :focus-visible
+- [ ] :focus-ring
+- [ ] focus-keyboard
+
+[Reference](https://www.freecodecamp.org/news/focus-rings-for-keyboard-interactions-only/)
+
+#### Q84. To create a collection of radio buttons associated with the same field, each <input> tag must \_\_\_\_.
+
+- [ ] have the same value of the id attribute
+- [x] have the same value of the name attribute
+- [ ] belong to the same field set
+- [ ] have the same value of the class attribute

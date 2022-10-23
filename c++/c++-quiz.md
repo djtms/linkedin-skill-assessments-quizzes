@@ -1355,3 +1355,106 @@ sprite->x
 - [x] The compiler needs the data type to caculate the length of the pointed data (for reading and writing) and to calculate increments and decrements to the pointer.
 - [ ] The compiler needs the data type to make sure that the pointer is not going to be used on illegal non-pointable types such as functions, labels, pointers, and references.
 - [ ] The compiler needs the data type to know how much memory to allocate for the pointer, because different data types require different pointer lenghts.
+
+#### Q82. The default executable generation on UNIX for a C++ program is \_
+
+- [ ] a.exe
+- [ ] a
+- [x] a.out
+- [ ] out.a
+
+#### Q83. What will be the output of the following program?
+
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+int a=1;
+cout<<(a++)*(++a)<<endl;
+return 0;
+}
+```
+
+- [ ] 1
+- [ ] 2
+- [x] 3
+- [ ] 6
+
+#### Q84. What does "c" stands for in cout and cin.
+
+- [ ] compiler
+- [ ] console
+- [x] character
+- [ ] standard namespace
+
+#### Q85. What is the use of tellp ()?
+
+- [ ] Current Input Pointer position
+- [x] Current Output Pointer position
+- [ ] Last Input Pointer position
+- [ ] Last Output Pointer position
+
+#### Q86. What is callback function?
+
+- [ ] Pointer for a pointer
+- [x] Pointer for a function
+- [ ] function for a pointer
+- [ ] function for a class
+
+#### Q87. What is a correct syntax to output "Hello World" in C++?
+
+- [x] cout << "Hello World";
+- [ ] System.out.println("Hello World");
+- [ ] print("Hello World");
+- [ ] Console.WriteLine("Hello World");
+
+#### Q87. How many categories of iterators are there in C++ ?
+
+- [ ] 4
+- [ ] 3
+- [ ] 7
+- [x] 5
+
+#### Q88. What is the meaning of base class in C++ ?
+
+- [ ] It inherit other class
+- [ ] It has a pointer variable
+- [ ] It is the first class declared
+- [x] Another class got inherit from this class
+
+#### Q89. Size of C++ objects are expressed in terms of multiples of the size of a ** and the size of a char is **.
+
+- [ ] char, 4
+- [ ] float, 8
+- [ ] int, 1
+- [x] char, 1
+
+#### Q90. Implementation dependent aspects about an implementation can be found in
+
+- [ ] `<numeric>`
+- [ ] `<limit>`
+- [x] `<limits>`
+- [ ] `<implementation>`
+
+#### Q91. What is a default constructor?
+
+- [ ] a constructor that can be used with no arguments
+- [x] a contructor that does not have a return value
+- [ ] a constructor that is used by multiple classes
+- [ ] a constructor that initializes all members of a class
+
+#### Q92. When protecting a header file, why would you use '#pragma once' instead of 'include' guard?
+
+- [ ] There is no reason to choose because they serve different purposes
+- [ ] An include guard uses a macro to achieve single inclusion, but the compiler cannot prevent the programmer from defining that macro elsewhere, which would result in no inclusion at all
+      defining that macro elsewhere, which would result in no inclusion at all
+- [x] '#pragma once' guarantees that the header code will never be changed because it is enforced by the compiler
+- [ ] Include guards refer to the header file in the file system, not to the code, so they are not helpful if the header file exists
+      more than once in a project. This is not a problem with '#pragma once'
+      
+ #### Q93. Which of the following statement is valid?
+
+- [ ] We can create new c++ operator.
+- [ ] We can change the precedence of the c++ operator.
+- [x] We can not change the operator templates.
+- [ ] We can change the associativity of the c++ operators.

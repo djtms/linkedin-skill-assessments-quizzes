@@ -1027,3 +1027,23 @@ s="abcd"; s(3)='x'
 - [ ] abxd
 - [x] a 1x 3 string array
 - [ ] a run-time error
+
+#### Q71. In which case would you use varargin in a function you write?
+
+- [ ] You want to count the number of input arguments.
+- [x] You want to include optional input arguments.
+- [ ] You want the workspace variable names of the input arguments.
+- [ ] You want the data types of the input arguments.
+
+#### Q72. What does e contain?
+
+```
+c = [9 8 0];
+d = [0 0 1];
+e = union(c,d);
+```
+
+- [ ] `e = [0 0 1 9 8 0]`
+- [ ] `e = [9 8 0 0 0 1]`
+- [x] `e = [0 1 8 9]`
+- [ ] `e = [1 8 9]`

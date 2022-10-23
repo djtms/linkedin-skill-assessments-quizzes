@@ -152,10 +152,10 @@ end
 
 #### Q17. In Rails, how would you cache a partial template that is rendered?
 
-- [x] `render partial: ‘shared/menu’, cached: true`
-- [ ] `render_with_cache partial: ‘shared/menu’`
-- [ ] `render partial: ‘shared/menu’`
-- [ ] `render partial: ‘shared/menu’, cached_with_variables: {}`
+- [x] `render partial: 'shared/menu', cached: true`
+- [ ] `render_with_cache partial: 'shared/menu'`
+- [ ] `render partial: 'shared/menu'`
+- [ ] `render partial: 'shared/menu', cached_with_variables: {}`
 
 #### Q18. What is the reason for using Concerns in Rails?
 
@@ -856,7 +856,7 @@ end
 - [ ] The models used for STI must mix in the module `ActiveRecord::STI`
 - [ ] All models used for STI must include "self.abstract_class=true".
 - [ ] All database tables used for STI must be related to each other using a foreign key.
-- [ ] The database table used for STI must have a column named "type".
+- [x] The database table used for STI must have a column named "type".
 
 #### Q64. A way that views can share reusable code, such as formatting a date, is called a \_?
 
@@ -963,5 +963,57 @@ end
 
 - [ ] how many downloads it has on Ruby Toolbox
 - [ ] if it is well documented
-- [x] how long pull requess and issues stay open
+- [x] how long pull requests and issues stay open
 - [ ] the date it was first released
+
+#### Q72. What decides which controller receives which requests?
+
+- [ ] web server
+- [x] router
+- [ ] view
+- [ ] model
+
+#### Q73. Which statement about this code will always be true?
+
+```ruby
+class UserController < ActionController::Base
+  def show
+    @user = User.find_by_id(session[:user_id])
+    @user ||= User.first
+  end
+end
+```
+
+- [ ] The variable `@user` will be set to the object returned by `User.first` unless `session[:user_id]` has a value.
+- [ ] The result of `User.find_by_id` is irrelevant because the variable `@user` will always be set to the object returned by `User.first`.
+- [ ] If `User.find_by_id` does not raise an exception, the variable `@user` will be set to the object returned by `User.first`.
+- [ ] If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`.
+
+#### Q74. When defining a resource route, seven routes are defined by default. Which two methods allow defining additional routes on the resource?
+
+- [ ] only, except
+- [ ] match, resolve
+- [ ] action, path
+- [ ] member, collection
+
+#### Q75. You are rendering a partial with this code. What will display the user's name?
+
+`<%= render partial: 'user_info', object: { name: 'user' } %>`
+
+- [ ] `<%= locals.user_info.name %>`
+- [ ] `<%= object.name %>`
+- [ ] `<%= @user.name %>`
+- [ ] `<%= @user_info.name %>`
+
+#### Q76. Once this form is submitted, which code in the controller would retrieve the string for :name?
+
+```
+<%= form_for(@category) do |f| %>
+<%= f.text_field(:name) %>
+<% end %>
+```
+
+- [ ] `params[:name]`
+- [ ] `@params.name`
+- [ ] `params.require(:category).permit(:name)`
+- [ ] `params[:category][:name]`

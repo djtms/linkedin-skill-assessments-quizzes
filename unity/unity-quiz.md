@@ -7,13 +7,13 @@
 - [ ] Gizmos
 - [x] Play mode tint
 
-#### Q2. A developer executes the C# code below, which finds any game objects tagged as “enemy” in a start event. But the developer notices that, when executed, FindGameObjectsWithTag returns NULL even though the scene contains objects tagged as “Enemy”. What is a possible cause?
+#### Q2. A developer executes the C# code below, which finds any game objects tagged as "enemy" in a start event. But the developer notices that, when executed, FindGameObjectsWithTag returns NULL even though the scene contains objects tagged as "Enemy". What is a possible cause?
 
-`GameObject[] MyEnemies = GameObject.FindGameObjectsWithTag(“Enemy”);`
+`GameObject[] MyEnemies = GameObject.FindGameObjectsWithTag("Enemy");`
 
 - [ ] The objects are animated
 - [ ] The objects are on the UI layer
-- [ ] The objects are not named “Enemy”
+- [ ] The objects are not named "Enemy"
 - [x] The objects are deactivated
 
 #### Q3. What does this code sample achieve? Float Answer = Random.value \* 10f;
@@ -479,8 +479,10 @@ public class Health : MonoBehaviour
 
 - [ ] A Coroutines will continue running on deactivated objects
 - [ ] B All component scripts inherit from `MonoBehaviour`
-- [ ] C Only humanoid characters feature bones
+- [x] C Only humanoid characters feature bones
 - [ ] D The `Update` function is never called automatically while an object is deactivated
+
+[Reference](https://docs.unity3d.com/2017.3/Documentation/Manual/GenericAnimations.html)
 
 #### Q49. When is the `Reset` method of `MonoBehaviour` invoked automatially?
 
@@ -514,6 +516,6 @@ public class Health : MonoBehaviour
 #### Q52. Which C# code fragment continuously updates an object's yaw (Y rotation)?
 
 - [ ] `c# transform.localRotation *= Quaternion.Euler(0f, RotSpeed * Time.deltaTime, 0f);`
-- [ ] `c# transform.Rotate(Vector3.right, RotSpeed * Time.deltaTime);`
+- [x] `c# transform.Rotate(Vector3.right, RotSpeed * Time.deltaTime);`
 - [ ] `c# transform.RotateAround(Vector3.up, RotSpeed * Time.deltaTime);`
 - [ ] `c# transform.SetParent(null);`

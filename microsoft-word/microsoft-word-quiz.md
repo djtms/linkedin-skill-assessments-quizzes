@@ -718,7 +718,7 @@ D. Inserts and Deletions and Formatting are turned off in Show Markup.
 - [ ] Translate
 - [ ] Transform
 
-#### Q92. Which is not text wrapping option for a picture?
+#### Q92. Which is not a text wrapping option for a picture?
 
 - [x] justify
 - [ ] through
@@ -731,3 +731,38 @@ D. Inserts and Deletions and Formatting are turned off in Show Markup.
 - [x] In paragraph settings, click Line and Page Break > pagination and select Keep with next
 - [ ] In paragraph settings, click Line and Page Break > pagination and select keep lines together
 - [ ] In paragraph settings, click Line and Page Break > pagination and select Widow/Orphan control
+
+#### Q94. Double clicking in the left margin will \_ the paragraph to the right.
+
+- [ ] double indent
+- [x] select
+- [ ] delete
+- [ ] underline
+
+#### Q95. When using Track Changes, what formatting indicates that text has been deleted?
+
+- [x] strikethrough
+- [ ] wavy line
+- [ ] italic
+- [ ] underline
+
+#### Q96. What action allows you to quickly access a specific document from your list of saved files?
+
+- [ ] Pin to list
+- [ ] Add to chooser
+- [x] Mark as favorite
+- [ ] Drag to Home tab
+
+#### Q97. When you create a macro, you can assign it to a **\_**. (Select all that apply.)
+
+    A. keyboard shortcut
+    B. specific user
+    C. style pane
+    D. group on the ribbon
+
+- [ ] D
+- [x] A
+- [ ] A, C, D
+- [ ] A, B, C
+
+[Reference](https://support.microsoft.com/en-us/office/create-or-run-a-macro-c6b99036-905c-49a6-818a-dfb98b7c3c9c#:~:text=Do%20one%20of%20the%20following,Click%20Button.)

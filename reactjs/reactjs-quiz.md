@@ -60,6 +60,8 @@ console.log(person);
 - [ ] Sinon
 - [x] Jest
 
+[Reference](https://jestjs.io)
+
 #### Q7. To get the first item from the array ("cooking") using array destructuring, how do you adjust this line?
 
 ```javascript
@@ -154,6 +156,8 @@ React.createElement('h1', null, "What's happening?");
 - [ ] `<h1 id="component">What's happening?</h1>`
 - [ ] `<h1 id="element">What's happening?</h1>`
 
+[Reference](https://www.geeksforgeeks.org/what-is-the-use-of-react-createelement/)
+
 #### Q16. What property do you need to add to the Suspense component in order to display a spinner or loading state?
 
 ```javascript
@@ -172,6 +176,8 @@ function MyComponent() {
 - [ ] loading
 - [x] fallback
 - [ ] spinner
+
+[Explanation](https://linguinecode.com/post/how-react-suspense-works)
 
 #### Q17. What do you call the message wrapped in curly braces below?
 
@@ -192,12 +198,16 @@ const element = <p>{message}</p>;
 - [x] `React.lazy`
 - [ ] `React.fallback`
 
+[Reference]()
+
 #### Q19. When do you use `useLayoutEffect`?
 
 - [ ] to optimize for all devices
 - [ ] to complete the update
 - [ ] to change the layout of the screen
 - [x] when you need the browser to paint before the effect runs
+
+[Reference](https://www.knowledgehut.com/blog/web-development/react-uselayouteffect)
 
 #### Q20. What is the difference between the click behaviors of these two buttons (assuming that this.handleClick is bound correctly)?
 
@@ -253,7 +263,7 @@ function Dish(props) {
 
 [Explanation](https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx)
 
-#### Q25. Which attribute do you use to replace innerHTML in the browser DOM?
+#### Q25. Which attribute is React's replacement for using innerHTML in the browser DOM?
 
 - [ ] injectHTML
 - [x] dangerouslySetInnerHTML
@@ -268,6 +278,8 @@ function Dish(props) {
 - [ ] integrated
 - [ ] closed
 - [ ] imperative
+
+[Reference](https://levelup.gitconnected.com/why-react-is-declarative-a300d1e930b7)
 
 #### Q27. When using webpack, why would you need to use a loader?
 
@@ -309,6 +321,8 @@ const Heading = () => {
 - [ ] error catchers
 - [ ] error helpers
 - [x] error boundaries
+
+[Explanation](https://www.geeksforgeeks.org/react-js-error-boundaries/)
 
 #### Q32. In which lifecycle method do you make requests for data in a class component?
 
@@ -814,13 +828,13 @@ database.map((user) => <h1>{user.data}</h1>);
 #### Q69. Describe what is happening in this code?
 
 ```javascript
-const { name: firstName } = person;
+const { name: firstName } = props;
 ```
 
-- [ ] It is creating a new object that contains the same name property as the person object.
-- [ ] It is assigning the value of the person object's firstName property to a constant called name.
-- [ ] It is retrieving the value of person.name.firstName.
-- [x] It is assigning the value of the person object's name property to a constant called firstName.
+- [ ] It is creating a new object that contains the same name property as the props object.
+- [ ] It is assigning the value of the props object's firstName property to a constant called name.
+- [ ] It is retrieving the value of props.name.firstName.
+- [x] It is assigning the value of the props object's name property to a constant called firstName.
 
 #### Q70. What is wrong with this code?
 
@@ -851,11 +865,13 @@ ReactDOM.createPortal(x, y);
 
 ```javascript
 const MyComponent = ({ children }) => (
-  <h1>{children.length}</h1>
+  <div>{children.length}</div>
 );
 ...
 <MyComponent>
-<p>Hello</p>
+<p>
+  Hello <span>World!</span>
+</p>
 <p>Goodbye</p>
 </MyComponent>
 ```
@@ -865,7 +881,7 @@ const MyComponent = ({ children }) => (
 - [ ] undefined
 - [x] 2
 
-#### Q73. What is this assignment pattern called?
+#### Q73. What is this pattern called?
 
 ```javascript
 const [count, setCount] = useState(0);
@@ -883,18 +899,20 @@ const [count, setCount] = useState(0);
 - [ ] public/manifest.json
 - [x] public/index.html
 
-#### Q75. The code below is rendering nothing, and there is an error that says "ReactDOM is not defined." How do you fix this issue?
+#### Q75. The code below is rendering nothing and generate this error: "ReactDOM is not defined." How do you fix this issue?
 
 ```javascript
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'reactjs-dom';
 
 const element = <h1>Hi</h1>;
+// Note: error on the line below
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(element, document.getElementById('root'));
+root.render(element);
 ```
 
-- [x] `render(element, document.getElementById("root"));`
+- [x] `createRoot(document.getElementById("root"));`
 - [ ] `ReactDOM(element, document.getElementById("root"));`
 - [ ] `renderDOM(element, document.getElementById("root"));`
 - [ ] `DOM(element, document.getElementById("root"));`
@@ -919,9 +937,9 @@ render() {
 
 #### Q77. You are rendering a list with React when this warning appears in the console: "Warning: Each child in a list should have a unique 'key' prop." How do you fix this issue?
 
-- [ ] Pass the name of each item as its key.
-- [ ] Add a key prop with the same value to each item the list.
-- [ ] Clear the console warnings.
+- [ ] Add a key prop with the same value to each item in the list
+- [ ] Clear the console warnings
+- [ ] Use the UseId hook to generate a unique key for each element in the list
 - [x] When iterating over the list items, add a unique property to each list item.
 
 #### Q78. How would you generate the boilerplate code for a new app that you are building to collect underpants?
@@ -1081,7 +1099,7 @@ function Dish() {
 
 [Reference](https://reactjs.org/docs/react-component.html#componentdidmount)
 
-#### Q93. What might you use webpack for?
+#### Q93. What might you use webpack for in React development?
 
 - [ ] to fetch remote dependencies used by your app
 - [x] to split your app into smaller chunks that can be more easily loaded by the browser
@@ -1210,3 +1228,160 @@ ReactDom.render(<Message sent="false" />, document.getElementById('root'));
 ```javascript
 ReactDom.render(<Message sent="false" />, document.getElementById('root'));
 ```
+
+#### Q102. This code is part of an app that collects Pokemon. The useState hook below is a piece of state holding onto the names of the Pokemon collected so far. How would you access the collected Pokemon in state?
+
+```javascript
+const PokeDex = (props) => {
+  const [pokeDex, setPokeDex] = useState([]);
+  /// ...
+};
+```
+
+- [ ] props.pokeDex
+- [ ] this.props.pokeDex
+- [ ] setPokeDex()
+- [x] pokeDex
+
+#### Q103. When using a portal, what is the second argument?
+
+```javascript
+ReactDOM.createPortal(x, y);
+```
+
+- [ ] the current state
+- [ ] the rendered element
+- [ ] the App component
+- [x] the DOM element that exists outside of the parent component
+
+#### Q104. What would you pass to the onClick prop that wil allow you to pass the initName prop into the greeet handler?
+
+```javascript
+const Greeting = ({ initName }) => {
+  const greet = (name) => console.log("Hello, " + name + "!");
+  return <button onClick={ ... }>Greeting Button </button>
+}
+```
+
+- [ ] hug
+- [ ] this.hug(initName)
+- [x] (name) => this.hug(name)
+- [ ] () => hug(initName)
+
+#### Q105. What is the name of the compiler used to transform JSX into JavaScript?
+
+- [x] Babel
+- [ ] JSX Editor
+- [ ] Browser Buddy
+- [ ] ReactDOM
+
+#### Q106. Which hook is used to prevent a function from being recreated on every component render?
+
+- [x] useCallback
+- [ ] useMemo
+- [ ] useRef
+- [ ] useTransition
+
+#### Q107. Why might you use the `useRef` hook?
+
+- [ ] To bind the function
+- [ ] To call a function
+- [x] To directly access a DOM
+- [ ] To refer to another JS file
+
+[Source](https://www.smashingmagazine.com/2020/11/react-useref-hook/)
+
+#### Q108. Which of the following is required to use React?
+
+- [x] JavaScript
+- [ ] React Router
+- [ ] Redux
+- [ ] Prop-Types
+
+[Source](https://reactjs.org/tutorial/tutorial.html#:~:text=What%20Is%20React%3F,of%20code%20called%20%E2%80%9Ccomponents%E2%80%9D.&text=We'll%20get%20to%20the%20funny%20XML%2Dlike%20tags%20soon.)
+
+#### Q109. What is the correct way to get a value from context?
+
+- [ ] const value = useContext(MyContext.Consumer)
+- [ ] const value = useContext(MyContext.Provider)
+- [x] const value = useContext(MyContext)
+- [ ] const value = useContext({value: "intiial value"})
+
+[Source](https://reactjs.org/docs/hooks-reference.html#usecontext)
+
+#### Q110. Why is ref used?
+
+- [ ] to bind function
+- [ ] to call function
+- [x] to directly access DOM node
+- [ ] to refer to another JS file
+
+[Source](https://reactjs.org/docs/refs-and-the-dom.html#when-to-use-refs)
+
+#### Q111. Choose the method which should be overridden to stop the component from updating?
+
+- [ ] componentDidMount
+- [ ] componentDidUpdate
+- [ ] willComponentUpdate
+- [x] shouldComponentUpdate
+
+[Source](https://reactjs.org/docs/react-component.html#shouldcomponentupdate)
+
+#### Q112. What is the functionality of a “webpack” command?
+
+- [x] Runs react local development server
+- [ ] Transfers all JS files to down into one file
+- [ ] A module builder
+- [ ] None of the above
+
+#### Q113. Choose the method which is not a part of ReactDOM?
+
+- [ ] ReactDOM.createPortal()
+- [ ] ReactDOM.hydrate()
+- [x] ReactDOM.destroy()
+- [ ] ReactDOM.findDOMnode()
+
+#### Q114. In react, the key should be?
+
+- [x] Unique among his siblings
+- [ ] Unique in DOM
+- [ ] Does not requires to be unique
+- [ ] all of the above
+
+[Source](https://reactjs.org/docs/lists-and-keys.html#keys)
+
+#### Q115. Which company developed ReactJS?
+
+- [ ] Google
+- [x] Meta (ex Facebook)
+- [ ] Apple
+- [ ] Twitter
+
+[Source](https://github.com/facebook/react)
+
+#### Q116. Choose the library which is most often associated with react?
+
+- [ ] Chai
+- [ ] Sinon
+- [x] Jest
+- [ ] Mocha
+
+[Source](https://reactjs.org/docs/testing-recipes.html)
+
+#### Q117. What of the following is used in React.js to increase performance?
+
+- [ ] Original DOM
+- [x] Virtual DOM
+- [ ] Both of the above
+- [ ] None of the above
+
+[Source](https://reactjs.org/docs/optimizing-performance.html)
+
+#### Q118. Among The following options, choose the one which helps react for keeping their data uni-directional?
+
+- [ ] DOM
+- [x] flux
+- [ ] JSX
+- [ ] Props
+
+[Source](https://reactjs.org/blog/2014/05/06/flux.html)

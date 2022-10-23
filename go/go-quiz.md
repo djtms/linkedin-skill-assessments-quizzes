@@ -528,11 +528,15 @@ func findUser(ctx context.Context, login string) (*User, error) {
 ```
 
 - [ ] Use a sync.WaitGroup.
-- [ ] Make ch a buffered channel.
+- [x] Make ch a buffered channel.
 - [ ] Add a default case to the select.
 - [ ] Use runtime.SetFinalizer.
 
-**Explanation**: `I am not sure, but I believe we can avoid the goroutine leak by adding a default case to the select statement. The leak happens because if the context timeout is not set correctly and if findUserInDB stalls or is slow, then the findUser function will just stay at the select statement, waiting for something to happen. We can get rid of this waiting by adding a default case, but since the function would just execute the default case every time without waiting for the goroutine, I don't believe this function would do what is intended.`
+[Reference](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)
+
+Relevant excerpt from the article:
+
+> _The simplest way to resolve this leak is to change the channel from an unbuffered channel to a buffered channel with a capacity of 1. Now in the timeout case, after the receiver has moved on, the Goroutine will complete its send by placing the \*User value in the channel then it will return._
 
 #### 44. What will this code print?
 
@@ -562,3 +566,28 @@ func findUser(ctx context.Context, login string) (*User, error) {
       ch <- r
       } ()
 - [ ] go ch <- worker(m)
+
+#### Q46. In this code, which names are exported?
+
+```
+package os
+
+type FilePermission int
+type userID int
+}
+```
+
+- [x] FilePermission
+- [ ] none of these answers
+- [ ] FilePermission and userID
+- [ ] userID
+
+[Reference 1](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)  
+[Reference 2](https://go.dev/tour/basics/3)
+
+#### Q47. Which of the following is correct about structures in Go?
+
+- [ ] Structure is another user defined data type available in Go programming, which allows you to combine data items of different kinds.
+- [ ] Structures are used to represent a record
+- [ ] To define a structure, you must use type and struct statements.
+- [x] All of the above

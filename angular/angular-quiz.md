@@ -1060,7 +1060,7 @@ export const APP_SETTINGS = new InjectionToken<AppSettings>('app.settings');
 - [ ] submit(ngForm.value)
 - [ ] submit(FirstName, lastName)
 
-#### Q55. What is the purpose of the prelodingStrategy property configuration in this router code?
+#### Q55. What is the purpose of the `prelodingStrategy` property configuration in this router code?
 
 ```
 RouterModule.forRoot (
@@ -1074,7 +1074,15 @@ RouterModule.forRoot (
 - [ ] It enables the option to flag individual routes for preloading.
 - [ ] It preloads all dependencies for routes, creating instances of services when the app first starts up
 - [ ] It ensures all modules get built into a single app module bundle file.
-- [ ] It configures the router to immediately load all routes that have a loadChildren property(routes that are typically loaded when requested)
+- [x] It configures the router to immediately load all routes that have a loadChildren property(routes that are typically loaded when requested)
+
+References:
+
+- [Angular Router, PreloadAllModules](https://angular.io/api/router/PreloadAllModules)
+- [Route preloading in Angular](https://web.dev/route-preloading-in-angular/)
+- [Preloading strategy](https://www.tektutorialshub.com/angular/angular-preloading-strategy/)
+- [Custom preloading strategy](https://www.concretepage.com/angular-2/angular-custom-preloading-strategy#Preloading)
+- [Preloading strategy, save loading time](https://medium.com/geekculture/preloading-strategy-in-angularsave-loading-time-ca791074fe28)
 
 #### Q56. What is an alternative way to write this markup to bind the value of the class field `userName` to the `h1` element title property?
 
@@ -1153,7 +1161,7 @@ export class TruncatePipe implements PipeTransform {
 #### Q61. Which Angular CLI command would you run to generate a UsersComponent and add it to the SharedModule (in file shared.module.ts in your application)?
 
 - [ ] ng generate component --newModule=shared
-- [ ] ng generate component users --module=shared
+- [x] ng generate component users --module=shared
 - [ ] ng generate component users --shared
 - [ ] ng generate component --add=shared
 

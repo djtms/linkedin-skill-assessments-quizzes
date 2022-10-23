@@ -558,10 +558,10 @@ h2 ~ p {
 
 ![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png)
 
-- [x] justify-content: space-around;
+- [ ] justify-content: space-around;
 - [ ] justify-content: center;
 - [ ] justify-content: auto;
-- [ ] justify-content: space-between;
+- [x] justify-content: space-between;
 
 #### Q41. There are many advantages to using icon fonts. What is one of those advantages?
 
@@ -1017,10 +1017,10 @@ background-position: 10% 50%;
 grid-template-columns: 2fr 1fr;
 ```
 
-- [ ] The first column is twice the height of the second column and will be as wide as the content
-- [ ] The first column is half the size of the container and the second column will absorb the remaining space
-- [x] The first column is twice as wide as the second column and will fit proportionally within the grid container
-- [ ] The first column is twice the width and height of the second column, and will fit proportionally within the grid container
+- [ ] The first column will be twice the height of the second column, and will be as wide as the content.
+- [ ] The first column will be half the size of the container, and the second column will absorb the remaining space.
+- [x] The first column will be twice as wide as the second column, and will fit proportionally within the grid container.
+- [ ] The first column will be twice the width and height of the second column, and will fit proportionally within the grid container.
 
 #### Q85. Which style rule would make the image 50% smaller during a hover?
 
@@ -1391,17 +1391,14 @@ a {
       10vh = 60px
       10vmin = 60px
       10vmax = 80px
-
 - [ ] 10vw = 60px
       10vh = 80px
       10vmin = 80px
       10vmax = 60px
-
 - [ ] 10vw = 8px
       10vh = 6px
       10vmin = 6px
       10vmax = 8px
-
 - [ ] 10vw = 6px
       10vh = 8px
       10vmin = 8px
@@ -1852,7 +1849,7 @@ p + section {
 
 ```html
 <div class="pen">
-  <span id="puppy">🐶</span>
+  <span id="puppy">:dog:</span>
 </div>
 ```
 
@@ -1861,7 +1858,7 @@ p + section {
 - [ ] top-left corner
 - [x] bottom-left corner
 
-#### Q123. Which choice uses the correct syntax for adding a hover pseudo class to <a> element ?
+#### Q123. Which choice uses the correct syntax for adding a hover pseudo class to \<a> element?
 
 - [x] `a:hover {...}`
 - [ ] `a :hover {...}`
@@ -1947,7 +1944,6 @@ a:focus {
       `:active` styles are applied on mouse click.
       `:hover` styles are applied on mouse over.
       `:focus` styles are applied on mouse click and hold, or when a Tab key on a keyboard is used to navigate through links.
-
 - [x] `:visited` styles are applied after the link has been opened.
       `:active` styles are applied on mouse click only and before mouse release.
       `:hover` styles are applied on mouse over.
@@ -1958,3 +1954,465 @@ a:focus {
       `:focus` styles are applied when a Tab key on a keyboard is used to navigate through links.
 
 [Reference](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes)
+
+#### Q128. What style rule should you use to display all input elements that have failed the validation test with a red font?
+
+- [ ] A
+
+```css
+input.valid[false] {
+  color: red;
+}
+```
+
+- [x] B
+
+```css
+input:invalid {
+  color: red;
+}
+```
+
+- [ ] C
+
+```css
+input.not(valid) {
+  color: red;
+}
+```
+
+- [ ] D
+
+```css
+input.invalid {
+  color: red;
+}
+```
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid)
+
+#### Q129. What style rule should you apply to the img element to display the element in grayscale with no color?
+
+- [ ] A
+
+```css
+img {
+  transform: grayscale(1);
+}
+```
+
+- [ ] B
+
+```css
+img {
+  filter: grayscale(0);
+}
+```
+
+- [ ] C
+
+```css
+img {
+  transform: grayscale(0);
+}
+```
+
+- [x] D
+
+```css
+img {
+  filter: grayscale(1);
+}
+```
+
+[Reference](https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_filter_grayscale)
+
+#### Q130. Why might you create a reset style sheet?
+
+- [ ] to reduce page size by removing browser styles from the page rendering.
+- [x] to start designing a page style by overriding any built-in browser styles
+- [ ] to make it easier to minify the content of your web page design
+- [ ] to increase execution time by not relying on built-in browser styles
+
+[Reference](http://web.simmons.edu/~grovesd/comm244/notes/week4/css-reset)
+
+#### Q131. Which option is an invalid way of declaring a padding value of 10 pixels on the top and bottom, and 0 pixels on the left and right?
+
+- [ ] padding: 10px 0px;
+- [x] padding: 10px 10px 0px 0px;
+- [ ] padding: 10px 0;
+- [ ] padding: 10px 0px 10px 0px;
+
+[Reference](https://www.w3schools.com/css/css_padding.asp)
+
+#### Q132. How would you absolutely position an element of the logo class inside of a relatively positioned container?
+
+- [ ] A
+
+```css
+.logo {
+  position: absolute;
+  padding-left: 100px;
+  padding-top: 150px;
+}
+```
+
+- [ ] B
+
+```css
+.logo {
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}
+```
+
+- [ ] C
+
+```css
+.logo {
+  position: absolute;
+  left-padding: 100px;
+  top-padding: 150px;
+}
+```
+
+- [x] D
+
+```css
+.logo {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 150px;
+}
+```
+
+#### Q133. How would the `<div>` with the class .child be positioned within its container?
+
+```html
+<style>
+  .container {
+    height: 200px;
+    width: 200px;
+  }
+  .child {
+    margin: auto 0;
+    height: 100px;
+  }
+</style>
+<div class="container">
+  <div class="child">...</div>
+</div>
+```
+
+- [ ] horizontally centered
+- [ ] vertically centered, spanning the container's width
+- [ ] at the bottom of the container, spanning the container's width
+- [x] at the top of the container, spanning the container's width
+
+[Reference](https://codepen.io/harsh1x4/pen/poVaQVz)
+
+#### Q134. By default, a CSS transition is \_\_
+
+- [ ] asymmetric, so that the transition going from the initial state to the end state is different from the transition going from the end state back to the initial state.
+- [ ] one sided, so that there is only one transition and it goes from the initial state to the end state.
+- [x] symmetric, so that the transition going from the initial state to the end state is the reverse of the transition going from the end state back to the initial state.
+- [ ] one-sided, so that there is only one transition and it goes from the end state to the initial state.
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+
+#### Q135. Which style rule will extend the header element across an entire grid row from the first column through the last column?
+
+- [ ] A
+
+```css
+header {
+  grid-column: 1 / auto;
+}
+```
+
+- [x] B
+
+```css
+header {
+  grid-column: 1/-1;
+}
+```
+
+- [ ] C
+
+```css
+header {
+  grid-column: -1/1;
+}
+```
+
+- [ ] D
+
+```css
+header {
+  grid-column: 1/100%;
+}
+```
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)
+
+#### Q136. To center the content of a grid cell horizontally and vertically within the cell, which style rule should you apply?
+
+- [ ] A
+
+```css
+align-items: start;
+justify-items: end;
+```
+
+- [x] B
+
+```css
+align--items: center;
+justify-items: center;
+```
+
+- [ ] C
+
+```css
+align-items: middle;
+justify-items: middle;
+```
+
+- [ ] D
+
+```css
+align-items: stretch;
+justify-items: stretch;
+```
+
+[Reference for align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) [Reference for justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)
+
+#### Q137. What style rule should you use to display all input elements that have failed the validation test with a red font?
+
+- [ ] A
+
+```css
+input.valid[false] {
+  color: red;
+}
+```
+
+- [x] B
+
+```css
+input:invalid {
+  color: red;
+}
+```
+
+- [ ] C
+
+```css
+input.not(valid) {
+  color: red;
+}
+```
+
+- [ ] D
+
+```css
+input.invalid {
+  color: red;
+}
+```
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid)
+
+#### Q139. To insert an external style sheet file into another style sheet file, which rule should you use?
+
+- [x] `@import`
+- [ ] `@link`
+- [ ] `@insert`
+- [ ] `@style`
+
+[Reference for import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import)
+
+#### Q140. Given this code, how tall will the following element be in pixels?
+
+```html
+<style>
+  #tall-text {
+    display: inline;
+    font-size: 20px;
+    height: 200px;
+  }
+</style>
+
+<p id="tall-text">Did I grow?</p>
+```
+
+- [ ] 200px
+- [x] 20px
+- [ ] 180px
+- [ ] 220px
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/height#:~:text)
+
+#### Q141. Which style rule will place an X within the grid to win the game?
+
+![A](img/Q-141.png)
+
+- [ ] row: 3;
+      column: 3;
+- [x] grid-row: 3;
+      grid-column: 3;
+- [ ] row: 2;
+      column: 2;
+- [ ] grid-row: 2;
+      grid-column: 2;
+
+[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)
+
+#### Q142. Which CSS property is used to create an image reflection ?
+
+- [x] box-relect
+- [ ] img-reflect
+- [ ] None of the above
+- [ ] reflect-img
+
+#### Q143. What is the general syntax of writing the var() function ?
+
+- [x] var(--name, value)
+- [ ] var(--name)
+- [ ] var(value)
+- [ ] None of the Above
+
+#### Q143. How many layout modes were there before the Flexbox Layout Module was introduced in CSS ?
+
+- [ ] 2
+- [ ] 1
+- [x] 4
+- [ ] 3
+
+#### Q144. Which of the following components of the CSS box model are transparent ?
+
+- [ ] Padding
+- [ ] Margin
+- [x] Both A and B
+- [ ] None
+
+#### Q145. How are custom fonts defined using CSS ?
+
+- [x] @Font-Face Rule
+- [ ] Custom font cannot be defined
+- [ ] src tags
+- [ ] None of the above
+
+#### Q146. Which of the following CSS property sets what kind of line decorations are added to an element, such as underlines, overlines, etc?
+
+- [ ] text-decoration
+- [ ] text-style
+- [x] text-decoration-line
+- [ ] text-line
+
+#### Q147. Which of the following CSS Property sets the stacking order of positioned elements?
+
+- [ ] y-index
+- [x] z-index
+- [ ] x-index
+- [ ] all of the mentioned
+
+#### Q148. Which of the following property allows a marquee to be used in the case of a text-overflow?
+
+- [ ] overflow-marquee
+- [x] overflow-style
+- [ ] overflow-text
+- [ ] none of the mentioned
+
+#### Q149. Which of the following Cascading order has the highest precedence?
+
+- [x] user agent declarations
+- [ ] user normal declarations
+- [ ] author normal declarations
+- [ ] author important declarations
+
+#### Q150. The CSS cascade assigns a weight to each style rule ?
+
+- [x] True
+- [ ] False
+
+#### Q151. The \***\*\_\_\_\_\*\*** represents the result of the cascade: it is the declared value that wins the cascade.
+
+- [ ] specified Value
+- [ ] actual value
+- [ ] computed value
+- [x] cascaded value
+
+#### Q152. Using negative text-indent is also known as **\_** ?
+
+- [ ] The Scott Kellum method
+- [x] The Phark method
+- [ ] Radu Darvas Technique
+- [ ] The Langridge method
+
+#### Q153. Using margin is also known as **\_** ?
+
+- [ ] Fahrner image replacement
+- [ ] The Lindsay method
+- [x] Radu Darvas Technique
+- [ ] The Langridge method
+
+#### Q154. If a particular rule should never be overridden by another rule, the \***\*\_\_\_\_\*\*** indication should be used.
+
+- [ ] @important
+- [ ] !important!
+- [x] !important
+- [ ] important!
+
+#### Q155. What does CSS stand for?
+
+- [ ] Creative Style Sheets
+- [ ] Colourful Style Sheets
+- [x] Cascading Style Sheets
+- [ ] Colourful Style Sheets
+
+[Reference](https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS)
+
+#### Q156. What color would rgb(255,0,0) give?
+
+- [ ] Blue
+- [ ] Green
+- [x] Red
+- [ ] Yellow
+
+#### Q157. What is the correct HTML for referring to an external style sheet?
+
+- [x] `<link rel="stylesheet" type="text/css" href="mystyle.css">`
+- [ ] `<stylesheet>mystyle.css</stylesheet>`
+- [ ] `<style src= "mystyle.css">`
+- [ ] None of these.
+
+#### Q158. The \<link> tag goes inside:
+
+- [ ] the title section
+- [ ] the body section
+- [x] the head section
+- [ ] None of the above
+
+#### Q159. What CSS define in HTML?
+
+- [ ] How to send HTML elements
+- [x] How to display HTML elements
+- [ ] How to save HTML elements
+- [ ] How to make HTML elements
+
+#### Q160. Which of the following statements is TRUE for CSS?
+
+- [ ] An inline style sheet should be used when a single document has a unique style
+- [x] An external style sheet is ideal when the style is applied to many pages
+- [ ] Both and b above
+- [ ] An external style sheet can be written in HTML
+
+#### Q161. In CSS, margin collapsing only happens with?
+
+- [ ] The horizontal margins of inline elements in the normal flow.
+- [x] The vertical margins of block elements in the normal flow.
+- [ ] The horizontal margins of block elements in the normal flow.
+- [ ] The vertical margins of inline elements in the normal flow.
