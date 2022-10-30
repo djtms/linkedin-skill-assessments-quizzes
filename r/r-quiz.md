@@ -45,7 +45,7 @@ xvect
 
 #### Q6. In the image below, the data frame is named rates. The statement `sd(rates[, 2])` returns 39. As what does R regard Ellen's product ratings?
 
-![Image](https://i.ibb.co/jvPPSRk/Captura-de-pantalla-2020-07-14-a-las-20-58-09.png)
+![Image](https://i.ibb.co/jvPPSRk/Captura-de-pantalla-2020-07-14-a-las-20-58-09.png?raw=png)
 
 - [ ] sample with replacement
 - [ ] population
@@ -75,7 +75,7 @@ xvect
 
 #### Q10. In the image below, the data frame on lines 1 through 4 is named StDf. State and Capital are both factors. Which statement returns the results shown on lines 6 and 7?
 
-![Image](https://i.ibb.co/8DL1HCV/Captura-de-pantalla-2020-07-14-a-las-18-33-34.png)
+![Image](https://i.ibb.co/8DL1HCV/Captura-de-pantalla-2020-07-14-a-las-18-33-34.png?raw=png)
 
 - [ ] StDf[1:2,-3]
 - [x] StDf[1:2,1]
@@ -276,7 +276,7 @@ Output: [1] 2 3 4
 
 #### Q29. Given DFMerged <- merge(DF1, DF2) and the image below, how manu rows are in DFMerged?
 
-![image](https://user-images.githubusercontent.com/52632898/139964478-9806a163-76b2-4f99-97bc-c925fdf6e388.png)
+![image](https://user-images.githubusercontent.com/52632898/139964478-9806a163-76b2-4f99-97bc-c925fdf6e388.png?raw=png)
 
 - [ ] 6
 - [ ] 9
@@ -597,3 +597,55 @@ a <- list("10", TRUE, 5.6)
 - [ ] is.numeric(a[1])
 - [ ] is.logical(a[1])
 - [ ] is.character(a[1])
+
+#### Q55. What is the result of these three lines of code?
+
+```
+vect1 <- c(1:4)
+vect2 <- c(1:2)
+vect1 * vect2
+```
+
+- [x] [1] 1 4 3 8 
+- [ ] ERROR
+- [ ] [1] 1 2 3 4 1 2
+- [ ] [1] 1 2 3 4 2 4 6 8
+
+#### Q56. Which choice returns [1] "2019-09-28"?
+
+- [ ] format(as.POSIXct("Sep-28-2019 07:54:31 AM",format='%b%d%Y'))
+- [ ] as.POSIXlt("Sep-28-2019 07:54:31 AM",format='%b-%d-%Y')
+- [ ] as.POSIXct("Sep-28-2019 07:54:31 AM UTC")
+- [x] format(as.POSIXct("Sep-28-2019 07:54:31 AM UTC",format='%b-%d-%Y'))
+
+#### Q57. The variable potus is a character vector, as shown in line 1 below. Wich statement returns the results shown?
+
+```
+1 potus <- c("GHW Bush", "Clinton", "GW Bush", "Obama")
+
+Results: [1] "GHW BUsh" "Clinton" "Obama"
+```
+
+- [ ] potus[-"GW Bush"]
+- [ ] potus[1:2 4]
+- [x] potus[-3]
+- [ ] potus[1,2,4]
+
+#### Q58. A data frame contains two factor -fact1 and fact2- and a numerical outcome variable. Which statement returns results that do NOT include an interaction term?
+
+- [x] anova(lm(outcome ~ fact1 : fact2))
+- [ ] anova(lm(outcome ~ fact1 * fact2))
+- [ ] anova(lm(outcome ~ fact1 + fact2))
+- [ ] anova(lm(outcome ~ fact1 + fact2 + fact1 : fact2))
+
+#### Q59. Review line 1 below. What does the statement on line 2 return?
+
+```
+1 myvect <- c(-2,-1,0)
+2 as.logical(myvect)
+```
+
+- [ ] [1]-2 -1 0
+- [x] [1]TRUE TRUE FALSE
+- [ ] [1]FALSE FALSE TRUE
+- [ ] [1]NA NA NA

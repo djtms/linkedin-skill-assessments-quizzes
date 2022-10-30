@@ -89,7 +89,7 @@ An intrusion detection system (`IDS`) is a device or software application that m
 
 #### Q12. Which area is DMZ?
 
-![image](https://user-images.githubusercontent.com/50566479/136518616-8712a45f-8ba5-48bd-ac60-5a96ddf754ae.png)
+![image](https://user-images.githubusercontent.com/50566479/136518616-8712a45f-8ba5-48bd-ac60-5a96ddf754ae.png?raw=png)
 
 - [ ] 4
 - [ ] 1
@@ -1011,3 +1011,12 @@ What is the next step you should take to best fulfill your responsibilities and 
 - [ ] blue
 - [ ] red
 - [ ] purple
+
+#### Q132. Understanding that multifactor authentication (MFA) is a best practice, which option should be avoided as a secondary authentication factor in MFA whenever possible?.
+
+- [ ] biometric authentication
+- [ ] OAUTH Token
+- [ ] authenticator apps
+- [x] SMS message
+
+[Reference](https://www.zdnet.com/article/fbi-warns-about-attacks-that-bypass-multi-factor-authentication-mfa/) `"(...)All in all, MFA is still very effective at preventing most mass and automated attacks; however, users should be aware that there are ways to bypass some MFA solutions, such as those relying on SMS-based verification."`

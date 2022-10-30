@@ -1624,7 +1624,7 @@ num_list[len(num_list) // 2]
 
 [Reference](https://pandas.pydata.org/docs/user_guide/dsintro.html)
 
-#### Q119. Suppose you have a variale named `vector` of type np.array with 10,000 elements. How can you turn `vector` into a variable named `matrix` with dimensions 100x100?
+#### Q119. Suppose you have a variable named `vector` of type np.array with 10,000 elements. How can you turn `vector` into a variable named `matrix` with dimensions 100x100?
 
 - [ ] `matrix = (vector.shape = (100,100))`
 - [ ] `matrix = vector.to_matrix(100,100)`
@@ -1696,7 +1696,7 @@ Hello, I am from France
 
 #### Q123. Using Pandas, we load a data set from Kaggle, as structured in the image below. Which command will return the total number of survivors?
 
-![Q129](images/Q129.png)
+![Q129](images/Q129.png?raw=png)
 
 - [x] `sum(titanic['Survived'])`
 - [ ] `[x for x in titanic['Survived'] if x == 1]`
@@ -1741,7 +1741,7 @@ for x in range(1, len(characters)):
 
 #### Q126. Jaccard Similarity is a formula that tells you how similar two sets are. It is defined as the cardinality of the intersection divided by the cardinality of the union. Which choice is an accurate implementation in Python?
 
-![Q132](images/Q132.png)
+![Q132](images/Q132.png?raw=png)
 
 - [ ] `def jaccard(a, b): return len (a | b) / len (a & b)`
 - [x] `def jaccard(a, b): return len (a & b) / len (a | b)`
@@ -1842,7 +1842,7 @@ print ("foo" if (256).bit_length() > 8 else "bar")
 
 #### Q138. The image below was created using Matplotlib. It is a distribution plot of a list of integers filled with numbers using the function **\_** and plotted with **\_**.
 
-![Q132](images/Q138.png)
+![Q132](images/Q138.png?raw=png)
 
 - [ ] `random.uniform(0,50);plt.hist`
 - [x] `random.gauss(50,20);plt.hist`
@@ -2336,3 +2336,23 @@ MISSING_ARG_3 = func
 - [ ] col
 - [x] 1
 - [ ] 0
+
+#### Q171. Data points in pyplot are called
+
+- [ ] pointers
+- [ ] points
+- [x] markers
+- [ ] none of these
+
+#### Q172. What does this code print?
+
+```
+a = np.array([[1, 2], [3, 4], [5, 6]])
+c = a[(a > 3) & (a < 11)]
+print(c)
+```
+
+- [ ] `[[3, 4], [5, 6]]`
+- [ ] `[False, False, False, True, True, True]`
+- [ ] `[[0,0], [3, 4], [5, 6]]`
+- [x] `[4 5 6]`
