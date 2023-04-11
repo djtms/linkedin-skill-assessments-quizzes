@@ -846,7 +846,7 @@ echo 'Hello, $(whoami)!'
 - [ ] alias 'ls -lah'=lh
 - [ ] lh | ls -lah
 
-#### Q70. Which statement will print all of the fully qualified .cvs files in the home directory or subdirectories while not displaying any errors?
+#### Q70. Which statement will print all of the fully qualified .csv files in the home directory or subdirectories while not displaying any errors?
 
 - [ ] find $USER_DIR -name "\*.csv" 2>/dev/null
 - [ ] find $HOME -name "\*.csv" 1>/dev/null
@@ -1038,3 +1038,21 @@ echo $((4/3))
 - [ ] for
 
 [Reference](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)
+
+#### Q81. What does this command sequence do?
+
+```bash
+cat > notes -
+```
+
+- [ ] It creates an empty file called "notes" and then exits.
+- [ ] It outputs the contents of the "notes" file to the screen, and then deletes it.
+- [x] It accepts text from the standard input and places it in the "notes" file.
+- [ ] It appends text to an existing file called "notes."
+
+#### Q82. You want to match five-letter palindromes such as radar, rotor, and tenet. Which sed option should you use?
+
+- [ ] sed -E -n '/^(.)(.)\3\2\1$/p'
+- [ ] sed -E -n '/^(.)(.)(.).\2\1$/p'
+- [ ] sed -E -n '/^(.)(.)(.)\2\1$/p'
+- [ ] sed -E -n '/^(.)(.)(.)(.)\3\2\1$/p'

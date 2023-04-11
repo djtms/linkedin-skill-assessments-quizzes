@@ -209,9 +209,9 @@
 #### Q29. What is a method?
 
 - [ ] a set of instructions designed to perform a frequently used operation within a program and return no values
-- [x] the exact same thing as a function and subroutine
+- [ ] the exact same thing as a function and subroutine
 - [ ] a set of variables that can change over time
-- [ ] a procedure associated with data and behaviour
+- [x] a procedure associated with data and behaviour
 
 #### Q30. A mobile phone is made up of components such as a motherboard, camera, and sensors. The motherboard represents all the functions of a phone, the display shows the display only, and the phone is represented as a whole. Which of the following has the highest level of abstraction?
 
@@ -313,7 +313,7 @@
 - [x] to avoid writing duplicate code
 - [ ] to separate class behavior from the more general
 
-_NOTE_: I don't have 4th variant in my test, it changed to new 5th variant. Is it also true?
+**NOTE:** I don't have 4th variant in my test, it changed to new 5th variant. Is it also true?
 
 #### Q43. In addition to attributes and behaviours, what quality must a class possess?
 
@@ -392,7 +392,7 @@ _NOTE_: I don't have 4th variant in my test, it changed to new 5th variant. Is i
 - [ ] It lists all actors for each use case.
 - [ ] It minimizes the number of actors required.
 
-#### Q54. How do object behavior and attributes differ?
+#### Q54. How do object behaviors and attributes differ?
 
 - [ ] Behavior describe dynamic properties; attributes are static.
 - [x] Attributes describe a state; behaviors describe a change.
@@ -498,7 +498,7 @@ _NOTE_: I don't have 4th variant in my test, it changed to new 5th variant. Is i
 
 - [ ] A
 
-```
+```java
 public class Car{
 }
 public class FlyingCars extends Car{
@@ -510,7 +510,7 @@ public class Honda Car{}
 
 - [ ] B
 
-```
+```java
 public class Car{
    public void fly(){}
 }
@@ -520,7 +520,7 @@ public class Honda extends Car{}
 
 - [ ] C
 
-```
+```java
 public class Car{
 public void fly(){}
 }
@@ -530,7 +530,7 @@ public class Honda Car{}
 
 - [x] D
 
-```
+```java
 public class Car{
 }
 public class FlyingCars extends Car{
@@ -616,10 +616,10 @@ public class Honda extends Car{}
 
 #### Q80. Static polymorphism uses method \_ ?
 
-- [ ] overloading
+- [x] overloading
 - [ ] inheritance
 - [ ] abstraction
-- [x] overriding
+- [ ] overriding
 
 #### Q81. What does a concrete class not have?
 
@@ -690,8 +690,8 @@ public class Honda extends Car{}
 
 - [ ] cat : kitten
 - [ ] color : red
-- [ ] planet : moon
-- [x] truck : window
+- [x] planet : moon
+- [ ] truck : window
 
 #### Q91. What cannot be used for polymorphism?
 
@@ -723,7 +723,7 @@ public class Honda extends Car{}
 
 [Reference](https://www.interviewbit.com/blog/principles-of-oops/)
 
-#### Q95. How do object behaviour and attributes differ?
+#### Q95. How do object behaviours and attributes differ?
 
 - [ ] Behaviour describe dynamic properties; attributes are static.
 - [x] Attributes describe a state; behaviours describe a change.
@@ -745,3 +745,61 @@ public class Honda extends Car{}
 - [ ] A friend class can access only protected members of the class of which it is a friend.
 
 [Reference](https://www.simplilearn.com/tutorials/cpp-tutorial/friend-class-in-cpp/)
+
+#### Q98. Which code sample demonstrates multiple inheritance?
+
+- [ ] `class employee{ }; class stream{ }; class topper{ };`
+- [ ] `class employee{int rating;}; class stream:public employee{ };`
+- [x] `class employee{int rating;}; class stream{int total;}; class topper: employee, stream{ };`
+- [ ] `class employeef{int rating};}: class stream{ }: class topper: public employee{ }:`
+
+#### Q99. What is multilevel inheritance?
+
+- [ ] a class that does not have more than one parent.
+- [ ] a class not derived from another derived obiect.
+- [ ] not doubling single-level inheritance.
+- [x] classes derived from other derived classes.
+
+[Reference](https://www.w3schools.com/cpp/cpp_inheritance_multilevel.asp)
+
+#### Q100. Can you have two classes with the same name in the same proiect?
+
+- [ ] No, you cannot.
+- [ ] Yes, as long as their constructors are different.
+- [ ] Yes, as long as their methods are different.
+- [x] Yes, as long as they are in different namespaces.
+
+#### Q101. What is the difference between an interface and an abstract class?
+
+- [ ] Interfaces can contain code or data. Abstract classes do not contain code or data. A class can inherit from more than one abstract class but can implement only one interface.
+- [ ] Abstract classes can contain code or data. Interfaces do not contain code or data. A class can inherit from more than one abstract class but can implement only one interface.
+- [ ] Interfaces can contain code or data. Abstract classes do not contain code or data. A class can inherit from only one abstract class but can implement an unlimited number of interfaces.
+- [x] Abstract classes can contain code or data. Interfaces do not contain code or data. A class can inherit from only one abstract class but can implement an unlimited number of interfaces.
+
+#### Q102. Objects are passed by **\_**
+
+- [ ] value or reference, depending on the programming language used
+- [ ] value
+- [ ] value or reference, depending on the program
+- [x] reference
+
+#### Q103. If a language just implements pass-by-value parameters to functions, can the objects passed as parameters be set to new instances inside the function and their new value will return to the caller?
+
+- [ ] Yes, but only if it is a reference and not a primitive class.
+- [ ] Yes, since the value is a reference even though it is passed by value, it can be done.
+- [ ] No, you will get a compilation error.
+- [x] No, a local copy will be initialized and will be lost as soon as it is out of scope.
+
+#### Q104. What is encapsulation?
+
+- [ ] defining classes by focusing on what is important for a purpose
+- [x] defining data and relevant methods together in the same class
+- [ ] making all methods private
+- [ ] using words to define classes
+
+#### Q105. object are passed by ___?
+
+- [x] value or reference, depending on the programmin language used
+- [ ] reference
+- [ ] value
+- [ ] value or reference, depending on program

@@ -280,7 +280,7 @@
 - [ ] `db.vehicle.distinct("category").count()`
 - [x] `db.vehicle.distinct("category").length`
 
-Note: count() works with find(...) but length works with distinct
+**Note**: count() works with find(...) but length works with distinct
 
 #### Q41. From the MongoDB shell, how do you create a new document in the customers collection?
 
@@ -612,3 +612,30 @@ Note: count() works with find(...) but length works with distinct
 - [x] `db.inventory.insert({ prodid: "tab1122", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`
 
 [MongoDB reference](https://www.mongodb.com/docs/manual/reference/write-concern/)
+
+#### Q85. What is the name of the default file used to configure MongoDB?
+
+- [ ] mongo.config
+- [x] mongod.conf
+- [ ] config.sys
+- [ ] .mdbconfig
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/reference/configuration-options/)
+
+#### Q86. After using the dropIndexes() command on your collection, one index remains.What can you do to drop the the remaining index?
+
+- [ ] Use dropIndexes({all:1}) with the all parameter.
+- [x] The required_id index cannot be deleted.
+- [ ] Call dropIndex({"<em>id</em>":1}) to force its removal.
+- [ ] Call dropIndex({"<em>id</em>"}) to force its removal.
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/reference/method/db.collection.dropIndex/)
+
+#### Q87. To scale horizontally, what does MongoDB use?
+
+- [x] sharding
+- [ ] replication
+- [ ] partition
+- [ ] backup
+
+[MongoDB reference](https://www.mongodb.com/basics/scaling)

@@ -153,7 +153,7 @@
 - [ ] `<div>` is the industry-standard default tag, but you could use `<span>` if you prefer.
 - [ ] `<div>` is used where a generic inline tag is needed, while `<span>` is used where a generic block-level tag is needed.
 
-#### Q16. What should fill the blank in the HTML code bellow?
+#### Q16. What should fill the blank in the HTML code below?
 
 ```html
 <form method="post" action="mailto:info@linkedin.com" ____="text/plain"></form>
@@ -428,7 +428,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 - [ ] It draws a horizontal line.
 - [ ] It designates a shift of topic at the section level. / Alt.: It designates a separation of sections within an `<article>`.
 
-This is a confusing question and there can be an arguments for both the second and the third options being correct.
+`This is a confusing question and there can be an arguments for both the second and the third options being correct.`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr): The HTML `<hr>` element represents a thematic break between paragraph-level elements. Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
 
@@ -1447,7 +1447,6 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<p>x<y&z>w</p>`
 
 `This question has an issue, however this answer will count as correct`
-
 `It's too strange question because all of that methods doesn't work. The good method is &amp, &lt, &gt using.`
 
 #### Q85. What is wrong with this code snippet?
@@ -1539,7 +1538,7 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<p>`The `<dt>`focal length`</dt>` of a lens gives the distance from the lens to the image sensor.`</p>`
 - [ ] `<p>`The `<dd>`focal length`</dd>` of a lens gives the distance from the lens to the image sensor.`</p>`
 
-`**Definition element => The <dfn> HTML element is used to indicate the term being defined within the context of a definition phrase or sentence. `<br>`**Description Term element => The <dt> HTML element specifies a term in a description or definition list, and as such must be used inside a <dl> element.`<br>` **Description Details element =>The <dd> HTML element provides the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).`
+**Definition** `element => The <dfn> HTML element is used to indicate the term being defined within the context of a definition phrase or sentence.`<br>`**Description Term element => The <dt> HTML element specifies a term in a description or definition list, and as such must be used inside a <dl> element.`<br>`**Description Details element =>The <dd> HTML element provides the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).`
 
 [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn)
 
@@ -1595,7 +1594,7 @@ As Steve Krug once said, happy talk must die.
 - [ ] `<meta name="creator" content="Author Name">`
 - [x] `<meta name="author" content="Author Name">`
 
-#### Q96. Given the following requirements, select the correct `input` configuration: An `input` that allows the user to select from a range of integer values between 0 and 100 (inclusive) in increments of 5.
+#### Q96. Given the following requirements, select the correct `input` configuration: An `input` that allows the user to select from a range of integer values between 0 and 100 (inclusive) in increments of 5
 
 - [ ] `<input type="range" min="0" max="100" by="5" />`
 - [x] `<input type="range" min="0" max="100" step="5" />`
@@ -1662,7 +1661,7 @@ As Steve Krug once said, happy talk must die.
 `The <article> HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Example:a user-submitted comment.`
 [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
 
-#### Q99. To make something editable by the user, you need to set the **\_** attribute to **\_**.
+#### Q99. To make something editable by the user, you need to set the **\_** attribute to **\_**
 
 - [ ] `access`; allow
 - [ ] `designMode`; true
@@ -1914,14 +1913,7 @@ A disabled fieldset is unusable and un-clickable. [Source](https://www.w3schools
 </dl>
 ```
 
-#### Q110. What is the difference between the `<div>` and the `<span>` tag?
-
-- [ ] `<div>` is used for major divisions on a page, while `<span>` is used to span across columns.
-- [x] `<div>` is used where a generic block-level tag is needed, while `<span>` is used where a generic inline tag is needed.
-- [ ] `<div>` is the industry standard default tag, but you could use `<span>` if you prefer.
-- [ ] `<div>` is used where a generic inline tag is needed, while `<span>` is used where a generic block-level tag is needed.
-
-#### Q111. what does the a in the html a tag stands for?
+#### Q110. what does the a in the html a tag stands for?
 
 - [ ] assign
 - [ ] add tag
@@ -1930,28 +1922,21 @@ A disabled fieldset is unusable and un-clickable. [Source](https://www.w3schools
 
 [Source](https://stackoverflow.com/questions/39434659/what-does-the-a-in-the-html-a-tag-stand-for)
 
-#### Q112. What is the correct HTML element for inserting a line break?
+#### Q111. What is the correct HTML element for inserting a line break?
 
 - [ ] `<break>`
 - [ ] `<lb>`
 - [x] `<br>`
 - [ ] `<a>`
 
-#### Q112. How to display preformatted text in HTML?
-
-- [ ] `<p>`
-- [x] `<pre>`
-- [ ] `<hr>`
-- [ ] All of the above
-
-#### Q113. The HTML global attribute, "contenteditable" is used to:
+#### Q112. The HTML global attribute, "contenteditable" is used to
 
 - [ ] Update content from the server
 - [ ] Specifies a context menu for an element. The menu appears when a user right-clicks on the element.
 - [x] Specify whether the content of an element should be editable or not
 - [ ] Return the position of the first found occurrence of content inside a string
 
-#### Q114. HTML elements that aren't meant to store content or other elements are called **\_** elements.
+#### Q113. HTML elements that aren't meant to store content or other elements are called **\_** elements
 
 - [x] void
 - [ ] independent
@@ -1960,7 +1945,7 @@ A disabled fieldset is unusable and un-clickable. [Source](https://www.w3schools
 
 [Source](https://www.w3.org/TR/2011/WD-html-markup-20110113/syntax.html#syntax-elements)
 
-#### Q115. The **\_** attribute of an HTML label element is a referencing mechanism to state what input or element the label is tied to.
+#### Q114. The **\_** attribute of an HTML label element is a referencing mechanism to state what input or element the label is tied to
 
 - [ ] to
 - [ ] of
@@ -1969,21 +1954,21 @@ A disabled fieldset is unusable and un-clickable. [Source](https://www.w3schools
 
 [Source](https://www.w3schools.com/tags/att_label_for.asp)
 
-#### Q116. Coding in HTML provides which of the following?
+#### Q115. Coding in HTML provides which of the following?
 
 - [ ] The responsiveness of the website
 - [ ] The style of the website
 - [x] The core website structure
 - [ ] The behavior of web elements
 
-#### Q117. Which HTML element is the container for all the renderable aspects of the document?
+#### Q116. Which HTML element is the container for all the renderable aspects of the document?
 
 - [ ] head
 - [x] body
 - [ ] title
 - [ ] meta
 
-#### Q118. The "h" in the HTML h1 tag is short for **\_**.
+#### Q117. The "h" in the HTML h1 tag is short for **\_**
 
 - [ ] head
 - [ ] horizontal
@@ -1991,3 +1976,180 @@ A disabled fieldset is unusable and un-clickable. [Source](https://www.w3schools
 - [x] heading
 
 [Source](https://www.w3schools.com/html/html_headings.asp)
+
+#### Q118. Which is an invalid use of the `<a>` element?
+
+- [ ] A
+
+```html
+<a href="#additional-information" class="Card">
+  <video src="media.mp4" width="400" height="300"></video>
+</a>
+```
+
+- [x] B
+
+```html
+<a href="#additional-information" class="Card">
+  <details>
+    <summary>Additional Information</summary>
+  </details>
+</a>
+```
+
+- [ ] C
+
+```html
+<a href="#additional-information" class="Card">
+  <p>Additional Information</p>
+  <p></p
+></a>
+```
+
+- [ ] D
+
+```html
+<a href="#additional-information" class-"Card">
+  <img src="media.jpeg" alt="More information"></video>
+</a>
+```
+
+#### Q119. How to display preformatted text in HTML?
+
+- [ ] `<p>`
+- [x] `<pre>`
+- [ ] `<hr>`
+- [ ] All of the above
+
+#### Q120. Which is a valid title element?
+
+- [ ] `<title><em>Exciting</em> title</title>`
+- [ ] `<title></title>`
+- [ ] `<title name="Exciting Title" />`
+- [x] `<title>Exciting title</title>`
+
+[Source](https://www.w3schools.com/tags/tag_title.asp)
+
+#### Q121. Which link contains a valid URL?
+
+- [ ] `<link rel="stylesheet" href="/styles for me/styles.css">`
+- [ ] `<link rel="stylesheet" href="/styles|for|me/styles.css">`
+- [ ] `<link rel="css" href="\styles for me\styles.css">`
+- [x] `<link rel="stylesheet" href="/styles%20for%20me/styles.css">`
+
+[Source 1](https://www.w3schools.com/tags/att_link_href.asp)
+[Source 2](https://www.sistrix.com/ask-sistrix/technical-seo/site-structure/do-i-have-to-convert-the-spaces-in-urls)
+
+#### Q122. Which example is missing a mandatory closing tag, making it invalid?
+
+- [ ] `<p>Simple paragraph`
+- [x] `<ul><li>Simple list</li>`
+- [ ] `<ul><li>Simple list<ul>`
+- [ ] `<dl><dt>Simple term<dd>Simple description</dl>`
+
+[Source](https://blog.teamtreehouse.com/to-close-or-not-to-close-tags-in-html5)
+
+#### Q123. What is the semantic method for marking up a video with a caption in browsers that support it?
+
+- [ ] `<video src="video.mp4" caption="video.vtt"></video>`
+- [ ] `<video src="video.mp4"><track caption="video.vtt" /></video>`
+- [ ] `<video src="video.mp4"><track default kind="captions" srclang="en" src="video.vtt" /></video>`
+- [x] `<video src="video.mp4"><caption default srclang="en" src="video.vtt" /></video>`
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+
+#### Q124. A white paper has a sidebar and endnotes, both of which are complementary to the main text. How would you mark them up to make their distinct roles more broadly accessible?
+
+- [ ] A
+
+```html
+<custom-sidebar aria-label-"Sidebar"›Sidebar...</custom-sidebar><custom-footnote aria-
+label="Endnotes">Endnotes...</custom-footnote>
+```
+
+- [x] B
+
+```html
+<aside role="sidebar">Sidebar...</aside><aside role="notes"»Endnotes...</aside>
+```
+
+- [ ] C
+
+```html
+<aside role="complementary">Sidebar...</aside>
+<aside role="supplementary">Endnotes...</aside>
+```
+
+- [ ] D
+
+```html
+<aside aria-label-"Sidebar">Sidebar...</aside><aside aria-label="Endnotes">Endnotes...</aside>
+```
+
+[Source](https://www.w3.org/TR/wai-aria-practices-1.2/#doc_noteref)
+
+#### Q125. A white paper has a sidebar and endnotes, both of which are complementary to the main text. How would you mark them up to make their distinct roles more broadly accesible?
+
+- [x] `<aside aria-label="Sidebar">Sidebar...</aside><aside aria-label="Endnotes">Endnotes...</aside>`
+- [ ] `<custom-sidebar aria-label="Sidebar">Sidebar...</custom-sidebar><custom-footnote aria-label="Endnotes">Endnotes...</custom-footnote>`
+- [ ] `<aside role="Sidebar">Sidebar...</aside><aside role="Endnotes">Endnotes...</aside>`
+- [ ] `<aside role="complementary">Sidebar...</aside><aside role="supplementary">Endnotes...</aside>`
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+#### Q126. Which video example will autoplay in most browsers?
+
+- [x] `<video src="video.mp4" autoplay muted></video>`
+- [ ] `<video src="video.mp4" background></video>`
+- [ ] `<video src="video.mp4" autoplay></video>`
+- [ ] `<video src="video.mp4" autoplay="force"></video>`
+
+[Source](https://stackoverflow.com/questions/65157672/force-html5-video-autoplay-unmuted)
+
+#### Q127. In which order will these scripts execute, assuming they all take the same time to download?
+
+```html
+<script type="module" src="module.js"></script>
+// external module
+<script type="async" src="module.js"></script>
+// async
+<script type="defer" src="module.js"></script>
+// defer
+<script type="module" src="module.js">
+  // inline module
+</script>
+```
+
+- [ ] async, external module, defer, inline module
+- [ ] async, inline module, external module, defer
+- [x] external module, async, defer, inline module
+- [ ] inline module, external module, defer, async
+
+#### Q128. What is the backward-compatible method of turning a circle in an SVG into a link?
+
+- [ ] `<html:a href="/our-circle/"><circle cx="10" cy="10" r="5"/></html:a>`
+- [ ] `<a svg:href="/our-circle/"><circle cx="10" cy="10" r="5"/></a>`
+- [ ] `<a href="/our-circle/"><circle cx="10" cy="10" r="5"/></a>`
+- [x] `<a href="/our-circle/" xlink:href="/our-circle/"><circle cx="10" cy="10" r="5"/></a>`
+
+[Source](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xlink:href)
+
+#### Q129. Users report that a form is not working. What is the culprit?
+
+```html
+  <form action="/choices" disabled>
+    <fieldset disabled>
+      <legend>Choices</legends>
+      <label>Choice 1 <input type="radio" name="choice" value="choice1" /></label>
+      <label>Choice 2 <input type="radio" name="choice" value="choice2" /></label>
+      <label>Choice 3 <input type="radio" name="choice" value="choice3" /></label>
+      <label>Choice 4 <input type="radio" name="choice" value="choice4" /></label>
+      <button>Choose!</button>
+    </fieldset>
+  </form>
+```
+
+- [x] There is no <input type="submit"> element.
+- [ ] There is no method set on the form.
+- [ ] The form element is disabled.
+- [ ] The fieldset is disabled.

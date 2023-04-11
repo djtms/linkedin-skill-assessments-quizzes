@@ -1143,17 +1143,19 @@ export class TruncateDirective{
 ```ts
 @Pipe({ name: 'truncate' })
 export class TruncatePipe implements PipeTransform {
-	transform(value: string, maxLength: number, showEllipsis: boolean){
-		const newValue = maxLength ? value.substr(0, maxLength): value;
-		return showEllipsis ? '${newValue}...` : newValue;
-	}
+  transform(value: string, maxLength: number, showEllipsis: boolean) {
+    const newValue = maxLength ? value.substr(0, maxLength) : value;
+    return showEllipsis ? '${newValue}...' : newValue;
+  }
 }
 ```
 
-- [x] {( 'some long text' | truncate:10 })
-- [ ] {( 'some long text' | truncate:10:true })
-- [ ] {( 'some long text' | truncate })
+- [ ] `{{ 'some long text' | truncate:10 }}`
+- [x] `'some long text' | truncate:10:true`
+- [ ] `{{ 'some long text' | truncate }}`
 - [ ] all of these answers
+
+[How do I call an Angular 2 pipe with multiple arguments?] (https://stackoverflow.com/questions/36816788/how-do-i-call-an-angular-2-pipe-with-multiple-arguments)
 
 #### Q61. Which Angular CLI command would you run to generate a UsersComponent and add it to the SharedModule (in file shared.module.ts in your application)?
 
@@ -1219,7 +1221,7 @@ export interface AppSettings {
 - [ ] This code as an error since you cannot use a TypeScript interface for the generic type on the InjectionToken.
 - [ ] The InjectionToken is used to create a provider token for a non-class dependency. An object lieteral can be provided as a value for the APP_SETTINGS dependency provider type that can then be injected into components, services, etc.
 - [ ] The InjectionToken is adding an instance of the AppSettings to the roote provider via the the InjectionToken constructor call, making it auto available to all NgModules, services, and componentts throughtout the Angular application without the need to inject it anywhere.
-- [ ] The InjectionToken is used to create a dynamic decorator for the AppSettings that can be sed on constructor parameters via an @AppSettings decorator.
+- [x] The InjectionToken is used to create a dynamic decorator for the AppSettings that can be sed on constructor parameters via an @AppSettings decorator.
 
 #### Q64. What Angular utilities, if any, are required to unit test a service with no constructor dependencies?
 
@@ -1270,3 +1272,197 @@ export interface AppSettings {
 - [x] `*ngFor="let item of items; trackBy: trackById"`
 
 [StackOverflow - How to use `trackBy` with `ngFor`](https://stackoverflow.com/a/58025894)
+
+#### Q68. What does this Angular CLI command do?
+
+```bash
+ng build --configuration=production --progress=false
+```
+
+- [ ] It builds the Angular application, setting the build configuration to the "production" target specified in the angular.json file, and logs progress output to the console.
+- [ ] It builds the Angular application, setting the build configuration to the "production" target specified in the angular.json file, and watching files for changes.
+- [ ] It builds the Angular application, setting the build configuration to the "production" target specified in the angular.json file, and disables watching files for changes.
+- [x] It builds the Angular application, setting the build configuration to the "production" target specified in the angular.json file, and prevents progress output to the console.
+
+[Angular documentation - `ng build`](https://angular.io/cli/build#:~:text=%2D%2D-,progress,-Log%20progress%20to)
+
+#### Q69. Service classes can be registered as providers via which decorators?
+
+- [ ] @Injectable, @NgModule, @Component, and @Directive.
+- [x] @Injectable only.
+- [ ] @Injectable and @NgModule only.
+- [ ] @Service and @NgModule only.
+
+#### Q70. What is the Input decorator used for in this component class?
+
+```javascript
+@Component({
+	selector:'app-product-name',
+	...
+})
+export class ProductNameComponent {
+	@Input() productName: string
+}
+```
+
+- [ ] It is used simply to put a comment in front of a class field for documentation.
+- [x] It provides a way to bind values to the productName field by using the component selector.
+- [ ] It autogenerates an `html
+<input type='text' id='productName'>` Dom element in the component template.
+- [ ] It provides a way to bind values to the productName instance field,just like native DOM element property bindings.
+      [Angular documentation - `Input()`](https://angular.io/guide/inputs-outputs)
+
+#### Q71. Which route guard can be used to mediate navigation to a route?
+
+- [x] all of these answers.
+- [ ] CanDeactivate.
+- [ ] CanLoad
+- [ ] CanActivate.
+      [Angular documentation - `Input()`](https://angular.io/guide/inputs-outputs)
+
+#### Q72. How can you configure the injector to use an existing object for a token instead of having it instantiate a class instance?
+
+- [x] Use the `useValue` provider configuration and set that equal to an existing object or an object literal.
+- [ ] It is not possible. Providers can be configured only with class types.
+- [ ] Simply add the object instance or literal to the providers array.
+- [ ] Make use of the `asValue` provider configuration property, setting it to true.
+
+[Configuring dependency providers](https://angular.io/guide/dependency-injection-providers)
+
+#### Q73. Based on this route definition, what can be injected into UserDetailComponent constructor to get ahold of the id route parameter?
+
+```ts
+{path: 'user/:id', component: UserDetailComponent }
+```
+
+- [x] ActivatedRoute
+- [ ] CurrentRoute
+- [ ] UrlPath
+- [ ] @Inject('id')
+
+[Common Routing Tasks](https://angular.io/guide/router#observable-parammap-and-component-reuse)
+
+#### Q74. With the following reactive form markup, what would you add to wire up a call to an onSubmit class method?
+
+```html
+<form [formGroup]="form">
+  <input type="text" formControlName="username" />
+  <button type="submit" [disabled]="form. invalid">Submit</button>
+</form>
+```
+
+- [ ] neither of these answers
+- [ ] Add (click)="onSubmit()" to the <button> element.
+- [x] Add (ngSubmit )="onSubmit ()" to the <form> element.
+- [ ] both of these answers
+
+[Angular - Forms](https://angular.io/guide/forms)
+
+#### Q75. What is the expected DOM code for this usage of the ngClass attribute directive when isActive is true?
+
+```html
+<div [ngClass]="{ ‘active-item': isActive }">Item One</div>
+```
+
+- [ ] `<div active-item>Item One</div>`
+- [x] `<div class="active-item">Item One</div>`
+- [ ] `<div class="is-active">Item One</div>`
+- [ ] `<div class="active-item isActive">Item One</div>`
+
+[Angular - NgClass](https://angular.io/api/common/NgClass)
+
+#### Q76. Which answer best explains the usage of ngModel in this template code?
+
+```html
+<input [(ngModel)]="user.name" />
+```
+
+- [ ] It is conditionally displaying the input element if the user.name property has a value.
+- [x] It is the two-way data binding syntax. The input element value property will be bound to the user.name property, and the value change event for the form element will update the user.name property value.
+- [ ] There is a typo in the code. It should have only the square brackets.
+- [ ] It is binding the value of the user.name property to the input element's val property to set its initial value.
+
+[Angular - NgModel](https://angular.io/api/forms/NgModel)
+
+#### Q77. What method is used to wire up a FormControl to a native DOM input element in reactive forms?
+
+- [ ] Use the string name given to the FormControl as the value for the DOM element id attribute.
+- [x] Use the formControlName directive and set the value equal to the string name given to the FormControl.
+- [ ] Add the string name given to the FormControl to an attribute named controls on the <form> element to indicate what fields it should include.
+- [ ] Use the square bracket binding syntax around the value attribute on the DOM element and set that equal to an instance of the FormControl.
+
+[Angular - Reactive Forms](https://angular.io/guide/reactive-forms)
+
+#### Q78. What other template syntax (replacing the ngClass directive) can be used to add or remove the CSS class names in this markup?
+
+```html
+<span [ngClass]="{ 'active': isActive, 'can-toggle': canToggle }"> Employed </span>
+```
+
+- [ ]
+
+```html
+<span class="{{ isActive ? 'is-active' : '' }}" class="{{ canToggle ? 'can-toggle' : '' }}">
+  Employed
+</span>
+```
+
+- [x]
+
+```html
+<span [class.active]="isActive" [class.can-toggle]="canToggle"> Employed </span>
+```
+
+- [ ]
+
+```html
+<span [styles.class.active]="isActive" [styles.class.can-toggle]="canToggle"> Employed </span>
+```
+
+- [ ]
+
+```html
+<span [css.class.active]="isActive" [css.class.can-toggle]="canToggle"> Employed </span>
+```
+
+#### Q79. In this directive decorator example, what is the purpose of the multi property in the provider object literal?
+
+```ts
+@Directive({
+  selector: '[customValidator]',
+  providers: [
+    {
+      provide: NG_VALIDATORS,
+      useExisting: CustomValidatorDirective,
+      multi: true,
+    },
+  ],
+})
+export class CustomValidatorDirective implements Validator {}
+```
+
+- [ ] It indicates that the CustomValidatorDirective can be used on multiple form element types.
+- [ ] It allows for multiple instances of the CustomValidatorDirective to be instantiated. Without multi, the CustomValidatorDirective would be a singleton for the entire app.
+- [x] It allows the registration of different providers for the single NG_VALIDATORS token. In this case, it is adding the CustomValidatorDirective to the list of form validators available.
+- [ ] It indicates that there will be multiple classes that handle the logic implementation for the custom validator.
+
+[StackOverflow](https://stackoverflow.com/questions/38144641/what-is-multi-provider-in-angular2)
+	
+#### Q80. Which Angular CLI command would you use to run your unit tests in a process that reruns your test suite on file changes?
+- [ ] ng test --single-run=false
+- [ ] ng test --watch-files
+- [ ] ng test --progress
+- [x] ng test
+	
+#### Q81. What is the most common use for the ngOnDestory lifecle hook?
+- [ ] Remove dome elements from the components's view
+- [ ] All of theses answers
+- [ ] Delete any injected serviced the
+- [x] Unsubscribe from obervables and detach
+	
+#### Q82. What NgModule decorator metadata property is leverage to allow other ....?
+
+- [ ] public
+- [ ] experts
+- [ ] Shared
+- [x] declarations

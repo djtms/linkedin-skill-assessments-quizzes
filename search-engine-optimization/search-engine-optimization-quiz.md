@@ -283,7 +283,7 @@
 
 - [ ] Use the pharse "local accountant" as a keyword to focus her website on.
 - [ ] Focus on short-tail keywords.
-- [x] Register her business with a Google My Business account.
+- [x] Register her business with a Google Business Profile account.
 - [ ] Leave a link to her website in the blog comments of popular accounting websites.
 
 #### Q33. What is the anchor text in this code sample?
@@ -758,3 +758,61 @@
 - [ ] The means Yahoo! actions just how popular an offered web page is based on the number as well as quality of websites that connect to it.
 - [ ] The search significance of a web page contrasted to the other web pages in the online search engine.
 - [x] The method Google measures exactly how popular a provided page is based upon the number and also quality of sites that connect to it.
+
+#### Q95. Your sitemap shows this entry: <lastmod>2020-09-09T19:34:00+01:00</lastmod>. What does +01:00 refer to?
+
+- [ ] time between publishing and updating
+- [ ] time since last sitemap crawl
+- [x] time zone designator
+- [ ] suggested content priority
+
+#### Q96. What markup language is most commonly used for sitemaps?
+
+- [ ] RSS
+- [ ] XLS
+- [ ] Javascript
+- [x] XML
+
+#### Q97. What markup language is most commonly used for sitemaps?
+
+- [ ] RSS
+- [ ] XLS
+- [ ] Javascript
+- [x] XML
+
+#### Q98. You are searching for a website that was published within last week. When you type in the URL, the site does not appear in Google search results. Why might this be?
+
+- [ ] You are searching on desktop and must wait for mobile-first indexing
+- [x] The site is not in Google's index
+- [ ] The website needs backling to be discovered by Googlebot
+- [ ] The website does not have a high enough domain authority
+
+#### Q99. In which scenario is using a 301 redirect preferred over a canonical link?
+
+- [ ] When using faceted navigation
+- [x] when treating uppercase versus lowercase characters in URLs
+- [ ] with an on-site search results page
+- [ ] when managing URL parameters
+
+#### Q100. What would be most beneficial in helping a site display rich features in Google's search results?
+
+- [ ] Google search console
+- [x] structured data
+- [ ] Data-Vocabulary.org
+- [ ] Google Result Generator
+    
+#### Q101. Which statement is true regarding the use of social signals, such as LinkedIn shares, by Google in its ranking algorithm?
+
+- [ ] Social signals provide a benefit only if they have structured data markup
+- [ ] Social signals are identical to backlinks
+- [ ] Google does not use social signals to determine rank
+- [X] Social signals are used to determine topic authority
+    
+[reference](https://www.gcertificationcourse.com/which-statement-is-true-regarding-the-use-of-social/)
+    
+#### Q102. How many outbound links should you include in each blog posting?
+
+- [ ] at least 2
+- [ ] at least five
+- [ ] at least seven
+- [ ] as many as are relevent

@@ -20,23 +20,63 @@
 
 #### Q3. Which is _not_ a valid loop construct in Go?
 
-- [x] `do { ... } while i < 5`
-- [ ] `for _,c := range "hello" { ... }`
-- [ ] `for i := 1; i < 5; i++ { ... }`
-- [ ] `for i < 5 { ... }`
+- [x]
 
-Explanation: Go has only `for`-loops
+```go
+      do { ... } while i < 5
+```
+
+- [ ]
+
+```go
+      for _,c := range "hello" { ... }
+```
+
+- [ ]
+
+```go
+      for i := 1; i < 5; i++ { ... }
+```
+
+- [ ]
+
+```go
+      for i < 5 { ... }
+```
+
+**Explanation:** Go has only `for`-loops
 
 #### Q4. How will you add the number 3 to the right side?
 
-`values := []int{1, 1, 2}`
+```go
+values := []int{1, 1, 2}
+```
 
-- [ ] `values.append(3)`
-- [ ] `values.insert(3, 3)`
-- [ ] `append(values, 3)`
-- [x] `values = append(values, 3)`
+- [ ]
 
-Explanation: slices in GO are immutable, so calling `append` does not modify the slice
+```go
+      values.append(3)
+```
+
+- [ ]
+
+```go
+      values.insert(3, 3)
+```
+
+- [ ]
+
+```go
+      append(values, 3)
+```
+
+- [x]
+
+```go
+      values = append(values, 3)
+```
+
+**Explanation:** slices in GO are immutable, so calling `append` does not modify the slice
 
 #### Q5. What is the value of `Read`?
 
@@ -57,10 +97,29 @@ const (
 
 #### Q6. Which is the _only_ valid import statement in Go?
 
-- [ ] `import "github/gin-gonic/gin"`
-- [ ] `import "https://github.com/gin-gonic/gin"`
-- [ ] `import "../template"`
-- [x] `import "github.com/gin-gonic/gin"`
+- [ ]
+
+```go
+      import "github/gin-gonic/gin"
+```
+
+- [ ]
+
+```go
+      import "https://github.com/gin-gonic/gin"
+```
+
+- [ ]
+
+```go
+      import "../template"
+```
+
+- [x]
+
+```go
+      import "github.com/gin-gonic/gin"
+```
 
 [Import in GoLang](https://golangdocs.com/import-in-golang)
 
@@ -145,7 +204,7 @@ func main() {
 - [ ] Sleep for a safe amount of time.
 - [x] `sync.WaitGroup`
 
-Explanation: this is exactly what `sync.WaitGroup` is designed for - [Use sync.WaitGroup in Golang](https://nanxiao.me/en/use-sync-waitgroup-in-golang/)
+**Explanation:** this is exactly what `sync.WaitGroup` is designed for - [Use sync.WaitGroup in Golang](https://nanxiao.me/en/use-sync-waitgroup-in-golang/)
 
 #### Q13. What is a side effect of using `time.After` in a `select` statement?
 
@@ -154,10 +213,11 @@ Explanation: this is exactly what `sync.WaitGroup` is designed for - [Use sync.W
 - [ ] It blocks the `select` statement until the time has passed.
 - [x] The goroutine does not end until the time passes.
 
-> Note: it doesn't block `select` and does not block other channels.  
-> 1. [time.After() Function in Golang With Examples](https://www.geeksforgeeks.org/time-after-function-in-golang-with-examples/)  
-> 2. [How can I use 'time.After' and 'default' in Golang?](https://stackoverflow.com/questions/39212333/how-can-i-use-time-after-and-default-in-golang)  
-> 3. [Go Playground example](https://go.dev/play/p/WojTrG1ywRK)
+> Note: it doesn't block `select` and does not block other channels.
+
+1. [time.After() Function in Golang With Examples](https://www.geeksforgeeks.org/time-after-function-in-golang-with-examples/)
+2. [How can I use 'time.After' and 'default' in Golang?](https://stackoverflow.com/questions/39212333/how-can-i-use-time-after-and-default-in-golang)
+3. [Go Playground example](https://go.dev/play/p/WojTrG1ywRK)
 
 #### Q14. What is the select statement used for?
 
@@ -215,7 +275,7 @@ func Add(a, b int) {
   }
   ```
 
-Explanation: documentation block should start with a function name
+**Explanation:** documentation block should start with a function name
 
 [Comments in Go](https://exercism.org/tracks/go/concepts/comments)
 
@@ -252,7 +312,7 @@ Explanation: documentation block should start with a function name
 1. [How to use conditional compilation with the go build tool, Oct 2013](https://dave.cheney.net/2013/10/12/how-to-use-conditional-compilation-with-the-go-build-tool)
 2. [go commands Build constraints](https://pkg.go.dev/cmd/go#hdr-Build_constraints)
 
-> `//go:build windows`  
+> `//go:build windows`
 > "Go versions 1.16 and earlier used a different syntax for build constraints, with a "// +build" prefix. The gofmt command will add an equivalent //go:build constraint when encountering the older syntax."
 
 #### Q19. What is the correct way to pass this as a body of an HTTP POST request?
@@ -261,10 +321,29 @@ Explanation: documentation block should start with a function name
 data := "A group of Owls is called a parliament"
 ```
 
-- [ ] `resp, err := http.Post("https://httpbin.org/post", "text/plain", []byte(data))`
-- [ ] `resp, err := http.Post("https://httpbin.org/post", "text/plain", data)`
-- [x] `resp, err := http.Post("https://httpbin.org/post", "text/plain", strings.NewReader(data))`
-- [ ] `resp, err := http.Post("https://httpbin.org/post", "text/plain", &data)`
+- [ ]
+
+```go
+  resp, err := http.Post("https://httpbin.org/post", "text/plain", []byte(data))
+```
+
+- [ ]
+
+```go
+      resp, err := http.Post("https://httpbin.org/post", "text/plain", data)
+```
+
+- [x]
+
+```go
+      resp, err := http.Post("https://httpbin.org/post", "text/plain", strings.NewReader(data))
+```
+
+- [ ]
+
+```go
+      resp, err := http.Post("https://httpbin.org/post", "text/plain", &data)
+```
 
 1. [net/http#Client.Post](https://pkg.go.dev/net/http#Client.Post)
 2. [http.Post Golang example](https://dev.to/ramu_mangalarapu/httppost-golang-example-5jp)
@@ -402,10 +481,10 @@ Relevant excerpt from the article:
 1. [Reference:](https://go.dev/play/p/gtne3iRL9AX)
 2. [testing package in Go](https://pkg.go.dev/testing), the relevant excerpt from the article:
 
-> `Fatal` is equivalent to `Log` followed by `FailNow`.  
-> `Log` formats its arguments using default formatting, analogous to `Println`, and records the text in the error log.  
-> `FailNow` marks the function as having failed and **stops its execution by calling `runtime.Goexit` (which then runs all deferred calls in the current goroutine). Execution will continue at the next test or benchmark.** `FailNow` must be called from the goroutine running the test or benchmark function, not from other goroutines created during the test. Calling `FailNow` does not stop those other goroutines.  
-> `Run` runs `f` as a subtest of `t` called name. It runs `f` in a separate goroutine and blocks until `f` returns or calls `t.Parallel` to become a parallel test. Run reports whether `f` succeeded (or at least did not fail before calling `t.Parallel`).  
+> `Fatal` is equivalent to `Log` followed by `FailNow`.
+> `Log` formats its arguments using default formatting, analogous to `Println`, and records the text in the error log.
+> `FailNow` marks the function as having failed and **stops its execution by calling `runtime.Goexit` (which then runs all deferred calls in the current goroutine). Execution will continue at the next test or benchmark.** `FailNow` must be called from the goroutine running the test or benchmark function, not from other goroutines created during the test. Calling `FailNow` does not stop those other goroutines.
+> `Run` runs `f` as a subtest of `t` called name. It runs `f` in a separate goroutine and blocks until `f` returns or calls `t.Parallel` to become a parallel test. Run reports whether `f` succeeded (or at least did not fail before calling `t.Parallel`).
 > Run may be called simultaneously from multiple goroutines, but all such calls must return before the outer test function for t returns.
 
 #### Q31. What does `log.Fatal` do?
@@ -451,7 +530,7 @@ AM/PM mark: "PM"
 - [ ] `log.Printf(log.ERROR, err)`
 - [ ] `log.Print("error: %v", err)`
 
-Explanation: There is defined neither _log.ERROR_, nor _log.Error()_ in [log package in Go](https://pkg.go.dev/log); `log.Print()` arguments are handled in the manner of `fmt.Print()`; `log.Printf()` arguments are handled in the manner of `fmt.Printf()`.
+**Explanation:** There is defined neither _log.ERROR_, nor _log.Error()_ in [log package in Go](https://pkg.go.dev/log); `log.Print()` arguments are handled in the manner of `fmt.Print()`; `log.Printf()` arguments are handled in the manner of `fmt.Printf()`.
 
 #### Q34. Which file names will the `go test` command recognize as test files?
 
@@ -583,17 +662,17 @@ Program exited.
 
 ```go
 func findUser(ctx context.Context, login string) (*User, error) {
-        ch := make(chan *User)
-        go func() {
-                ch <- findUserInDB(login)
-        }()
+    ch := make(chan *User)
+    go func() {
+            ch <- findUserInDB(login)
+    }()
 
-        select {
-        case user := <-ch:
-                return user, nil
-        case <-ctx.Done():
-                return nil, fmt.Errorf("timeout")
-        }
+    select {
+    case user := <-ch:
+            return user, nil
+    case <-ctx.Done():
+            return nil, fmt.Errorf("timeout")
+    }
 }
 ```
 
@@ -611,9 +690,9 @@ Relevant excerpt from the article:
 #### 44. What will this code print?
 
 ```go
-      var i int8 = 120
-      i += 10
-      fmt.Println(i)
+var i int8 = 120
+i += 10
+fmt.Println(i)
 ```
 
 - [x] -126
@@ -632,40 +711,40 @@ Program exited.
 #### 45. Given the definition of worker below, what is the right syntax to start a start a goroutine that will call worker and send the result to a channel named ch?
 
 ```go
-      func worker(m Message) Result
+func worker(m Message) Result
 ```
 
-- [ ]  
-  
+- [ ]
+
 ```go
-        go func() {
-                r := worker(m)
-                ch <- r
-        }
+go func() {
+    r := worker(m)
+    ch <- r
+}
 ```
 
-- [ ]  
-  
+- [ ]
+
 ```go
-        go func() {
-                r := worker(m)
-                r -> ch
-        } ()
+go func() {
+    r := worker(m)
+    r -> ch
+} ()
 ```
 
-- [x]  
-  
+- [x]
+
 ```go
-        go func() {
-                r := worker(m)
-                ch <- r
-        } ()
+go func() {
+    r := worker(m)
+    ch <- r
+} ()
 ```
 
-- [ ]  
-  
+- [ ]
+
 ```go
-        go ch <- worker(m)
+go ch <- worker(m)
 ```
 
 [Go Playground example](https://go.dev/play/p/96j7tuQKF50)
@@ -684,7 +763,7 @@ type userID int
 - [ ] FilePermission and userID
 - [ ] userID
 
-[Reference 1](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)  
+[Reference 1](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)
 [Reference 2](https://go.dev/tour/basics/3)
 
 #### Q47. Which of the following is correct about structures in Go?
@@ -768,10 +847,391 @@ func main() {
 }
 ```
 
-- [ ] `#1: ctx.SetTimeout(3*time.Second) #2: req.AttachContext(ctx)`
-- [x] `#1: ctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel() #2: req = req.WithContext(ctx)`
-- [ ] `#1: ctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel() #2: req.AttachContext(ctx)`
-- [ ] `#1: ctx.SetTimeout(3*time.Second) #2: req = req.WithContext(ctx)`
+- [ ]
+
+```go
+      ctx.SetTimeout(3*time.Second)
+      req.AttachContext(ctx)
+```
+
+- [x]
+
+```go
+      ctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel()
+      req = req.WithContext(ctx)
+```
+
+- [ ]
+
+```go
+      ctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel() #2: req.AttachContext(ctx)
+```
+
+- [ ]
+
+```go
+      ctx.SetTimeout(3*time.Second)
+      req = req.WithContext(ctx)
+```
 
 1. [context#WithTimeout](https://pkg.go.dev/context#WithTimeout)
 2. [net/http#Request.WithContext](https://pkg.go.dev/net/http#Request.WithContext)
+
+#### Q53. If you have a struct named Client defined in the same .go file as the statement, how do you export a variable with a default value so the variable is accessible by other packages?
+
+- [ ]
+
+  ```go
+  let Default := new Client()
+  ```
+
+- [ ]
+
+  ```go
+  public default = &Client()
+  ```
+
+- [x]
+
+  ```go
+  var Default = &Client{}
+  ```
+
+- [ ]
+
+  ```go
+  export default := new Client{}
+  ```
+
+#### Q54. This program outputs `{Master Chief Spartan Protagonist Halo}`. How would you get it to output `Master Chief - a Spartan - is the Protagonist of Halo` instead?
+
+```go
+package main
+
+import "fmt"
+
+type Character struct{
+        Name  string
+        Class string
+        Role  string
+        Game  string
+}
+
+func main() {
+        mc := Character{
+                Name: "Master Chief",
+                Class: "Spartan",
+                Role: "Protagonist",
+                Game: "Halo",
+        }
+        fmt.Println(mc)
+}
+```
+
+- [ ] A
+
+  ```go
+  // Replace
+  // fmt.Println(mc)
+  // with this:
+
+  fmt.Printf("(?P<Name>) - a (?P<Class>) - is the (?P<Role>) of (?P<Game>)", mc)
+  ```
+
+- [ ] B
+
+  ```go
+  // Replace
+  // fmt.Println(mc)
+  // with this:
+  fmt.Println(mc, func(c Character) string {
+        return c. Name + " - a " + c.Class + " - is the " + c.Role + " of " + c.Game
+  })
+  ```
+
+- [x] C
+
+  ```go
+  // add this to the package `main`
+
+  func (c Character) String() string {
+        return fmt.Sprintf("%s - a %s - is the %s of %s", c.Name, c.Class, c.Role,c.Game)
+  }
+  ```
+
+- [ ] D
+
+  ```go
+   // add this to the package `main`
+
+  func (c Character) OnPrint() {
+        fmt.Println("{{c.Name}} - a {{c.Class}} - is the {{c.Role}} of {{c.Game}}")
+  }
+  ```
+
+1. [fmt#Stringer](https://pkg.go.dev/fmt#Stringer)
+
+#### Q55. How would you implement a working `Append()` method for `Clients`?
+
+```go
+package main
+
+type Client struct {
+  Name string
+}
+type Clients struct {
+  clients []*Client
+}
+func main() {
+  c:= &Clients{clients.make([]*Client,0)}
+  c.Append(&Client{Name: "LinkedIn API})
+}
+```
+
+- [x] A
+
+  ```go
+  func (cc *Clients) Append(c *Client) {
+    cc.clients = append(cc.clients, c)
+  }
+  ```
+
+- [ ] B
+
+  ```go
+  func (cc *Clients) Append(c *Client) {
+    cc.append(c)
+  }
+  ```
+
+- [ ] C
+
+  ```go
+  func (cc Clients) Append(c Client) {
+    cc.clients = append(cc.clients, c)
+  }
+  ```
+
+- [ ] D
+
+  ```go
+  func (cc *Clients) Append(c Client) {
+    cc.clients.append(c)
+  }
+  ```
+
+#### Q56. How would you recover from a `panic()` thrown by a called function without allowing your program to fail assuming your answer will run in the same scope where your function call will experience the panic?
+
+- [ ] Wrap the function call in an anonymous function with a return type of `panic`, remembering to invoke the anonymous function by suffixing it with `()` then introspecting the returned `panic` instance to handle the error.
+
+- [ ] Use `try{ ... }` to wrap the code calling the function and then handle the error within the `catch{ ... }`.
+
+- [x] Use `defer func { ... }()` before the function call with the error and then handle the panic inside the anonymous function.
+
+- [ ] Prefix the function call with `@` to force return the panic as an `error` value and then handle the error just as you would an `error` returned by any function.
+
+#### Q57. What will this code print?
+
+```go
+var n int
+fmt.Println (n)
+```
+
+- [x] 0
+- [ ] nil
+- [ ] a random value
+- [ ] 1
+
+> This is because in Go, when a variable is declared but not explicitly initialized, it is assigned a default [zero value](https://go.dev/tour/basics/12) based on its type. For integers like n, the zero value is 0.
+
+#### Q58. When creating a formatted string, which verb should you use to call the String () string method of a custom type?
+
+- [x] %s
+- [ ] %b
+- [ ] %v
+- [ ] %string
+
+> In Go, the %s verb is used to format a string. When used with a custom type that has a String() method defined, the String() method will be automatically called and its return value will be used in the formatted string.
+
+#### Q59. Which is not a valid value for layout when calling time. Now ( ) . Format ( layout)?
+
+- [ ] time.REC3339
+- [ ] "1970-01-01"
+- [ ] "Jan 2nd 2006"
+- [x] time.Kitchen
+
+> The time.Kitchen constant is not a valid value for layout when calling time.Now().Format(layout). The time.Kitchen constant is used to format a time value in a 12-hour clock format with seconds, such as 3:04:05PM.
+
+#### Q60. How would you signal to the Go compiler that the Namespace struct must implement the JSONConverter interface? This question assumes the answer would be included in the same package where Namespace is declared.
+
+- [ ] var_JSONConverter = nil. (\*Namespace)
+- [x] var_JSONConverter = (\*Namespace) (nil)
+- [ ] type Namespace struct {
+      implements JSONConverter
+      // The rest of the struct declaration goes here
+      }
+- [ ] type Namespace struct {
+      JSONConverter
+      // The rest of the struct declaration goes here
+      }
+
+> This syntax creates a variable \_ with the type of JSONConverter and assigns to it a value of (\*Namespace)(nil). This essentially checks that the Namespace struct satisfies the JSONConverter interface by ensuring that it can be assigned to a variable of type JSONConverter.
+
+#### Q61. Which statement about typing and interfaces is false?
+
+- [ ] A method signature is the combination of a method name and the type(s) of its declared parameter(s) and return value(s).
+- [x] A struct must explicitly declare using the implements keyword that its instances can be used wherever a variable, parameter, and/or
+      return value is typed for the declared interface.
+- [ ] An interface declares a list of methods and their signatures that a type must implement to be compatible with values typed for that interface.
+- [ ] Variable, parameters, and return values must be "typed" as one of 1) a built-in type, 2) a type alias, 3) a derived type, 4) a composite type, or
+
+5. an interface.
+
+> # In Go, a type automatically satisfies an interface if it implements all the methods of that interface. There is no need to explicitly declare that a struct implements an interface using a specific keyword.
+
+#### Q62. How would you complete this program to generate the specified output, assuming the SQL table
+
+```go
+===[Output]================
+1: &{GameId:1 Title:Wolfenstein YearReleased:1992}
+2: &{GameId:2 Title:Doom YearReleased:1993}
+3: &{GameId:3 Title:Quake YearReleased:1996}
+
+===[main.go]================
+package main
+
+import (
+        "database/sql"
+        "fmt"
+        _ "github.com/go-sql-driver/mysql"
+        "log"
+)
+
+type Game struct {
+        GameId       int
+        Title        string
+        YearReleased int
+}
+
+func main() {
+
+        conn, err := sql.Open("mysql",
+                "john_carmack:agiftw!@tcp(localhost:3306)/idsoftware")
+
+        if err != nil {
+                panic(err)
+        }
+        defer func() { _ = conn.Close() }()
+
+        results, err := conn.Query("SELECT game_id,title,year_released FROM games;")
+        if err != nil {
+                panic(err)
+        }
+        defer func() { _ = results.Close() }()
+
+        // #1 <=== What goes here?
+
+        for results.Next() {
+                var g Game
+
+                // #2 <=== What goes here?
+
+                if err != nil {
+                        panic(err)
+                }
+
+                // #3 <=== What goes here?
+
+        }
+
+        for i, g := range games {
+                fmt.Printf("%d: %+v\n", i, g)
+        }
+
+}
+```
+
+- [ ]
+
+```go
+#1: games := make([]*Game, results.RowsAffected())
+#2: g, err = results.Fetch()
+#3: games[results.Index()] = &g
+```
+
+- [ ]
+
+```go
+#1: games := []Game{}
+#2: g, err = results.Fetch()
+#3: games = append(games,g)
+```
+
+- [ ]
+
+```go
+#1: games := map[int]Game{}
+#2: err = results.Scan(&g)
+#3: games[g.GameId] = g
+```
+
+- [x]
+
+```go
+#1: games := make(map[int]*Game, 0)
+#2: err = results.Scan(&g.GameId, &g.Title, &g.YearReleased)
+#3: games[g.GameId] = &g
+```
+
+#### Q63. Fill in the blanks
+
+1.  Test files in Go must **\_**.
+2.  Individual tests are identified by **\_**.
+3.  You can run subtests by **\_\_**.
+4.  You log the error and mark the test failed by **\_**.
+
+- [ ] be stored in a `/test/`subdirectory of that package
+      <br/>functions accepting a `testing.Tester` parameter
+      <br/>writing functions with names matching `^Subtest`
+      <br/>calling `testing.AssertionFailed`
+
+- [x] end in `_test.go`
+      <br/>function names matching `^Test[A-Z]`
+      <br/>calling `t.Run()`
+      <br/>calling `t.Errorf()`
+
+- [ ] begin with `test_`
+      <br/>functions matching `[a-z]Test$`
+      <br/>calling `testing.Subtest()`
+      <br/>allowing `testing.Assert()` to fail its assertion
+
+- [ ] be stored in `/test/` root subdirectory for the project
+      <br/>functions accepting a `testing.Test` parameter
+      <br/>passing closures to `testing.AddSubtest()`
+      <br/>returning an `error` from the function
+
+#### Q64. Which type is a rune an alias for?
+
+- [ ] char
+- [ ] byte
+- [x] int32
+- [ ] string
+
+1. [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings)
+
+Relevant excerpt from the article:
+
+> _The Go language defines the word rune as an alias for the type int32, so programs can be clear when an integer value represents a code point._
+
+#### Q65. When can you use the := syntax to assign to multiple variables? For example:
+
+```go
+x, err := myFunc()
+```
+
+- [x] if it at least has not been declared in that lexical block
+- [ ] at all times, as it will overwrite existing variables
+- [ ] if no variables of those names is accessible
+- [ ] if none of the variables exist in that lexical block
+
+1. [Short variable declarations](https://go.dev/ref/spec#Short_variable_declarations)

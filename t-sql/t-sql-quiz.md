@@ -39,7 +39,7 @@ END CATCH
 
 #### Q5. What is an example of a DDL command in SQL?
 
-- [ ] `TRUNCATE TABLE`
+- [x] `TRUNCATE TABLE`
 - [ ] `DELETE`
 - [ ] `MERGE`
 - [x] `DROP`
@@ -244,12 +244,14 @@ SELECT ProductID, ProductName, SerialNumber
 FROM Products______ ;
 ```
 
-- [x] `WHERE SerialNumber LIKE '%10_3'`
+- [ ] `WHERE SerialNumber LIKE '%10_3'`
 - [ ] `WHERE SerialNumber LIKE ('%10'+'_'+'3')`
 - [ ] `WHERE SerialNumber LIKE '%10"_"3'`
-- [ ] `WHERE SerialNumber LIKE '%10[_]3'`
+- [x] `WHERE SerialNumber LIKE '%10[_]3'`
 
-> The underscore will match any single character so you must bracket it to match a literal `_`, otherwise you could potentially return a serial number ending in '1013', for example.
+> The underscore will match any single character, therefore you need to wrap the literal `_` with square brackets, otherwise, it may return a serial number ending with '1013', '10A3', etc.
+
+[Reference link](https://learn.microsoft.com/en-us/sql/t-sql/language-elements/like-transact-sql?view=sql-server-ver15#using-wildcard-characters-as-literals)
 
 #### Q23. When no join type between multiple tables in a query's `FROM` clause is specified, what type of join is assumed?
 
@@ -350,7 +352,7 @@ CREATE TABLE Books (
 
 - [ ] `NO DUPLICATES`
 - [ ] `UNIQUE CONSTRAINT AK_Books_BookISBN`
-- [ ] D`UPLICATE CONSTRAINT (AK_Books_BookISBN)`
+- [ ] `DUPLICATE CONSTRAINT (AK_Books_BookISBN)`
 - [x] `CONSTRAINT AK_Books_BookISBN UNIQUE`
 
 #### Q32. Given a table with the following structure, which query will not return the lowest grade earned by any student?
@@ -442,7 +444,7 @@ END;
 ![T-SQL-Q36](images/Q36.jpg)
 
 - [x] `UPDATES Students SET team = 'Philosophy Parrots' WHERE team = 'Philosophy Pandas';`
-- [ ] `UPDATES Students SET team = `Philosophy Parrots`WHERE team =`Philosophy Pandas`;`
+- [ ] `UPDATES Students SET team = `Philosophy Parrots`WHERE team =`Philosophy Pandas;`
 - [ ] `UPDATES Students SET team = "Philosophy Parrots" WHERE team = "Philosophy Pandas";`
 - [ ] `UPDATES Students SET team = Philosophy Parrots WHERE team = Philosophy Pandas;`
 
@@ -511,35 +513,35 @@ CREATE TABLE Publishers (
 ```
 
 - [ ] :
-
-```ALTER TABLE Books
-          ADD CONSTRAINT FK Books_PublisherID
-          FOREIGN KEY (PublisherID)
-          REFERENCES Publishers (PublisherID) ON UPDATE SET NULL
+```tsql
+ALTER TABLE Books
+ADD CONSTRAINT FK Books_PublisherID
+FOREIGN KEY (PublisherID)
+REFERENCES Publishers (PublisherID) ON UPDATE SET NULL
 ```
 
 - [x] :
-
-```ALTER TABLE Books
-          ADD CONSTRAINT FK Books_PublisherID
-          FOREIGN KEY (PublisherID)
-          REFERENCES Publishers (PublisherID) ON DELETE CASCADE
+```tsql
+ALTER TABLE Books
+ADD CONSTRAINT FK Books_PublisherID
+FOREIGN KEY (PublisherID)
+REFERENCES Publishers (PublisherID) ON DELETE CASCADE
 ```
 
 - [ ] :
-
-```ALTER TABLE Books
-          ADD CONSTRAINT FK_Books_PublisherID
-          FOREIGN KEY (PublisherID)
-          REFERENCES Publishers (PublisherID)
+```tsql
+ALTER TABLE Books
+ADD CONSTRAINT FK_Books_PublisherID
+FOREIGN KEY (PublisherID)
+REFERENCES Publishers (PublisherID)
 ```
 
 - [ ] :
-
-```ALTER TABLE Publishers
-          ADD CONSTRAINT FK_Publishers_PublisherID
-          FOREIGN KEY (PublisherID)
-          REFERENCES Books (PublisherID) CASCADE DELETE
+```tsql
+ALTER TABLE Publishers
+ADD CONSTRAINT FK_Publishers_PublisherID
+FOREIGN KEY (PublisherID)
+REFERENCES Books (PublisherID) CASCADE DELETE
 ```
 
 #### Q42. Your database currently has a table called Inventory in the Warehouse schema. You need to move the table to the Products schema. Which query accomplishes this goal?
@@ -607,10 +609,12 @@ _______
 SELECT 123+'abc' AS Result;
 ```
 
-- [x] 123abc
+- [ ] 123abc
 - [ ] 123'abc'
 - [ ] '123abc'
-- [ ] error
+- [x] error
+
+> Conversion failed when converting the varchar value 'abc' to data type int.
 
 #### Q50.What output will the following SQL sequence produce? Assume that the tables have been created and all the columns exist.
 
@@ -630,3 +634,56 @@ SELECT bal FROM Account WHERE acct='12345';
 - [ ] `You will get an error because ROLLBACK deletes the row that was update`
 
 [Reference link](https://www.geeksforgeeks.org/sql-transactions/)
+
+#### Q51. The Marketing department wants to send an email to each member of the Humanities department. Based on the table below, which query gives them the first name and email address of each member of that department?
+
+![T-SQL-Q36](images/Q36.jpg)
+
+- [ ] `SELECT first_name, email FROM Students WHERE department = Humanities;`
+- [ ] `SELECT first_name, email FROM Students WHERE department = "Humanities";`
+- [x] `SELECT first_name, email FROM Students WHERE department = 'Humanities';`
+- [ ] `SELECT 'first_name', 'email' FROM 'Students' WHERE 'department' = "Humanities";`
+
+#### Q52. Which statement deletes a table named Inventory from the Products database?
+
+- [ ] :
+
+```tsql
+  DROP TABLE Products.Inventory;
+```
+
+- [x] :
+
+```tsql
+  USE Products;
+  DROP TABLE Inventory;
+```
+
+- [ ] :
+
+```tsql
+  USE Products;
+  DELETE Inventory;
+```
+
+- [ ] :
+
+```tsql
+  USE Products.Inventory;
+  DROP TABLE Inventory;
+```
+> This statement first switches to the Products database using the `USE` command and then drops the Inventory table using the `DROP TABLE` command.
+
+#### Q53. In a SELECT statement, which clause should always be used with the TOP clause in order to predictably indicate which rows are affected by TOP?
+
+- [ ] GROUP BY
+- [ ] HAVING
+- [ ] WHERE
+- [x] ORDER BY
+
+#### Q54. Which data type should you choose when you nedd to store dates and times that include time zone information?
+
+- [x] datetimeoffset
+- [ ] smalldatetime
+- [ ] datetime
+- [ ] datetime2

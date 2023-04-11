@@ -61,7 +61,7 @@
 - [ ] an SSL certificate
 - [ ] a bitmask
 - [x] an AWS KMS key
-- [ ] an HTTP protocol 
+- [ ] an HTTP protocol
 
 #### Q10. Lambdas allow for running of what other things?
 
@@ -324,7 +324,7 @@
 
 #### Q47. You want to minimize cold start time for your Lambda. What do you do?
 
-- [ ] Add extra code to check if the transient cache, or the /tmp directory, has the data that you stored.
+- [x] Add extra code to check if the transient cache, or the /tmp directory, has the data that you stored.
 - [ ] Add extra code to check if the permanent cache, or the /cache directory, has the data that you stored.
 - [ ] Do nothing. AWS minimizes cols start time by default.
 - [ ] Create a warm-up Lambda that calls your Lambda every minute
@@ -344,8 +344,10 @@
 
 - [ ] at the function level
 - [ ] at the alias or function level
-- [ ] at the version, alias, or function level
+- [x] at the version, alias, or function level
 - [ ] at the version or function level
+
+[Reference](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html)
 
 #### Q50. Lambda can read events from which other AWS services? (ref-https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html)
 
@@ -354,7 +356,7 @@
 - [ ] Kinesis, DynamoDB, and SNS
 - [x] Kinesis, DynamoDB, and SQS
 
-**Explanation** 
+**Explanation**
 
 - `Lambda can used for all services mentioned on the question: Kinesis, S3, SNS, SQS, DynamoDB. But as you can see in the reference, Lambda's responsibility and method invocation can be categorized by Lambda polling and Event Driven (synchronous invocation). When you implement an event-driven architecture, you grant the event-generating service permission to invoke your function in the function's resource-based policy. Then you configure that service to generate events that invoke your function. When you implement a Lambda polling architecture, you grant Lambda permission to access the other service in the function's execution role. Lambda reads data from the other service, creates an event, and invokes your function. According to this analytics, Kinesis-DynamoDB-SQS use same method invocation, Lambda polling.`
 
@@ -412,3 +414,42 @@
 - [ ] Send the Lambda failures to a Dead Letter Queue
 - [x] Use AWS X-Ray to step through the function
 - [ ] Use Kinesis to write their own custom logging tool
+
+#### Q58. Lambdas can be created **\_**.
+
+- [x] All of these answers
+- [ ] From scratch
+- [ ] From the app repository
+- [ ] Using a blueprint
+
+#### Q59. You need to quickly understand execution times for two different Lambda functions with different invocation types: asynchronous and synchronous. What do you do?
+
+- [x] Enable tracing, rerun the lambdas, and view in the lambda console
+- [ ] View the logs in CloudTrail
+- [ ] View the logs in CloudWatch
+- [ ] Enable tracing, rerun the Lambdas, and view in the X-Ray console
+
+#### Q60. Which tool would you use to test a Lambda locally?
+
+- [ ] AWS SAM
+- [ ] AWS CLI
+- [ ] AWS CloudFormation
+- [x] AWS SAM CLI
+
+#### Q61. Your function failed to execute due to a timeout. What type of error is this?
+
+- [ ] Caller
+- [x] Runtime
+- [ ] Request
+- [ ] Account
+
+#### Q62. A company will be modernizing their application which is currently running on Amazon Elastic Cloud Compute (EC2) instances. They have experience with scaling this infrastructure using Amazon EC2 Autoscaling. They want to move to serverless infrastructure consisting of an Amazon API Gateway that triggers Lambda functions. They are consulting you about scaling this new infrastructure. What should the company consider in order to make sure the serverless infrastructure scales to their needs?
+
+- [ ] Enable Auto Scaling Groups for AWS Lambda to ensure that enough Lambda functions are ready to handle the incoming requests
+- [ ] Throttle Lambda functions by configuring reserved concurrency, sending the excess traffic to Dead Letter Queues (DLQ) that will be handled when the request volume reduces.
+- [x] Look at service limits for Amazon API Gateway and Lambda functions used in order to identify potential bottlenecks and balance performance requirements, costs, and business impact
+- [ ] Do nothing. API Gateway and AWS Lambda are managed services that have built-in horizontal scaling, security, and high availability to handle unlimited amount of requests
+
+**Explanation**
+
+In serverless it is important to understand the service limits of all the services used end to end to understand the level of requests that can be handled.

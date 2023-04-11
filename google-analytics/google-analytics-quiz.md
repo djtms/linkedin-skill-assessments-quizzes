@@ -197,7 +197,9 @@
 - [ ] directly after the `<body>` tag
 - [ ] directly before the `</body>` tag
 
-#### Q28. Refer to the two following URLs. How can you make this data more readable in Google Analytics by mapping the actual product names to the ID in the URL? `.../shop/?ProductID=1234` `.../shop/?ProductID=5678`
+#### Q28. Refer to the two following URLs. How can you make this data more readable in Google Analytics by mapping the actual product names to the ID in the URL?
+
+`.../shop/?ProductID=1234` `.../shop/?ProductID=5678`
 
 - [ ] Configure calculated metrics.
 - [ ] Use a custom import.
@@ -595,9 +597,9 @@
 - [ ] on metrics only
 - [x] temporary
 
-#### Q84. What is a risk of using the Copare to Previous Period option?
+#### Q84. What is a risk of using the Compare to Previous Period option?
 
-- [ ] it is not possible to cmpare previous periods with sampled data pulled ad hoc
+- [ ] it is not possible to compare previous periods with sampled data pulled ad hoc
 - [ ] The same amount of days selected for the Date Range will be used for the coparison
 - [x] If the review period is Wednesday to Thursday, the previous period may include weekends, which may skew the comparison
 - [ ] Both sets of data may appear on the same graph, which will skew your ability to analyze impact
@@ -608,3 +610,10 @@
 - [x] Acquisition > Google Ads > Search queries
 - [ ] Acquisition > Google Ads > Keywords
 - [ ] Acquisition > Campaign > Organic Keywords
+
+#### Q86. What does the Site Search Report Display
+
+- [ ] How users search Google
+- [ ] in-page analytics
+- [ ] waht pages are missing from you site
+- [x] how users search on you site

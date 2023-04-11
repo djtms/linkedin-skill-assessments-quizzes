@@ -2,10 +2,10 @@
 
 #### Q1. A dataset that includes \_ can be used to create a map visualization. (Select all that apply.)
 
-    A. house numbers, street names
-    B. geospatial data
-    C. city names, country names
-    D. longitude, latitude
+A. house numbers, street names
+B. geospatial data
+C. city names, country names
+D. longitude, latitude
 
 - [x] A, B, C, D
 - [ ] A, C, D
@@ -759,3 +759,10 @@
 - [ ] Service settings
 - [ ] Connectors
 - [x] Network
+
+#### Q96. You pinned an Excel pivot table to a dashboard. What will other users be allowed to do with this visualization?
+
+- [ ] View the pivot table.
+- [x] all of these answers
+- [ ] Rearrange pivot table fields.
+- [ ] Drill down in the pivot table.

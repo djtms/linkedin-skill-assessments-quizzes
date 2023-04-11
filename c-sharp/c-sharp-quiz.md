@@ -709,6 +709,8 @@ public int Password
 - [ ] `string myVariable = null`
 - [ ] `string(null) myVariable`
 
+[Official documentation: nullable value types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types#declaration-and-assignment)
+
 #### Q66. Do you need to declare an out variable before you use it?
 
 - [x] `No, you can declare an out in the parameter list.`
@@ -718,7 +720,7 @@ public int Password
 
 #### Q67. How would you access the last two people in an array named People?
 
-- [ ] `People[..^2]`
+- [x] `People[..^2]`
 - [ ] `You cannot do this in C#.`
 - [ ] `People[..^3]`
 - [ ] `People[^2]`
@@ -795,9 +797,43 @@ void MyFunction()
 
 [Reference](https://stackoverflow.com/a/6136865)
 
-    #### Q74. Which statement is True?
+#### Q74. Which statement is True?
 
 - [ ] All are true.
 - [ ] None are true.
 - [ ] string is a value type.
 - [x] string is an alias for String
+
+[Reference](https://stackoverflow.com/q/7074)
+
+#### Q75. How would you return more than one value from a method?
+
+- [x] Use either a tuple or an out variable.
+- [ ] The only way is to use an out variable.
+- [ ] The only way is to use a tuple.
+- [ ] This cannot be done
+
+#### Q76. Which is a valid example of a derived class?
+
+- [ ] `public class PremiumUser sub User {}`
+- [x] `public class PremiumUser: User {}`
+- [ ] `public class PremiumUser -> sub User {}`
+- [ ] `public class User: PremiumUser {}`
+
+#### Q77. What is the correct way to call a static method named DebugString from a static class called InputManager?
+
+- [ ] `static InputManager.DebugString();`
+- [ ] `InputManager().DebugString;`
+- [ ] `new InputManager().DebugString();`
+- [x] `InputManager.DebugString();`
+    
+#### Q78. What values can be assigned to this variable?
+    
+```cs
+public string? nickname
+```
+
+- [ ] null
+- [ ] String values
+- [x] String values or null
+- [ ] String values with more than one character

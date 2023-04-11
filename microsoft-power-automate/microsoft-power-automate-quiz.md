@@ -212,3 +212,60 @@
 - [x] Terminate
 - [ ] Scope
 - [ ] Switch
+
+#### Q28. Can you create nested conditions? If yes, how?
+
+- [x] Yes. Add another set of conditions into the Yes/No results of an existing condition.
+- [ ] Yes. Add another set of conditions after the resulting actions.
+- [ ] No. You can have only one set of conditions per flow.
+- [ ] It depends on the action. For instance, you cannot have multiple conditions if you are updating SharePoint records.
+
+#### Q29. What control would you use to build parallel branches of conditional logic based on a single value?
+
+![Image of footer](images/Q01.png?raw=png)
+
+- [ ] Apply to each
+- [ ] Scope
+- [x] Switch
+- [ ] Condition
+
+#### Q30. In this flow, what is required for dynamic content to be available for use in the Email step?
+
+![Image of footer](images/Q30.png?raw=png)
+
+- [ ] Recipient of email must have edit rights to the SharePoint library.
+- [ ] User must be owner of the SharePoint library.
+- [ ] The SharePoint site and library must be specified.
+- [x] File must be in a folder inside the SharePoint library.
+
+#### Q31. What is a business process flow?
+
+- [ ] Business process flows are automatically generated from business process flow charts in Microsoft Visio.
+- [x] Business process flows define a set of steps that guide people through a process to a desired outcome.
+- [ ] Accounting departments use business process flows to report on regular operations.
+- [ ] You can use business process flows to create routines that will automatically process business maintenance tasks, such as system backups.
+
+#### Q32. What rights do you give to other people with whom you share a flow directly from Power Automate?
+
+- [ ] You give them the rights to use the flow only. 
+- [ ] You give them the rights to use, edit, share, or delete the flow. 
+- [x] You give them the rights to use the flow, but you can extend the rights to edit or share for specific people.
+- [ ] You give them the rights to edit or share the flow.
+
+#### Q33. Who can use the Power Automate mobile app? 
+
+![Image of footer](images/Q30.png?raw=png)
+
+- [ ] Anyone who already has a Power Automate account can install and use the mobile app.
+- [ ] Anyone who purchases a Power Automate mobile license can install and use the mobile app.
+- [ ] The Power Automate app can be installed and used on mobile devices that are linked to Office 365 enterprise licenses.
+- [x] Anyone can install and use the Power Automate app on an Android or iOS device.
+
+#### Q34. You want a flow that sends an email if a new spreadsheet is added to a SharePoint library. What is the correct order for the steps shown?
+
+![Image of footer](images/Q34.png?raw=png)
+
+- [ ] A, B, D, E, C
+- [x] C, B, A, E, D
+- [ ] D, A, E, B, C
+- [ ] C, A, B, D, E

@@ -177,7 +177,7 @@ function MyComponent() {
 - [x] fallback
 - [ ] spinner
 
-[Explanation](https://linguinecode.com/post/how-react-suspense-works)
+[Reference](https://linguinecode.com/post/how-react-suspense-works)
 
 #### Q17. What do you call the message wrapped in curly braces below?
 
@@ -208,6 +208,11 @@ const element = <p>{message}</p>;
 - [x] when you need the browser to paint before the effect runs
 
 [Reference](https://www.knowledgehut.com/blog/web-development/react-uselayouteffect)
+
+[Answer confirmed by multiple members of the community in this internal discussion](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/issues/3946)
+
+**Explanation:**
+`useLayoutEffect` gets executed _before_ the `useEffect` hook without much concern for DOM mutation. Even though the React hook `useLayoutEffect` is set after the `useEffect` Hook, it gets triggered first!
 
 #### Q20. What is the difference between the click behaviors of these two buttons (assuming that this.handleClick is bound correctly)?
 
@@ -261,7 +266,7 @@ function Dish(props) {
 - [ ] a property that lets you set an array as a property
 - [ ] a property that lets you pass data to child elements
 
-[Explanation](https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx)
+[Reference](https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx)
 
 #### Q25. Which attribute is React's replacement for using innerHTML in the browser DOM?
 
@@ -322,7 +327,7 @@ const Heading = () => {
 - [ ] error helpers
 - [x] error boundaries
 
-[Explanation](https://www.geeksforgeeks.org/react-js-error-boundaries/)
+[Reference](https://www.geeksforgeeks.org/react-js-error-boundaries/)
 
 #### Q32. In which lifecycle method do you make requests for data in a class component?
 
@@ -347,18 +352,20 @@ const Heading = () => {
 - [ ] recursive functions
 - [ ] higher-order functions
 
-#### Q35. What is `[e.target.id]` called in the following code snippet?
+#### Q35. What is `[e.target.id]` called in this code snippet?
 
 ```javascript
-handleChange(e) {
-  this.setState({ [e.target.id]: e.target.value })
-}
+const handleChange = (e) => {
+  setState((prevState) => ({ ...prevState, [e.target.id]: e.target.value }));
+};
 ```
 
 - [ ] a computed property name
 - [ ] a set value
 - [x] a dynamic key
 - [ ] a JSX code string
+
+[Reference](https://www.geeksforgeeks.org/how-to-set-state-with-a-dynamic-key-name-in-reactjs/)
 
 #### Q36. What is the name of this component?
 
@@ -389,7 +396,9 @@ class Clock extends React.Component {
 - [ ] It automatically updates a component.
 - [x] `setState` is asynchronous and might result in out of sync values.
 
-Read [this article](https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)**Explanation:** Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
+[Reference](https://medium.com/@wisecobbler/using-a-function-in-setstate-instead-of-an-object-1f5cfd6e55d1)
+
+**Explanation:** Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
 
 #### Q39. What package contains the render() function that renders a React element tree to the DOM?
 
@@ -408,11 +417,9 @@ Read [this article](https://medium.com/@wisecobbler/using-a-function-in-setstate
 #### Q41. What do you need to change about this code to get it to run?
 
 ```js
-class clock extends React.Component {
-  render() {
-    return <h1>Look at the time: {this.props.time}</h1>;
-  }
-}
+const clock = (props) => {
+  return <h1>Look at the time: {props.time}</h1>;
+};
 ```
 
 - [ ] Add quotes around the return value
@@ -420,7 +427,9 @@ class clock extends React.Component {
 - [ ] Remove the render method
 - [x] Capitalize `clock`
 
-Read [this article](https://reactjs.org/docs/jsx-in-depth.html#html-tags-vs.-react-components)**Explanation:** In JSX, lower-case tag names are considered to be HTML tags.
+[Reference](https://reactjs.org/docs/jsx-in-depth.html#html-tags-vs.-react-components)
+
+**Explanation:** In JSX, lower-case tag names are considered to be HTML tags.
 
 #### Q42. Which Hook could be used to update the document's title?
 
@@ -429,12 +438,14 @@ Read [this article](https://reactjs.org/docs/jsx-in-depth.html#html-tags-vs.-rea
 - [ ] `useEffect(function updateTitle() { name + ' ' + lastname; });`
 - [ ] `useEffect(function updateTitle() { title = name + ' ' + lastname; });`
 
-#### Q43. What can you use to wrap Component imports in order to load them lazily?
+#### Q43. Which function from React can you use to wrap Component imports to load them lazily?
 
-- [ ] `React.fallback`
-- [ ] `React.split`
-- [x] `React.lazy`
-- [ ] `React.memo`
+- [ ] `fallback`
+- [ ] `split`
+- [x] `lazy`
+- [ ] `memo`
+
+[Reference](https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/)
 
 #### Q44. How do you invoke setDone only when component mounts, using hooks?
 
@@ -644,10 +655,6 @@ const Star = ({ selected = false }) => <Icon color={selected ? 'red' : 'grey'} /
 
 #### Q59. How would you add to this code, from React Router, to display a component called About?
 
-```javascript
-<Route path="/:id" />
-```
-
 - [x] A
 
 ```javascript
@@ -796,8 +803,7 @@ ReactDOM.createPortal(x, y);
 - [ ] the App component
 - [ ] the page
 
-**Explanation:**
-From official docs: [Portals](https://reactjs.org/docs/portals.html)
+[Reference](https://reactjs.org/docs/portals.html)
 
 #### Q67. What is `setCount`?
 
@@ -810,8 +816,7 @@ const [count, setCount] = useState(0);
 - [ ] a state object
 - [x] a function to update the state
 
-**Reference:**
-From official docs: [Hooks-State](https://reactjs.org/docs/hooks-state.html#:~:text=If%20we%20want%20to%20update%20the%20current)
+[Reference](https://reactjs.org/docs/hooks-state.html#:~:text=If%20we%20want%20to%20update%20the%20current)
 
 #### Q68. What is the use of map function below?
 
@@ -899,7 +904,7 @@ const [count, setCount] = useState(0);
 - [ ] public/manifest.json
 - [x] public/index.html
 
-#### Q75. The code below is rendering nothing and generate this error: "ReactDOM is not defined." How do you fix this issue?
+#### Q75. The code below is rendering nothing and generates this error: "ReactDOM is not defined." How do you fix this issue?
 
 ```javascript
 import React from 'react';
@@ -1063,7 +1068,10 @@ This question test knowledge of react class components. You need to use `this` i
 - [ ] a service worker
 - [ ] a tag
 
-`React Components are like functions that return HTML elements. Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components.` [(Source)](https://reactjs.org/docs/components-and-props.html)
+[Reference](https://reactjs.org/docs/components-and-props.html)
+
+**Explanation:**
+React Components are like functions that return HTML elements. Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components.
 
 #### Q90. You want to disable a button so that it does not emit any events onClick. Which prop do you use to acomplish this?
 
@@ -1243,18 +1251,7 @@ const PokeDex = (props) => {
 - [ ] setPokeDex()
 - [x] pokeDex
 
-#### Q103. When using a portal, what is the second argument?
-
-```javascript
-ReactDOM.createPortal(x, y);
-```
-
-- [ ] the current state
-- [ ] the rendered element
-- [ ] the App component
-- [x] the DOM element that exists outside of the parent component
-
-#### Q104. What would you pass to the onClick prop that wil allow you to pass the initName prop into the greeet handler?
+#### Q103. What would you pass to the onClick prop that wil allow you to pass the initName prop into the greet handler?
 
 ```javascript
 const Greeting = ({ initName }) => {
@@ -1265,123 +1262,182 @@ const Greeting = ({ initName }) => {
 
 - [ ] hug
 - [ ] this.hug(initName)
-- [x] (name) => this.hug(name)
-- [ ] () => hug(initName)
+- [ ] (name) => this.hug(name)
+- [x] () => hug(initName)
 
-#### Q105. What is the name of the compiler used to transform JSX into JavaScript?
+Explanation: Apparently the question misstyped `greet` as `hug`. Putting this aside, we can still learn from this question.
+
+- In a function, the global object is the default binding for `this`. In a browser window the global object is [object Window].
+  This is a functional Component, so `this` from `this.hug` actually refers to browser window.
+  Since it is a functional component, we can directly refer to hug without using `this`.
+- To pass a handler to onClick, we should always pass a function rather than execute a function. So we need to use callback here.
+  `initName` is available in Greeting's function scope, so we can directly supply as an argument to hug().
+
+#### Q104. What is the name of the compiler used to transform JSX into JavaScript?
 
 - [x] Babel
 - [ ] JSX Editor
 - [ ] Browser Buddy
 - [ ] ReactDOM
 
-#### Q106. Which hook is used to prevent a function from being recreated on every component render?
+#### Q105. Which hook is used to prevent a function from being recreated on every component render?
 
 - [x] useCallback
 - [ ] useMemo
 - [ ] useRef
 - [ ] useTransition
 
-#### Q107. Why might you use the `useRef` hook?
+#### Q106. Why might you use the `useRef` hook?
 
 - [ ] To bind the function
 - [ ] To call a function
 - [x] To directly access a DOM
 - [ ] To refer to another JS file
 
-[Source](https://www.smashingmagazine.com/2020/11/react-useref-hook/)
+[Reference](https://www.smashingmagazine.com/2020/11/react-useref-hook/)
 
-#### Q108. Which of the following is required to use React?
+#### Q107. Which of the following is required to use React?
 
 - [x] JavaScript
 - [ ] React Router
 - [ ] Redux
 - [ ] Prop-Types
 
-[Source](https://reactjs.org/tutorial/tutorial.html#:~:text=What%20Is%20React%3F,of%20code%20called%20%E2%80%9Ccomponents%E2%80%9D.&text=We'll%20get%20to%20the%20funny%20XML%2Dlike%20tags%20soon.)
+[Reference](https://reactjs.org/tutorial/tutorial.html#:~:text=What%20Is%20React%3F,of%20code%20called%20%E2%80%9Ccomponents%E2%80%9D.&text=We'll%20get%20to%20the%20funny%20XML%2Dlike%20tags%20soon.)
 
-#### Q109. What is the correct way to get a value from context?
+#### Q108. What is the correct way to get a value from context?
 
 - [ ] const value = useContext(MyContext.Consumer)
 - [ ] const value = useContext(MyContext.Provider)
 - [x] const value = useContext(MyContext)
 - [ ] const value = useContext({value: "intiial value"})
 
-[Source](https://reactjs.org/docs/hooks-reference.html#usecontext)
+[Reference](https://reactjs.org/docs/hooks-reference.html#usecontext)
 
-#### Q110. Why is ref used?
+#### Q109. Why is ref used?
 
 - [ ] to bind function
 - [ ] to call function
 - [x] to directly access DOM node
 - [ ] to refer to another JS file
 
-[Source](https://reactjs.org/docs/refs-and-the-dom.html#when-to-use-refs)
+[Reference](https://reactjs.org/docs/refs-and-the-dom.html#when-to-use-refs)
 
-#### Q111. Choose the method which should be overridden to stop the component from updating?
+#### Q110. Choose the method which should be overridden to stop the component from updating?
 
 - [ ] componentDidMount
 - [ ] componentDidUpdate
 - [ ] willComponentUpdate
 - [x] shouldComponentUpdate
 
-[Source](https://reactjs.org/docs/react-component.html#shouldcomponentupdate)
+[Reference](https://reactjs.org/docs/react-component.html#shouldcomponentupdate)
 
-#### Q112. What is the functionality of a “webpack” command?
+#### Q111. What is the functionality of a “webpack” command?
 
-- [x] Runs react local development server
+- [ ] Runs react local development server
 - [ ] Transfers all JS files to down into one file
 - [ ] A module builder
-- [ ] None of the above
+- [x] All of the above
 
-#### Q113. Choose the method which is not a part of ReactDOM?
+#### Q112. Choose the method which is not a part of ReactDOM?
 
 - [ ] ReactDOM.createPortal()
 - [ ] ReactDOM.hydrate()
 - [x] ReactDOM.destroy()
 - [ ] ReactDOM.findDOMnode()
 
-#### Q114. In react, the key should be?
+#### Q113. In react, the key should be?
 
 - [x] Unique among his siblings
 - [ ] Unique in DOM
 - [ ] Does not requires to be unique
 - [ ] all of the above
 
-[Source](https://reactjs.org/docs/lists-and-keys.html#keys)
+[Reference](https://reactjs.org/docs/lists-and-keys.html#keys)
 
-#### Q115. Which company developed ReactJS?
+#### Q114. Which company developed ReactJS?
 
 - [ ] Google
 - [x] Meta (ex Facebook)
 - [ ] Apple
 - [ ] Twitter
 
-[Source](https://github.com/facebook/react)
+[Reference](https://github.com/facebook/react)
 
-#### Q116. Choose the library which is most often associated with react?
+#### Q115. Choose the library which is most often associated with react?
 
 - [ ] Chai
 - [ ] Sinon
 - [x] Jest
 - [ ] Mocha
 
-[Source](https://reactjs.org/docs/testing-recipes.html)
+[Reference](https://reactjs.org/docs/testing-recipes.html)
 
-#### Q117. What of the following is used in React.js to increase performance?
+#### Q116. What of the following is used in React.js to increase performance?
 
 - [ ] Original DOM
 - [x] Virtual DOM
 - [ ] Both of the above
 - [ ] None of the above
 
-[Source](https://reactjs.org/docs/optimizing-performance.html)
+[Reference](https://reactjs.org/docs/optimizing-performance.html)
 
-#### Q118. Among The following options, choose the one which helps react for keeping their data uni-directional?
+#### Q117. Among The following options, choose the one which helps react for keeping their data uni-directional?
 
 - [ ] DOM
 - [x] flux
 - [ ] JSX
 - [ ] Props
 
-[Source](https://reactjs.org/blog/2014/05/06/flux.html)
+[Reference](https://reactjs.org/blog/2014/05/06/flux.html)
+
+#### Q118. Which choice is a correct refactor of the Greeting class component into a function component?
+
+```javascript
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello {this.props.name}!<h1>;
+  }
+}
+```
+
+- [ ] `const Greeting = (name) => <h1>{name}</h1>`
+- [ ] `function Greeting(name){return <h1>{name}</h1>;}`
+- [ ] `const Greeting = props => { <h1>{props.name}</h1> }`
+- [x] `const Greeting = ({ name }) => <h1>Hello {name}</h1>;`
+
+#### Q119. Why is the `waitlist` not updating correctly?
+
+```javascript
+const Waitlist = () => {
+  const [name, setName] = useState('');
+  const [waitlist, setWaitlist] = useState([]);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    waitlist.push(name);
+  };
+  return (
+    <div>
+      <form onSubmit={onSubmit}>
+        <label>
+          Name: <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </label>
+        <button type="submit">Add to waitlist</button>
+      </form>
+
+      <ol>
+        {waitlist.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ol>
+    </div>
+  );
+};
+```
+
+- [x] `waitlist` is being mutated directly. Use the `setWaitlist` function instead to update the waitlist state.
+- [ ] The form is reloading the page each time `Add to waitlist` is clicked.
+- [ ] The `Add to waitlist` button is missing a click handler.
+- [ ] There are likely repeated names inside of the `waitlist` array.
+
+[Reference](https://reactjs.org/docs/react-component.html#setstate)

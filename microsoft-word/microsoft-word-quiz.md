@@ -766,3 +766,77 @@ D. Inserts and Deletions and Formatting are turned off in Show Markup.
 - [ ] A, B, C
 
 [Reference](https://support.microsoft.com/en-us/office/create-or-run-a-macro-c6b99036-905c-49a6-818a-dfb98b7c3c9c#:~:text=Do%20one%20of%20the%20following,Click%20Button.)
+
+#### Q98. Both boxes contain a white arrow, but it is visible only in the second box. What command was applied to the second box to make the arrow visible?
+
+![Q98.png](images/Q98.png)
+
+- [ ] Bring to front
+- [ ] WordArt
+- [ ] Group
+- [x] Send to back
+
+#### Q99. Which selecton handle should you drag to rotate the object?
+
+![Q99.png](images/Q99.png)
+
+- [ ] G
+- [ ] E
+- [x] A
+- [ ] C
+
+#### Q100. You and your colleagues are asked to reply to some comments in a documents you have addressed your comments. Which choice is not a good way to indicate that you have taken care of the comments before sending the file to the next person?
+
+- [ ] Insert a new comment
+- [ ] Reply to the comment
+- [x] Delete the comment
+- [ ] Resolve the comment
+
+#### Q101. What action allow you to quickly access a specific docuemnt from your list of saved file?
+
+- [ ] List
+- [ ] Go to file
+- [x] Bookmark
+- [ ] Jump
+
+#### Q102. Which page orientation should you select to accomdate a wide chart or table?
+
+- [ ] Wide
+- [ ] Potrait
+- [x] Landscape
+- [ ] None of the above
+
+#### Q103. For what task can you not use the style inspector?
+
+- [ ] displaying the paragraph formatting at the insertion point
+- [ ] resestting or clearing paragraph or text-level formatting
+- [x] recommending style changes for improved accessibility
+- [ ] displaying the text-level formatting at the insertion point
+
+#### Q104. Your industry uses a lot of terminology that is not included in regular dictionaries, so document checking is both inaccurate and laborious. How can you modify Word to make document checking more efficient and accurate?
+
+- [ ] In the Word proofing options, enable Suggest (Windows) or Select (Mac) from main dictionary only
+- [ ] Add your terminology to the default Word dictionary
+- [ ] In the Word proofing tools, enable checking for both Cliches and Jargon (Windows) or Cliches, colloquialisms and jargon (Mac)
+- [ ] Create a custom dictionary that includes your specific terminology
+
+#### Q105. What happens when you resolve a comment?
+
+- [ ] The comment is deleted
+- [ ] There is no change to the comment
+- [ ] A reply is added to the comment
+- [x] The comment appears dimmed
+
+#### Q106. Using the Styles group in Word lets you quickly ______?
+
+- [ ] apply frames and artistic effects to graphics
+- [ ] modify page margins
+- [ ] apply a different theme
+- [x] apply styles for heading levels, body text, and titles
+
+#### Q107. You need to direct a reader from specific text to a related graphic that clarifies the content in another place in your document. Which command can you use to set this up?
+
+- [ ] Citation
+- [ ] Table of Contents
+- [x] Cross-Reference
+- [ ] Table of Figures

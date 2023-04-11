@@ -746,7 +746,7 @@ https://sfmagazine.com/post-entry/may-2020-excel-sharing-a-pivot-table-slicer-be
 
 #### Q89. Which value is calculated when the formula **=AVERAGE(G2:G6)/AVERAGE(C2:C6)** is entered into cell H7?
 
-![image](images/Q97.png?raw=png)
+![image](images/Q89.jpeg)
 
 - [ ] average number of minutes per call
 - [ ] average annual sales per minute
@@ -1228,3 +1228,77 @@ https://support.microsoft.com/en-us/office/print-headings-or-titles-on-every-pag
 - [ ] 1,048,576
 - [x] 16384
 - [ ] 1,048,000
+
+#### Q138. What feature can you use to populate B2:B7 with the number from each sectence in A2:A7?
+
+![excel_sheet_b2b7_a2a7](https://user-images.githubusercontent.com/93790398/199109832-18774a59-e00b-4fc1-b798-57a28af96668.png)
+
+- [ ] No Excel feature can accomplish this; this is possible only using formulas.
+- [x] Flash Fill
+- [ ] Merge cells
+- [ ] Text to columns
+
+#### Q139. Which choice causes a circular error when it is included in a worksheet formula?
+
+- [x] a reference to the cell occupied by the formula
+- [ ] a named constant
+- [ ] a worksheet function
+- [ ] a defined formula name
+
+#### Q140. You have a workheet with the year in column A, the month in column B, and the day in column C. All fields contain numbers. What function would you use to create the date column in D?
+
+- [x] DATEVALUE
+- [ ] CONCATENATE
+- [ ] TEXTJOIN
+- [ ] DATE
+
+#### Q141. You have a column containing runner times for a recent race. What function could you use to find the second-place finisher (the runner with the second-lowest time)?
+
+- [ ] SMALL
+- [x] MATCH
+- [ ] MIN
+- [ ] NEXT
+
+[Source](https://exceljet.net/articles/how-to-lookup-first-and-last-match)
+
+#### Q142. What is the default horizontal alignment of text in a cell
+
+- [x] left
+- [ ] bottom
+- [ ] top
+- [ ] right
+
+#### Q143. Which formula adds 8 and 5 in a cell?
+
+- [ ] `=ADD(8+5)`
+- [ ] 8+5
+- [ ] None of these answers, as you cannot add without a `SUM` function.
+- [x] `=8+5`
+
+#### Q144. What feature allow you to make the text appear as it does in cell B1:F1?
+
+![image](https://cdn.lynda.com/question/60d22a3a498ede3358868119/60d22a3a498ede3358868119-1624482528356)
+
+- [ ] cell border
+- [ ] merge cells
+- [x] text orientation
+- [ ] wrap text
+
+#### Q145. What type of chart is this?
+
+![Q145](https://user-images.githubusercontent.com/48485675/221608974-f1fa1369-9a52-43d5-a738-5744ede084bc.png)
+
+- [x] histogram
+- [ ] waterfall
+- [ ] treemap
+- [ ] box and whisker
+
+
+#### Q146. What type of chart is this?
+
+![Q146](https://user-images.githubusercontent.com/125942986/223951588-6460e0d2-9c18-4232-b087-5741e3212d3c.png)
+
+- [ ] histogram
+- [x] waterfall
+- [ ] treemap
+- [ ] box and whisker

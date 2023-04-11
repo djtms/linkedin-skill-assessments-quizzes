@@ -91,6 +91,8 @@ console.log(/* Snippet Here */); //Prints food
 
 #### Q8. You've written the code shown to log a set of consecutive values, but it instead results in the value 5, 5, 5, and 5 being logged to the console. Which revised version of the code would result in the value 1, 2, 3 and 4 being logged?
 
+- [ ] `A`
+
 ```js
 for (var i = 1; i <= 4; i++) {
   setTimeout(function () {
@@ -99,7 +101,7 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [ ] .
+- [ ] `B`
 
 ```js
 for (var i = 1; i <= 4; i++) {
@@ -111,7 +113,7 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [ ] .
+- [ ] `C`
 
 ```js
 for (var i = 1; i <= 4; i++) {
@@ -121,7 +123,7 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [x] .
+- [x] `D`
 
 ```js
 for (var i = 1; i <= 4; i++) {
@@ -133,7 +135,7 @@ for (var i = 1; i <= 4; i++) {
 }
 ```
 
-- [ ] .
+- [ ] `E`
 
 ```js
 for (var j = 1; j <= 4; j++) {
@@ -157,7 +159,7 @@ for (var j = 1; j <= 4; j++) {
 
 #### Q10. Which statement creates a new function called discountPrice?
 
-- [x] .
+- [x] `A`
 
 ```js
 let discountPrice = function (price) {
@@ -165,7 +167,7 @@ let discountPrice = function (price) {
 };
 ```
 
-- [ ] .
+- [ ] `B`
 
 ```js
 let discountPrice(price) {
@@ -173,7 +175,7 @@ let discountPrice(price) {
 };
 ```
 
-- [ ] .
+- [ ] `C`
 
 ```js
 let function = discountPrice(price) {
@@ -181,7 +183,7 @@ let function = discountPrice(price) {
 };
 ```
 
-- [ ] .
+- [x] `D`
 
 ```js
 discountPrice = function (price) {
@@ -217,7 +219,7 @@ console.log(bob.precip);
 - [ ] `/[0-9]+:[0-9]+:[0-9]+/`
 - [ ] `/ : : /`
 
-NOTE: The first three are all partially correct and will match digits, but the **second option is the most correct** because it will **only** match **2 digit** time values (12:00:32). The first option would have worked if the repetitions range looked like `[0-9]{2}`, however because of the **comma** `[0-9]{2,}` it will select 2 **or more** digits (120:000:321). The third option will any range of time digits, single _and_ multiple (meaning `1:2:3` will also match).
+**NOTE**: The first three are all partially correct and will match digits, but the **second option is the most correct** because it will **only** match **2 digit** time values (12:00:32). The first option would have worked if the repetitions range looked like `[0-9]{2}`, however because of the **comma** `[0-9]{2,}` it will select 2 **or more** digits (120:000:321). The third option will any range of time digits, single _and_ multiple (meaning `1:2:3` will also match).
 
 **More resources:**
 
@@ -1067,7 +1069,7 @@ Javascript!
 
 - [ ] .
 
-```
+```plaintext
 I
 love
 Javascript!
@@ -1216,13 +1218,19 @@ console.log(animals.pop()); //Prints jaguar
 ```
 
 - [ ] `animals.filter(e => e === "jaguar");`
-- [x] `animals.reverse();`
+- [ ] `animals.reverse();`
 - [ ] `animals.shift();`
 - [x] `animals.pop();`
 
-`Note: this question has two correct answers.`
+[Reference Javascript Array pop()](https://www.w3schools.com/jsref/jsref_pop.asp)
 
-[Reference Javascript Array Reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+shift() - removes the FIRST element of an array and returns the removed item.
+
+pop() - removes the LAST element of an array and returns the removed item.
+
+reverse() - reverses the order of the elements in an array.
+
+filter() - get every element in the array that meets the condition.
 
 #### Q94. What line is missing from this code?
 
@@ -1259,6 +1267,7 @@ console.log(y);
 - [ ] true
 - [x] Two
 
+**Note:** `this question is same with Q46.`
 [Reference ternary operator js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 #### Q96. How would you access the word It from this multidimensional array?
@@ -1721,9 +1730,9 @@ console.log(score);
 - [ ] `6`
 - [ ] `7`
 
-1. [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-2. [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-3. [Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+1. [Reference Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+2. [Reference Array.prototype.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+3. [Reference Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
 #### Q125. What does this code print to the console?
 
@@ -1855,21 +1864,7 @@ if (/* Snipped goes here */){
 - [ ] Boolean(0)
 - [ ] Boolean(NaN)
 
-#### Q133. Which method converts a JSON string to a Javascript object?
-
-- [x] JSON.parse()
-- [ ] JSON.fromString();
-- [ ] JSON.stringify()
-- [ ] JSON.toObject()
-
-#### Q134. Which method do you use to attach one DOM mode to another?
-
-- [ ] attachNode()
-- [x] appendChild()
-- [ ] querySelector()
-- [ ] getNode()
-
-#### Q135. How would you add a data item named animal with a value of sloth to local storage for the current domain?
+#### Q133. How would you add a data item named animal with a value of sloth to local storage for the current domain?
 
 - [ ] LocalStorage.setItem("animal","sloth");
 - [x] document.localStorage.setItem("animal","sloth");
@@ -1878,7 +1873,7 @@ if (/* Snipped goes here */){
 
 [Reference](https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem)
 
-#### Q136. What value is printed to the console after this code execute?
+#### Q134. What value is printed to the console after this code execute?
 
 ```js
 let cat = Object.create({ type: 'lion' });
@@ -1897,7 +1892,7 @@ console.log(copyCat.type, copyCat.size);
 
 [Reference](https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem)
 
-#### Q137. What does this code print to the console?
+#### Q135. What does this code print to the console?
 
 ```js
 let animals = [{ type: 'lion' }, 'tiger'];
@@ -1921,7 +1916,7 @@ console.log(animals[1], clones[1]);
 
 [Reference](https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem)
 
-#### Q138. What will be the output of the following code.
+#### Q136. What will be the output of the following code.
 
 ```js
 a=5;
@@ -1934,7 +1929,7 @@ alert(a++(+(+(+b))));
 - [x] 9
 - [ ] 20
 
-#### Q139. What fragment could you add to this code to make it output "{"type": "tiger"}" to the console?
+#### Q137. Which snippet could you add to this code to print "{"type": "tiger"}" to the console?
 
 ```js
 let cat = { type: "tiger", size: "large" };
@@ -1949,32 +1944,18 @@ console.log(json); // print {"type":"tiger"}
 - [ ] `JSON.stringify(cat);`
 - [ ] `JSON.stringify(cat, /type/);`
 
-#### Q140. Which document method is not used to get a reference to a DOM node?
+[Reference](https://www.w3schools.com/jsref/jsref_stringify.asp)
 
-- [ ] document.getNode();
+#### Q138. Which document method is not used to get a reference to a DOM node?
+
+- [x] document.getNode();
 - [ ] document.getElementsByClassName();
-- [x] document.querySelectorAll();
+- [ ] document.querySelectorAll();
 - [ ] document.querySelector();
 
 [Reference](<https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById#:~:text=querySelector()%20and%20Document.,element%20objects%20in%20the%20DOM.>)
 
-#### Q141. Which snippet could you add to this code to print "{"type": "tiger"}" to the console?
-
-```
-let cat = {type: "tiger", size: "large"};
-let json= /_ Snippet Here _/;
-console.log(json); //prints {"type": "tiger"}
-
-```
-
-- [x] JSON.sringify(cat);
-- [ ] JSON.sringify(cat, ["type"]);
-- [ ] JSON.sringify(cat, /type/);
-- [ ] cat.toJSON("type");
-
-[Reference](https://www.w3schools.com/jsref/jsref_stringify.asp)
-
-#### Q142. In JavaScript, all objects inherit a built-in property from a **\*\*\*\***\_\_\_**\*\*\*\***.
+#### Q139. In JavaScript, all objects inherit a built-in property from a **\*\*\*\***\_\_\_**\*\*\*\***.
 
 - [ ] node
 - [ ] instance variable
@@ -1983,14 +1964,14 @@ console.log(json); //prints {"type": "tiger"}
 
 [Reference](https://www.freecodecamp.org/news/javascript-prototype-explained-with-examples/)
 
-#### Q143. Which of the following are not server-side Javascript objects?
+#### Q140. Which of the following are not server-side Javascript objects?
 
 - [ ] Date
 - [ ] FileUpload
 - [ ] Function
 - [x] All of the above
 
-#### Q144. What will be the output of the following code snippet?
+#### Q141. What will be the output of the following code snippet?
 
 ```javascript
 const obj1 = { first: 20, second: 30, first: 50 };
@@ -2002,28 +1983,30 @@ console.log(obj1);
 - [ ] first: 30 , second: 20
 - [ ] None of the above
 
-#### Q145. Which object in Javascript doesn’t have a prototype?
+#### Q142. Which object in Javascript doesn’t have a prototype?
 
 - [x] Base Object
 - [ ] All objects have prototype
 - [ ] None of the objects have prototype
 - [ ] None of the above
 
-#### Q146. What does … operator do in JS?
+#### Q143. What does … operator do in JS?
 
 - [x] Used to spread iterables to individual elements
 - [ ] Describe datatype of undefined
 - [ ] No such operator exists
 - [ ] None of the above
 
-#### Q147. How to stop an interval timer in Javascript?
+#### Q144. How to stop an interval timer in Javascript?
 
 - [x] clearInterval
 - [ ] clearTimer
 - [ ] intervalOver
 - [ ] None of the above
 
-#### Q148. What will be the output of the following code snippet?
+[Reference](https://www.interviewbit.com/javascript-mcq/)
+
+#### Q145. What will be the output of the following code snippet?
 
 ```javascript
 print(typeof NaN);
@@ -2034,7 +2017,7 @@ print(typeof NaN);
 - [ ] String
 - [ ] None of the above
 
-#### Q149. What will be the output of the following code snippet?
+#### Q146. What will be the output of the following code snippet?
 
 ```javascript
 <script type="text/javascript">a = 5 + "9"; document.write(a);</script>
@@ -2045,9 +2028,84 @@ print(typeof NaN);
 - [ ] Runtime Error
 - [x] 59
 
-#### Q149. Which of the following methods can be used to display data in some form using Javascript?
+#### Q147. Which of the following methods can be used to display data in some form using Javascript?
 
 - [ ] document.write()
 - [ ] console.log()
 - [ ] window.alert()
-- [ ] all of the above
+- [x] all of the above
+
+#### Q148. What value is assigned to total after this code executes?
+
+```javascript
+function sum(num1, num2 = 2, num3 = 3) {
+  return num1 + num2 + num3;
+}
+let values = [1, 5];
+let total = sum(4, ...values);
+```
+
+- [x] 10
+- [ ] 6
+- [ ] 7
+- [ ] 8
+
+[Reference: Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+#### Q149. Which statement is applicable to the defer attribute of the HTML <script> tag?
+
+- [x] defer allows the browser to continue processing the page while the script loads in the background.
+- [ ] defer causes the script to be loaded from the backup content delivery network (CDN).
+- [ ] defer blocks the browser from processing HTML below the tag until the script is completely loaded.
+- [ ] defer lazy loads the script, causing it to download only when it is called by another script on the page.
+
+[Reference: defer html script attribute](https://www.w3schools.com/tags/att_script_defer.asp)
+
+#### Q150. Which method of a class is called to initialize an object of that class?
+
+- [ ] init()
+- [ ] create()
+- [ ] new()
+- [x] constructor()
+
+[Reference: constructor method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+
+#### Q151. Which expression evaluates to true?
+
+- [ ] Boolean(NaN)
+- [ ] Boolean(0)
+- [x] Boolean("false")
+- [ ] Boolean("")
+
+[Reference: Boolean object](https://www.w3schools.com/js/js_booleans.asp)
+
+#### Q152. How would you check if the word "pot" is in the word "potato"?
+
+- [ ] "pot".indexOf("potato") !== -1
+- [ ] "potato".includes("Pot")
+- [x] "potato".includes("pot")
+- [ ] "potato".contains("pot");
+
+[Reference: String.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+
+#### Q153. Which collection object allows a unique value to be inserted only once?
+
+- [ ] Map
+- [ ] Array
+- [x] Set
+- [ ] Object
+
+[Reference: developer.mozilla Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+#### Q154. How would you change the color of this header to pink?
+
+```javascript
+<h2 id="cleverest">girls</h2>
+```
+
+- [ ] document.getElementByName("cleverest").style.color = "pink";
+- [ ] document.getElementsByTagName("h2").style.color = "pink";
+- [ ] document.getElementByName("h2").style.color = "pink";
+- [x] document.getElementById("cleverest").style.color = "pink";
+
+[Reference: W3Schools HTML DOM Style color Property](https://www.w3schools.com/jsref/prop_style_color.asp)

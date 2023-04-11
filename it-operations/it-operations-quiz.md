@@ -4,29 +4,29 @@
 
 - [x] A
 
-  - Reset administrator password.
-  - Set network name.
-  - Set network security.
-  - Set network password.
+- Reset administrator password.
+- Set network name.
+- Set network security.
+- Set network password.
 
 - [ ] B
 
-  - Reset administrator password.
-  - Set network name.
-  - Set network password.
+- Reset administrator password.
+- Set network name.
+- Set network password.
 
 - [ ] C
 
-  - Set network name.
-  - Set network password.
-  - Assign DNS servers.
+- Set network name.
+- Set network password.
+- Assign DNS servers.
 
 - [ ] D
 
-  - Change administrator account name.
-  - Set network password.
-  - Set network name.
-  - Assign DNS servers.
+- Change administrator account name.
+- Set network password.
+- Set network name.
+- Assign DNS servers.
 
 #### Q2. Can you connect a DisplayPort monitor to a USB-C port on your computer?
 
@@ -60,20 +60,20 @@
 
 - [x] A
 
-  1. Modem
-  2. Gateway
-  3. Switch
+1. Modem
+2. Gateway
+3. Switch
 
 - [ ] B
 
-  1. Modem
-  2. Switch
-  3. Gateway
+1. Modem
+2. Switch
+3. Gateway
 
 - [ ] C
 
-  1. Gateway
-  2. Switch
+1. Gateway
+2. Switch
 
 - [ ] The order is not important.
 
@@ -107,16 +107,20 @@
   battery
   expansion slots
 
-- [ ] basic I/O
-      cooling
-      NIC
-      graphics
-      expansion slots
-- [ ] basic I/O
-      graphics
-      NIC
-      mass storage
-      expansion slots
+- [ ]
+  basic I/O
+  cooling
+  NIC
+  graphics
+  expansion slots
+
+- [ ]
+  basic I/O
+  graphics
+  NIC
+  mass storage
+  expansion slots
+
 - [ ]
   basic I/O
   graphics
@@ -585,7 +589,28 @@ To get to either UEFI or BIOS on a system you usually go via the computer's boot
 
 #### Q71. Which I/O components are typically found in a chipset on the motherboard?
 
-- [ ] USB, SATA and internal communications
+- [x] USB, SATA and internal communications
 - [ ] display adapter, networking, audio, and basic I/O
 - [ ] the processor, RAM, and expansion cards
 - [ ] I/O components are not on the motherboard. They are located on the rear of the case
+
+#### Q72. What does the acronym RAID refer to?
+
+- [x] Redudant Array of Independent Disk
+- [ ] Repeating Architecture for Internal Drives
+- [ ] Recoverable Advanced Integration and Duplication
+- [ ] Replicated Array of Internal Devices
+
+#### Q73. What is an example of a top-level domain (TLD)?
+
+- [ ] NET
+- [ ] HTTP
+- [x] //
+- [ ] DNS
+
+#### Q74. Jan is setting up a coffee shop's wireless network. Given the number of Wi-Fi networks within range, which are the best choices for a 2.4GHz Wi-Fi channel?
+
+- [ ] 3, 6, 9
+- [ ] 3, 10, 12
+- [x] 1, 6, 11
+- [ ] 1, 2, 8

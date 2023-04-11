@@ -1082,3 +1082,101 @@ override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanc
        }
   }
 ```
+
+#### Q72. Given the string resource below, which code snippet is valid?
+
+```
+<string name="upload_photo_notification">%1$d of %2$d photos uploaded</string>
+```
+
+- [ ] A
+
+```
+val string: String = getString(
+   R.string.upload_photo_notification,
+   "2",
+   "5"
+)
+```
+
+- [ ] B
+
+```
+val string: String = getString(
+   R.id.upload_photo_notification,
+   2,
+   5
+)
+```
+
+- [x] C
+
+```
+val string: String = getString(
+   R.string.upload_photo_notification,
+   2,
+   5
+)
+```
+
+- [ ] D
+
+```
+val string: String = getString(
+   R.id.upload_photo_notification,
+   "2",
+   "5"
+)
+```
+
+[Reference](https://developer.android.com/guide/topics/resources/string-resource#formatting-strings)
+
+#### Q73. Different languages have different rules for grammatical agreement with quantity. To support the following two strings in multiple languages in your app, what is the ideal resource definition?
+
+```
+"You have 1 day remaining"
+"You have 2 days remaining"
+```
+
+- [ ] A
+
+```
+<string name="trial_days_left_one"> You have %1$d day remaining</string>
+<string name="trial_days_left_other">You have %1$d days remaining</string>
+```
+
+- [ ] B
+
+```
+<plurals name="trial days left">
+    <plural quantity="one">You have %1$d day remaining</plural>
+    <plural quantity="other">You have %1$d days remaining</plural>
+</plurals>
+```
+
+- [x] C
+
+```
+<plurals name="trial_days_left">
+    <item quantity="one">You have %1$d day remaining</item>
+    <item quantity="other">You have %1$d days remaining</item>
+</plurals>
+```
+
+- [ ] D
+
+```
+<string name="trial_days_left">
+    <plural quantity="one">You have %1$d day remaining</plural>
+    <plural quantity="other">You have &1$d days remaining</plural>
+</string>
+```
+
+#### Q74. When would the operating system use the onTrimMemory() method?
+
+- [ ] `when the app is uninstalled`
+- [x] `when the app is backgrounded`
+- [ ] `when the device is in battery optimization mode`
+- [ ] `when network requests are made on the main thread`
+
+[Reference](https://developer.android.com/guide/topics/resources/string-resource#Plurals)

@@ -377,17 +377,6 @@
 - [ ] `LOAD DATA LOCAL INFILE`
 - [ ] `extended INSERT statement`
 
-#### Q42. You are working with the tables as shown in this diagram. You need to make sure that any record added to the purchases table consists of a customerID, which already exists in the customers table, and a carID, which already exists in the cars table. You decide to use a trigger to do the validation. Which one do you use?
-
-![mysql Q43](images/mysql_q43.jpg?raw=true)
-
-- [ ] `AFTER INSERT`
-- [x] `BEFORE INSERT`
-- [ ] `CROSS JOIN`
-- [ ] `IF EXISTS`
-
-`IF EXISTS` and `CROSS JOIN` are not valid for a trigger.
-
 #### Q43. Which is the correct syntax of an extended insert statement?
 
 - [ ] insert into cars (make, model, year) values ('Ford', 'Mustang', 2002)
@@ -504,7 +493,7 @@ Note: `DESCRIBE tablename` is a shortcut for this command
 
 - [x] to reduce corruption in data
 - [ ] to reduce storage space
-- [ ] to make the system faster
+- [x] to make the system faster
 - [ ] to prevent data anomalies
 
 Note: "to make the system faster" can also be correct. For example we can calculate some heavy query in advance and store its result in some column (use it as a cache). So if "system" means "application which uses mysql" then it's correct too.
@@ -731,7 +720,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 
 - [ ] Stored procedures are not secure, because they can be executed from the command line as the root user
 - [ ] Stored procedures are secure, because the owner of the stored procedure can decide to whom access is granted
-- [x] Stored procedures are secure, because applications can be given access to stored procedures and not any underlying variables
+- [x] Stored procedures are secure, because applications can be given access to stored procedures and not any underlying tables
 - [ ] Stored procedures are not secure, because they can execute statements to drop tables or bulk delete data
 
 #### Q78. How would you retrieve data on all the customers where no phone number is stored?
@@ -880,7 +869,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 - [ ] XML
 - [ ] TXT
 
-#### Q96. You are working with the tables as shown in this diagram. You need to generate the list of all cars, whether or not they had been sold, with the purchase date of the cars that were sold. Which statement accomplishes that?
+#### Q96. You are working with the tables shown below. You need to generate the list of all cars, whether or not they had been sold. Which statement accomplishes that?
 
 ![mysql picture](images/mysql_q98.png?raw=true)
 
@@ -1037,14 +1026,14 @@ Table name: superheroes
 #### Q107. "COUNT" keyword belongs to which categories in Mysql?
 
 - [x] Aggregate functions
-- [ ] Operators``
+- [ ] Operators
 - [ ] Clauses
 - [ ] All of the mentioned`
 
 #### Q108. Which among the following belongs to an "aggregate function"?
 
 - [x] COUNT
-- [ ] UPPER`
+- [ ] UPPER
 - [ ] LOWER
 - [ ] All of the mentioned
 
@@ -1112,10 +1101,43 @@ Table name: superheroes
         AND Courses.Course_number = Grades.Course_number
         AND Grades.Grade = A
 
-
 (Which of the following sets is computed by the above query?)
 
 - [ ] Names of Students who have got an A grade in all courses taught by Sriram
 - [ ] Names of Students who have got an A grade in all courses
 - [x] Names of Students who have got an A grade in at least one of the courses taught by Sriram
 - [ ] None of the above
+
+#### Q116. You are working with an UPDATE trigger on the employee table in this diagram. How can you access the new value for the address inside the trigger?
+
+![mysql picture](images/mysql_q116.png?raw=true)
+
+- [ ] Use NEW. address.
+- [x] Use DELETED. address.
+- [ ] Use INSERTED. address.
+- [ ] Use OLD. address.
+
+#### Q117. You are working with the tables shown below. You need to make sure that any record added to the purchases table consists of a customerlD, which already exists in the customers table, and a carlD, which already exists in the cars table. You decide to use a trigger to do the validation. Which one do you use?
+
+![mysql picture](images/mysql_q85.png?raw=true)
+
+- [ ] IF EXISTS
+- [ ] CROSS JOIN
+- [x] BEFORE INSERT
+- [ ] AFTER INSERT]
+
+`IF EXISTS` and `CROSS JOIN` are not valid for a trigger.
+
+#### Q118. Current versions of MySQL support the full-text search feature on some storage engines, as an alternative to using the LIKE operator and regular expressions. Which statement would you run to enable a full-text index for the column description in the table Car?
+
+- [x] ALTER TABLE car ADD FULL TEXT(description);
+- [ ] MERGE TABLE car ADD FULL TEXT(description)
+- [ ] ENABLE FULL TEXT(description) car
+- [ ] SEARCH FULL TEXT(description) car
+
+#### Q119. You are building a table schema to store student grades as a letter (A, B, C, D, or F). Which column type is the best choice?
+
+- [ ] VARCHAR
+- [x] ENUM
+- [ ] LONGTEXT
+- [ ] TEXT

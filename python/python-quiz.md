@@ -83,6 +83,8 @@ my_list
 - [ ] to take a snapshot of all the packages and libraries in your virtual environment
 - [ ] to scan the health of your Python ecosystem while inside a virtual environment
 
+[reference](https://www.scaler.com/topics/python-libraries/)
+
 #### Q9. What is the runtime of accessing a value in a dictionary by using its key?
 
 - [ ] O(n), also called linear time.
@@ -706,6 +708,8 @@ t1 = test()
 - [x] in all caps with underscores separating words -- e.g. `MAX_VALUE = 255`
 - [ ] in mixed case without using underscores to separate words -- e.g. `MaxValue = 255`
 
+[Reference](https://realpython.com/python-pep8/)
+
 #### Q51. Describe the functionality of a deque.
 
 - [ ] A deque adds items to one side and remove items from the other side.
@@ -772,6 +776,8 @@ def __init__(self):
 - [x] When you need to check every element in an iterable of known length.
 - [ ] When you want to minimize the use of strings in your code.
 - [ ] When you want to run code in one file for a function in another file.
+
+[Reference](https://www.interviewbit.com/python-cheat-sheet/)
 
 #### Q57. What is the most self-descriptive way to define a function that calculates sales tax on a purchase?
 
@@ -1183,10 +1189,10 @@ np.ones([1,2,3,4,5])
 {x for x in range(100) if x%3 == 0}
 ```
 
-- [x] a set of all the multiples of 3 less then 100
+- [x] a set of all the multiples of 3 less than 100
 - [ ] a set of all the number from 0 to 100 multiplied by 3
-- [ ] a list of all the multiples of 3 less then 100
-- [ ] a set of all the multiples of 3 less then 100 excluding 0
+- [ ] a list of all the multiples of 3 less than 100
+- [ ] a set of all the multiples of 3 less than 100 excluding 0
 
 #### Q87. What does the // operator in Python 3 allow you to do?
 
@@ -1270,7 +1276,7 @@ print(num_list)
 ```python
 num_list = [1,2,3,4,5]
 
-num_list.pop(3)
+num_list.pop(2)
 >>> [1,2,4,5]
 
 num_list.remove(2)
@@ -1591,6 +1597,8 @@ d = sum(c)
 - [ ] `linalg.det() and .dot()`
 - [ ] `linalg.inv() and .eye()`
 
+**Explanation:** Understanding this answer requires knowledge of linear algebra. Some systems of equations can be solved by the method of _diagonalization_, which involves finding the **eigenvectors and eigenvalues** of the system's matrix and multiplying related matrices.
+
 #### Q116. What is the correct syntax for creating a variable that is bound to a list?
 
 - [ ] `my_list = (2, 'apple', 3.5)`
@@ -1719,12 +1727,12 @@ actors = ["Downey", "Holland", "Evans"]
 - [x] `zip(characters, actors)`
 - [ ]
 
-```python
-d = {}
+  ```python
+  d = {}
 
-for x in range(1, len(characters)):
-    d[x] = actors[x]
-```
+  for x in range(1, len(characters)):
+      d[x] = actors[x]
+  ```
 
 - [ ] `{x:y for x in characters for y in actors}`
 
@@ -1833,6 +1841,8 @@ print ("foo" if (256).bit_length() > 8 else "bar")
 - [ ] numerical; tabular
 - [ ] tabular; numerical
 
+[Reference](https://www.interviewbit.com/blog/pandas-vs-numpy/)
+
 #### Q137. What do you need to do to install additional packages into Python?
 
 - [ ] Use a C compiler like gcc or clang.
@@ -1914,9 +1924,9 @@ def can_matrices_be_multiplied (matrix1, matrix2):
 ```
 
 - [ ] columnsMat1; rowsMat1;
-- [ ] columnsMat1; rowsMat2;
+- [x] columnsMat1; rowsMat2;
 - [ ] columnsMat1; columnsMat2;
-- [x] columnsMat2; rowsMat1;
+- [ ] columnsMat2; rowsMat1;
 
 #### Q145. What is the output of this comprehension?
 
@@ -2159,7 +2169,7 @@ Else y = 1 + 30
 - [ ] conversion of a byte stream into Python object hierarchy
 - [ ] conversion of a list into a datatable
 
-Explanation:Pickling is the process of sterilizing a Python object, that is, conversion of a byte stream into Python object hierarchy. The reverse of this process is known as unpickling.
+**Explanation:** Pickling is the process of sterilizing a Python object, that is, conversion of a byte stream into Python object hierarchy. The reverse of this process is known as unpickling.
 
 #### Q158. What is the output of the following program ?
 
@@ -2212,7 +2222,7 @@ print(x**2 == -1)
 - [ ] 1j
 - [ ] False
 
-Explanation: The letter `j` acts as the imaginary unit in Python, therefore `x**2` means `j**2` which is equal to `-1`. The statement `x**2 == -1` is evaluated as `True`.
+**Explanation:** The letter `j` acts as the imaginary unit in Python, therefore `x**2` means `j**2` which is equal to `-1`. The statement `x**2 == -1` is evaluated as `True`.
 
 #### Q164. What will be printed in the console if you run this code?
 
@@ -2225,7 +2235,7 @@ print(0xA + 0xB + 0xC)
 - [ ] 0xA + 0xB + 0xC
 - [ ] None
 
-Explanation: A, B and C are hexadecimal integers with values 10, 11 and 12 respectively, so the sum
+**Explanation:** A, B and C are hexadecimal integers with values 10, 11 and 12 respectively, so the sum
 of A, B and C is 33.
 
 #### Q165. What will this code output to the screen?
@@ -2248,6 +2258,8 @@ else:
 - [ ] Use tuples instead of lists when you have a common collection of similar objects.
 - [x] Use tuples instead of lists for functions that need to return multiple values.
 - [ ] Use lists instead of tuples when the position of elements is important.
+
+[Reference](https://www.scaler.com/topics/python/tuples-in-python/)
 
 #### Q167. Consider the following code snippet that uses decorators to calculate the execution time of execution_fn function:
 
@@ -2346,7 +2358,7 @@ MISSING_ARG_3 = func
 
 #### Q172. What does this code print?
 
-```
+```python
 a = np.array([[1, 2], [3, 4], [5, 6]])
 c = a[(a > 3) & (a < 11)]
 print(c)
@@ -2356,3 +2368,110 @@ print(c)
 - [ ] `[False, False, False, True, True, True]`
 - [ ] `[[0,0], [3, 4], [5, 6]]`
 - [x] `[4 5 6]`
+
+#### Q173. What is the correct syntax for replacing the string `apple` in the list with the string `orange`?
+
+```python
+my_list = [2, 'apple', 3.5]
+```
+
+- [ ] `orange = my_list[1]`
+- [x] `my_list[1] = 'orange'`
+- [ ] `my_list['orange'] = 1`
+- [ ] `my_list[1] == orange`
+
+#### Q174. Assume m, n and p are positive integers. In the following comprehension, how many times will the function `randint` be called?
+
+```python
+[ [ [ randint(1,100) for i in range(m) ] for j in range(n) ] for k in range(p) ]
+```
+
+- [x] m _ n _ p
+- [ ] the greater value of (m,n,p)
+- [ ] 1 million
+- [ ] m + n + p
+
+#### Q175. Suppose you have a class named MyClass which has multiple inheritance and methods with the same name in its ancestors. Which class method could you call to see which method will get priority when invoked?
+
+- [x] `MyClass.__mro__`
+- [ ] `MyClass.hierarchy()`
+- [ ] `callable(MyClass)`
+- [ ] `dir(MyClass)`
+
+**Explanation:** MRO stands for Method Resolution Order. It returns a list of types the class is derived from, in the order they are searched for methods.
+
+#### Q176. Suppose you have a list of employees described by the code below. You want to assign alice the same salary as charlie. Which choice will accomplish that?
+
+```python
+employees = {
+    'alice':{
+        'position':'Lead Developer',
+        'salary':1000
+    },
+    'bob':{
+        'position': 'Lead Artist',
+        'salary':2000
+    },
+    'charlie':{
+        'position':'cfo',
+        'salary':3000
+    }
+}
+```
+
+- [x] `employess['alice']['salary'] = employees['charlie']['salary']`
+- [ ] `employees.alice.salary = employees.charlie.salary`
+- [ ] `employees['alice'][1] = employees['charlie'][1]`
+- [ ] `employees['alice'].salary = employees['charlie'].salary`
+
+**Explanation:** This is accessing a key in a nested dictionary inside another dictionary
+
+The command employees['alice']['salary'] = employees['charlie']['salary'] assigns the value of the 'salary' key in the dictionary of the employee 'charlie' to the 'salary' key in the dictionary of the employee 'alice'.
+It is the same thing as:
+
+```python
+employees = {
+    'alice': {'position': 'Lead Developer', 'salary': 1000},
+    'bob': {'position': 'Lead Artist', 'salary': 2000},
+    'charlie': {'position': 'cfo', 'salary': 3000}
+}
+# or:
+employees = {'alice': {'position': 'Lead Developer', 'salary': 1000},
+             'bob': {'position': 'Lead Artist', 'salary': 2000},
+             'charlie': {'position': 'cfo', 'salary': 3000}}
+```
+
+#### Q177. You are given a piece of code. Assume m and n are already defined as some positive integer value. When it completes, how many tuples will my list contain?
+
+```python
+mylist = []
+
+for i in range(m):
+    for j in range(n):
+        mylist.append((i,j))
+```
+
+- [ ] m
+- [ ] m + n
+- [ ] n
+- [x] m \* n
+
+**Explanation:** This code will run for m x n times, if you run this code, it will create m x n tuples. <br/> The first loop runs for m times and the inner loop will run for n times. While the single iteration of first loop will only be completed when all of the n iterations of inner loop are completed. This is the same process for 2nd, 3rd, ... mth iterations for outer loop. Overall, both loops will run m x n times
+
+#### Q178. What will this comprehension provide you?
+
+```python
+{x : [y for y in range (1, x) if x % y == 0] for x in range (2, 100)}
+```
+
+- [x] a dictionary whose keys are the numbers from 2 to 99 (inclusive), and their respective values are their factors
+- [ ] a dictionary whose keys are the numbers from 2 to 99 (inclusive), and their respective values are a list from 1 to the key value itself (inclusive)
+- [ ] a dictionary whose keys are the numbers from 2 to 99 (inclusive), and their respective values are the even numbers from 1 to the key value itself (inclusive)
+- [ ] a dictionary whose keys are the numbers from 2 to 99 (inclusive), and their respective values are the odd numbers from 1 to the key value itself (inclusive)
+
+#### Q179. What operator do you use to assess equality between two elements?
+
+- [ ] =
+- [ ] &&
+- [ ] ||
+- [x] ==
